@@ -717,33 +717,30 @@ function tryAttack(p) {
       spawnFx(hurt.x, hurt.y, 'burst', { size: 0.7 });
     } else {
       fireProjectile({ x: p.x, y: p.y, vx: Math.cos(a) * 560, vy: Math.sin(a) * 560,
-        r: 5, dmg: p.atk, dtype: 'magic', from: p, life: 0.9, color: p.color, friendly: true });
-      spawnFx(p.x + Math.cos(a) * 34, p.y + Math.sin(a) * 34, 'slash', { rot: a, size: 0.8 });
+        r: 5, dmg: p.atk, dtype: 'magic', from: p, life: 0.9, color: p.color, friendly: true, arc: true });
     }
     return;
   }
   if (p.sprite === 'bastion') { // TANK: melee shield bash with knockback
     const hit = meleeStrike(p, a, 115, 1.3, 430, 'tech');
-    spawnFx(p.x + Math.cos(a) * 52, p.y + Math.sin(a) * 52, 'slash', { rot: a, size: 1.35 });
+    spawnFx(tgt.x, tgt.y, 'slash', { rot: a, size: 1.35 });
     if (hit) { G.shake = Math.max(G.shake, 5); addParticles(p.x + Math.cos(a) * 60, p.y + Math.sin(a) * 60, '#ff5a4e', 8); }
     return;
   }
   if (p.sprite === 'rook') { // FIGHTER: proximity stance — melee up close, ranged at distance
     if (dist(p, tgt) < 140) {
       const hit = meleeStrike(p, a, 115, 1.2, 150, 'hybrid');
-      spawnFx(p.x + Math.cos(a) * 50, p.y + Math.sin(a) * 50, 'slash', { rot: a, size: 1.1 });
+      spawnFx(tgt.x, tgt.y, 'slash', { rot: a, size: 1.1 });
       if (hit) { G.shake = Math.max(G.shake, 3); addParticles(p.x + Math.cos(a) * 56, p.y + Math.sin(a) * 56, '#c084fc', 6); }
     } else {
       fireProjectile({ x: p.x, y: p.y, vx: Math.cos(a) * 560, vy: Math.sin(a) * 560,
-        r: 5, dmg: p.atk, dtype: 'hybrid', from: p, life: 0.9, color: p.color, friendly: true });
-      spawnFx(p.x + Math.cos(a) * 34, p.y + Math.sin(a) * 34, 'slash', { rot: a, size: 0.8 });
+        r: 5, dmg: p.atk, dtype: 'hybrid', from: p, life: 0.9, color: p.color, friendly: true, arc: true });
     }
     return;
   }
   const dtype = p.faction === 'red' ? 'tech' : p.faction === 'blue' ? 'magic' : 'hybrid';
   fireProjectile({ x: p.x, y: p.y, vx: Math.cos(a) * 560, vy: Math.sin(a) * 560,
-    r: 5, dmg: p.atk, dtype, from: p, life: 0.9, color: p.color, friendly: true });
-  spawnFx(p.x + Math.cos(a) * 34, p.y + Math.sin(a) * 34, 'slash', { rot: a, size: 0.8 });
+    r: 5, dmg: p.atk, dtype, from: p, life: 0.9, color: p.color, friendly: true, arc: true });
 }
 function castSkill(slot) {
   const p = player; if (!p || !p.alive || p.stun > 0 || !G.running) return;
@@ -1138,6 +1135,7 @@ function updateProjectiles(dt) {
         if (dist(pr, e) < pr.r + e.r) {
           damageEnemy(e, pr.dmg, pr.dtype, pr.from);
           addParticles(pr.x, pr.y, pr.color, 5);
+          if (pr.arc) spawnFx(e.x, e.y, 'slash', { rot: Math.atan2(pr.vy, pr.vx), size: 0.8 });
           if (pr.pierce && pr.pierce > 0) pr.pierce--; else { pr.life = 0; break; }
         }
       }
