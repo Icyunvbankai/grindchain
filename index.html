@@ -50,7 +50,7 @@
 
   /* Top-center: boss bar */
   #boss-bar-wrap { position:absolute; top:calc(8px + env(safe-area-inset-top)); left:50%; transform:translateX(-50%);
-    width:min(46vw,380px); display:none; text-align:center; }
+    width:min(40vw,340px); display:none; text-align:center; }
   #boss-name { font-size:11px; letter-spacing:2px; color:#ff9d9d; margin-bottom:3px; text-shadow:0 0 8px #f00; }
   #boss-bar-outer { height:14px; border:2px solid #4a2020; border-radius:7px; background:#100808; overflow:hidden; }
   #boss-bar { height:100%; width:100%; background:linear-gradient(180deg,#ff5252,#a00); transition:width .2s; }
@@ -86,21 +86,21 @@
     border-radius:8px; padding:1px 6px; font-weight:bold; }
   .potion.cd { opacity:.4; }
 
-  /* Bottom-right: skill cluster */
-  #skills { position:absolute; right:16px; bottom:calc(24px + env(safe-area-inset-bottom)); width:196px; height:196px; }
+  /* Bottom-right: skill cluster — laid out on a grid so no buttons overlap */
+  #skills { position:absolute; right:16px; bottom:calc(24px + env(safe-area-inset-bottom)); width:216px; height:210px; }
   .skill-btn { position:absolute; border-radius:50%; background:rgba(18,18,30,.88); border:2px solid #444;
     display:flex; align-items:center; justify-content:center; font-weight:bold; color:#fff; overflow:hidden; }
   .skill-btn .key { font-size:13px; z-index:2; text-shadow:0 1px 3px #000; }
   .skill-btn .cd-overlay { position:absolute; left:0; bottom:0; width:100%; background:rgba(0,0,0,.72); z-index:1; }
   .skill-btn .cd-text { position:absolute; z-index:2; font-size:16px; color:#fff; text-shadow:0 1px 3px #000; display:none; }
-  #btn-attack { width:76px; height:76px; right:0; bottom:44px; border-color:#888; font-size:22px; }
-  #btn-skill1 { width:60px; height:60px; right:88px; bottom:96px; }
-  #btn-skill2 { width:60px; height:60px; right:20px; bottom:128px; }
-  #btn-ult { width:68px; height:68px; right:96px; bottom:8px; border-color:#c93; }
-  #btn-dash { width:54px; height:54px; right:130px; bottom:150px; border-color:#4af; font-size:18px; }
-  #btn-lock { width:48px; height:48px; right:176px; bottom:60px; border-color:#666; font-size:18px; }
+  #btn-attack { width:76px; height:76px; right:0; bottom:40px; border-color:#888; font-size:22px; }
+  #btn-skill1 { width:60px; height:60px; right:86px; bottom:88px; }
+  #btn-skill2 { width:60px; height:60px; right:10px; bottom:124px; }
+  #btn-ult { width:68px; height:68px; right:86px; bottom:8px; border-color:#c93; }
+  #btn-dash { width:52px; height:52px; right:160px; bottom:100px; border-color:#4af; font-size:18px; }
+  #btn-lock { width:44px; height:44px; right:164px; bottom:40px; border-color:#666; font-size:18px; }
   #btn-lock.locked { border-color:#ff5252; box-shadow:0 0 10px #f33; }
-  #btn-interact { width:48px; height:48px; right:176px; bottom:120px; border-color:#6c6; font-size:18px; display:none; }
+  #btn-interact { width:44px; height:44px; right:164px; bottom:160px; border-color:#6c6; font-size:18px; display:none; }
 
   /* Player status (above joystick area) */
   #player-status { position:absolute; left:18px; bottom:calc(230px + env(safe-area-inset-bottom)); width:170px; }
