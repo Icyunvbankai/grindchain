@@ -32,7 +32,8 @@
   .hero-btn { flex:1; background:#14141f; color:#ccc; border:1px solid #444; border-radius:8px;
     padding:8px 4px; font-size:10px; letter-spacing:1px; cursor:pointer; font-family:inherit; }
   .hero-btn span { color:#888; font-size:9px; }
-  .hero-btn.sel { border-color:#ff6b6b; color:#fff; box-shadow:0 0 8px rgba(255,60,60,.4); }
+  .hero-btn.sel { border-color:#ff6b6b; color:#fff; background:#2a1214;
+    box-shadow:0 0 12px rgba(255,60,60,.65), inset 0 0 8px rgba(255,60,60,.25); }
 
   /* ---------- HUD ---------- */
   #hud { position:absolute; inset:0; z-index:10; pointer-events:none; display:none; }
@@ -1303,10 +1304,10 @@ function drawMinimap() {
     const ax = ox + a.x * k, ay = oy + a.y * k;
     if (a.alive) {
       dot(a.x, a.y, '#7dff8a', 3);
-      const frac = clamp(a.hp / a.maxhp, 0, 1), bw = 16;
-      mmc.fillStyle = 'rgba(0,0,0,0.7)'; mmc.fillRect(ax - bw / 2, ay + 5, bw, 3.5);
+      const frac = clamp(a.hp / a.maxhp, 0, 1), bw = 26, bh = 5.5;
+      mmc.fillStyle = 'rgba(0,0,0,0.85)'; mmc.fillRect(ax - bw / 2 - 1, ay + 6, bw + 2, bh + 2);
       mmc.fillStyle = frac > 0.6 ? '#7dff8a' : frac > 0.3 ? '#ffd75e' : '#ff5252';
-      mmc.fillRect(ax - bw / 2, ay + 5, bw * frac, 3.5);
+      mmc.fillRect(ax - bw / 2, ay + 7, bw * frac, bh);
     } else {
       const pr = 4 + Math.sin(G.time * 6) * 1.6;
       mmc.strokeStyle = '#ff5252'; mmc.lineWidth = 2;
