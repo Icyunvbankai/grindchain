@@ -441,10 +441,10 @@ let player = null, allies = [];
 
 // ---------- camera ----------
 const cam = { x: 0, y: 0 };
+const CAM_Z = 0.85; // zoomed out a bit; player stays dead-center
 function updateCamera() {
-  const tx = clamp(player.x - W/2, 0, ARENA.w - W);
-  const ty = clamp(player.y - H/2, 0, ARENA.h - H);
-  cam.x += (tx - cam.x) * 0.12; cam.y += (ty - cam.y) * 0.12;
+  const tx = player.x - (W / CAM_Z) / 2, ty = player.y - (H / CAM_Z) / 2;
+  cam.x += (tx - cam.x) * 0.15; cam.y += (ty - cam.y) * 0.15;
 }
 
 // ---------- input: joystick ----------
@@ -503,8 +503,8 @@ let mmZoom = 1, pings = [];
 function pingAt(e) {
   const r = mm.getBoundingClientRect();
   const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-  const wx = (px - 0.5) * ARENA.w * mmZoom + cam.x + W/2 - ARENA.w/2 + ARENA.w/2;
-  pings.push({ x: clamp(wx, 0, ARENA.w), y: clamp((py - 0.5) * ARENA.h * mmZoom + cam.y + H/2, 0, ARENA.h), t: 3 });
+  const wx = (px - 0.5) * ARENA.w * mmZoom + cam.x + W / (2 * CAM_Z) - ARENA.w/2 + ARENA.w/2;
+  pings.push({ x: clamp(wx, 0, ARENA.w), y: clamp((py - 0.5) * ARENA.h * mmZoom + cam.y + H / (2 * CAM_Z), 0, ARENA.h), t: 3 });
   toast('PING');
 }
 // keyboard (desktop testing)
@@ -1152,11 +1152,11 @@ function render() {
   if (G.shake > 0) { ctx.translate(rand(-G.shake, G.shake), rand(-G.shake, G.shake)); G.shake *= 0.88; if (G.shake < 0.4) G.shake = 0; }
   // floor
   ctx.fillStyle = '#0b0b13'; ctx.fillRect(0, 0, W, H);
-  ctx.save(); ctx.translate(-cam.x, -cam.y);
+  ctx.save(); ctx.translate(-cam.x * CAM_Z, -cam.y * CAM_Z); ctx.scale(CAM_Z, CAM_Z);
   if (FLOOR_IMG.complete && FLOOR_IMG.naturalWidth) {
     const ts = 320;
-    for (let ty = Math.max(0, Math.floor(cam.y / ts) * ts), ry = Math.round(Math.max(0, Math.floor(cam.y / ts) * ts) / ts); ty < Math.min(ARENA.h, cam.y + H + ts); ty += ts, ry++)
-      for (let tx = Math.max(0, Math.floor(cam.x / ts) * ts), rx = Math.round(Math.max(0, Math.floor(cam.x / ts) * ts) / ts); tx < Math.min(ARENA.w, cam.x + W + ts); tx += ts, rx++) {
+    for (let ty = Math.max(0, Math.floor(cam.y / ts) * ts), ry = Math.round(Math.max(0, Math.floor(cam.y / ts) * ts) / ts); ty < Math.min(ARENA.h, cam.y + H / CAM_Z + ts); ty += ts, ry++)
+      for (let tx = Math.max(0, Math.floor(cam.x / ts) * ts), rx = Math.round(Math.max(0, Math.floor(cam.x / ts) * ts) / ts); tx < Math.min(ARENA.w, cam.x + W / CAM_Z + ts); tx += ts, rx++) {
         ctx.save(); ctx.translate(tx + ts/2, ty + ts/2);
         ctx.scale(rx % 2 ? -1 : 1, ry % 2 ? -1 : 1);
         ctx.drawImage(FLOOR_IMG, -ts/2, -ts/2, ts, ts);
@@ -1298,7 +1298,7 @@ function drawMinimap() {
   const s = 256, k = s / ARENA.w / mmZoom;
   mmc.clearRect(0, 0, s, s);
   mmc.fillStyle = '#0a0a12'; mmc.fillRect(0, 0, s, s);
-  const ox = s/2 - (cam.x + W/2) * k, oy = s/2 - (cam.y + H/2) * k;
+  const ox = s/2 - (cam.x + W / (2 * CAM_Z)) * k, oy = s/2 - (cam.y + H / (2 * CAM_Z)) * k;
   mmc.strokeStyle = '#2a2a3a'; mmc.strokeRect(ox, oy, ARENA.w * k, ARENA.h * k);
   const dot = (x, y, c, r) => { mmc.fillStyle = c; mmc.beginPath(); mmc.arc(ox + x * k, oy + y * k, r, 0, TAU); mmc.fill(); };
   for (const c of chests) if (!c.opened) dot(c.x, c.y, '#ffd75e', 3);
@@ -1307,7 +1307,7 @@ function drawMinimap() {
     const ax = ox + a.x * k, ay = oy + a.y * k;
     if (a.alive) {
       dot(a.x, a.y, '#7dff8a', 3);
-      const frac = clamp(a.hp / a.maxhp, 0, 1), bw = 26, bh = 5.5;
+      const frac = clamp(a.hp / a.maxhp, 0, 1), bw = 20, bh = 4;
       mmc.fillStyle = 'rgba(0,0,0,0.85)'; mmc.fillRect(ax - bw / 2 - 1, ay + 6, bw + 2, bh + 2);
       mmc.fillStyle = frac > 0.6 ? '#7dff8a' : frac > 0.3 ? '#ffd75e' : '#ff5252';
       mmc.fillRect(ax - bw / 2, ay + 7, bw * frac, bh);
