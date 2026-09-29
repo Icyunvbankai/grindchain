@@ -73,14 +73,16 @@
   #sys-btns button { background:rgba(20,20,30,.9); color:#aaa; border:1px solid #333; border-radius:8px;
     width:38px; height:32px; font-size:15px; }
 
-  /* Bottom-left: joystick + potions */
-  #joystick-zone { position:absolute; left:18px; bottom:calc(24px + env(safe-area-inset-bottom)); width:130px; height:130px; }
+  /* Bottom-left: joystick only (big thumb stick, MOBA-style) */
+  #joystick-zone { position:absolute; left:18px; bottom:calc(24px + env(safe-area-inset-bottom)); width:144px; height:144px; }
   #joystick-base { position:absolute; inset:0; border-radius:50%; background:rgba(30,30,45,.35);
     border:2px solid rgba(120,120,160,.35); }
   #joystick-knob { position:absolute; left:50%; top:50%; width:56px; height:56px; border-radius:50%;
     background:radial-gradient(circle at 35% 35%, #5a5a7a, #2a2a3a); border:2px solid rgba(160,160,200,.5);
     transform:translate(-50%,-50%); }
-  #potions { position:absolute; left:18px; bottom:calc(166px + env(safe-area-inset-bottom)); display:flex; gap:10px; }
+  /* Bottom-center: potion row (utility strip, MOBA-style) */
+  #potions { position:absolute; left:50%; transform:translateX(-50%);
+    bottom:calc(20px + env(safe-area-inset-bottom)); display:flex; gap:10px; }
   .potion { width:52px; height:52px; border-radius:12px; background:rgba(20,12,12,.85); border:2px solid #633;
     display:flex; align-items:center; justify-content:center; font-size:22px; position:relative; }
   .potion .count { position:absolute; bottom:-6px; right:-6px; background:#c33; color:#fff; font-size:11px;
@@ -103,8 +105,9 @@
   #btn-lock.locked { border-color:#ff5252; box-shadow:0 0 10px #f33; }
   #btn-interact { width:44px; height:44px; right:164px; bottom:160px; border-color:#6c6; font-size:18px; display:none; }
 
-  /* Player status (above joystick area) */
-  #player-status { position:absolute; left:18px; bottom:calc(230px + env(safe-area-inset-bottom)); width:170px; }
+  /* Player status (bottom-center, above the potion strip) */
+  #player-status { position:absolute; left:50%; transform:translateX(-50%);
+    bottom:calc(92px + env(safe-area-inset-bottom)); width:170px; }
   #ps-hp-outer { height:12px; background:#1a0f0f; border:1px solid #533; border-radius:6px; overflow:hidden; }
   #ps-hp { height:100%; width:100%; background:linear-gradient(180deg,#7dff8a,#2a5); transition:width .12s; }
   #ps-en-outer { height:6px; background:#0f1420; border-radius:3px; overflow:hidden; margin-top:3px; }
