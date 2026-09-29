@@ -1108,10 +1108,32 @@ function drawSpriteFighter(p) {
   ctx.fillStyle = 'rgba(0,0,0,.4)';
   ctx.beginPath(); ctx.ellipse(p.x, p.y + p.r * 1.1, p.r * 1.1, p.r * 0.4, 0, 0, TAU); ctx.fill();
   const h = p.r * 5.2, w = h * (img.naturalWidth || 112) / (img.naturalHeight || 160);
+  // --- procedural animation juice ---
+  let ox = 0, oy = 0, rot = 0, sc = 1;
+  const attacking = p.atkAnimT > 0, hurting = p.hurtT > 0;
+  if (p.moving && !attacking && !hurting) {
+    const wt = p.animT * 11;                 // walk bob + sway sells the 2-frame cycle
+    oy = -Math.abs(Math.sin(wt)) * 3;
+    rot = Math.sin(wt) * 0.035;
+  } else if (!attacking && !hurting) {
+    sc = 1 + Math.sin(p.animT * 3) * 0.018;  // idle breathing
+  }
+  if (attacking) {                           // lunge toward facing + pop
+    const k = clamp(p.atkAnimT / 0.35, 0, 1);
+    ox = Math.cos(p.face) * 10 * k; oy = Math.sin(p.face) * 10 * k - 2 * k;
+    sc = 1 + 0.07 * k;
+  }
+  if (hurting) sc = 1 - 0.06 * clamp(p.hurtT / 0.4, 0, 1); // squash on hit
   ctx.save();
-  ctx.translate(p.x, p.y - p.r * 0.6);
+  ctx.translate(p.x + ox, p.y - p.r * 0.6 + oy);
   if (Math.cos(p.face) < 0) ctx.scale(-1, 1);
+  ctx.rotate(rot);
+  ctx.scale(sc, sc);
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+  if (hurting) ctx.filter = 'brightness(2.2)'; // white hit-flash
   if (img.complete && img.naturalWidth) ctx.drawImage(img, -w/2, -h/2, w, h);
+  ctx.filter = 'none';
+  ctx.imageSmoothingEnabled = false;
   ctx.restore();
   if (p.stun > 0) { ctx.fillStyle = '#ffe14d'; ctx.font = '16px sans-serif'; ctx.textAlign = 'center'; ctx.fillText('💫', p.x, p.y - p.r * 2.6); }
   const bw = p.r * 2.4;
@@ -1251,7 +1273,9 @@ function render() {
     const fi = Math.min(set.length - 1, Math.floor(f.t / f.dur * set.length));
     const img = set[fi], s = (f.kind === 'burst' ? 120 : 150) * f.size;
     ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(f.rot || 0);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
     if (img.complete && img.naturalWidth) ctx.drawImage(img, -s/2, -s/2, s, s);
+    ctx.imageSmoothingEnabled = false;
     ctx.restore();
   }
   // ult telegraph ring (world space)
