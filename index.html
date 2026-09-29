@@ -1338,6 +1338,7 @@ function render() {
     const fi = Math.min(set.length - 1, Math.floor(f.t / f.dur * set.length));
     const img = set[fi], s = (f.kind === 'burst' ? 120 : 150) * f.size;
     ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(f.rot || 0);
+    if (f.kind === 'slash') ctx.scale(-1, 1); // mirror the arc — it was curving the wrong way
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
     if (img.complete && img.naturalWidth) ctx.drawImage(img, -s/2, -s/2, s, s);
     ctx.imageSmoothingEnabled = false;
