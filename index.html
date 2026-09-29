@@ -94,6 +94,9 @@
   .skill-btn { position:absolute; border-radius:50%; background:rgba(18,18,30,.88); border:2px solid #444;
     display:flex; align-items:center; justify-content:center; font-weight:bold; color:#fff; overflow:hidden; }
   .skill-btn .key { font-size:13px; z-index:2; text-shadow:0 1px 3px #000; }
+  .skill-btn .skill-icon { position:absolute; inset:0; width:100%; height:100%; border-radius:50%; object-fit:cover; }
+  #btn-skill1 .key, #btn-skill2 .key, #btn-ult .key { position:absolute; right:2px; bottom:2px; font-size:9px;
+    background:rgba(0,0,0,.7); border-radius:6px; padding:1px 5px; }
   .skill-btn .cd-overlay { position:absolute; left:0; bottom:0; width:100%; background:rgba(0,0,0,.72); z-index:1; }
   .skill-btn .cd-text { position:absolute; z-index:2; font-size:16px; color:#fff; text-shadow:0 1px 3px #000; display:none; }
   #btn-attack { width:76px; height:76px; right:0; bottom:40px; border-color:#888; font-size:22px; }
@@ -199,9 +202,9 @@
     </div>
     <div id="skills" class="hud-panel">
       <div class="skill-btn" id="btn-attack"><span class="key">⚔️</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
-      <div class="skill-btn" id="btn-skill1"><span class="key">1</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
-      <div class="skill-btn" id="btn-skill2"><span class="key">2</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
-      <div class="skill-btn" id="btn-ult"><span class="key">ULT</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
+      <div class="skill-btn" id="btn-skill1"><img class="skill-icon" id="icon-skill1" alt="Skill 1"><span class="key">1</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
+      <div class="skill-btn" id="btn-skill2"><img class="skill-icon" id="icon-skill2" alt="Skill 2"><span class="key">2</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
+      <div class="skill-btn" id="btn-ult"><img class="skill-icon" id="icon-ult" alt="Ultimate"><span class="key">ULT</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
       <div class="skill-btn" id="btn-dash"><span class="key">💨</span><div class="cd-overlay"></div><div class="cd-text"></div></div>
       <div class="skill-btn" id="btn-lock"><span class="key">🎯</span></div>
       <div class="skill-btn" id="btn-interact"><span class="key">✋</span></div>
@@ -1445,9 +1448,17 @@ function startGame(faction) {
   allies = [makeAlly(1, allyFactions[0], 'ALLY-1'), makeAlly(2, allyFactions[1], 'ALLY-2')];
   document.getElementById('pn1').textContent = 'ALLY-1 ' + allyFactions[0].toUpperCase();
   document.getElementById('pn2').textContent = 'ALLY-2 ' + allyFactions[1].toUpperCase();
-  // tint skill buttons to faction
+  // tint skill buttons to faction + swap in that faction's skill icons
   const col = FACTIONS[faction].color;
   ['btn-skill1', 'btn-skill2', 'btn-ult'].forEach(id => document.getElementById(id).style.borderColor = col);
+  const SKILL_ICONS = {
+    red:   { s1: 'icons/plasma-burst.webp',  s2: 'icons/overdrive.webp',     ult: 'icons/orbital-strike.webp' },
+    blue:  { s1: 'icons/arcane-bolt.webp',   s2: 'icons/frost-nova.webp',    ult: 'icons/meteor.webp' },
+    purple:{ s1: 'icons/phase-blades.webp',  s2: 'icons/blink.webp',         ult: 'icons/singularity.webp' },
+  }[faction];
+  document.getElementById('icon-skill1').src = SKILL_ICONS.s1;
+  document.getElementById('icon-skill2').src = SKILL_ICONS.s2;
+  document.getElementById('icon-ult').src = SKILL_ICONS.ult;
   updatePotionUI(); updateObjective();
   G.running = true; G.waveState = 'waves';
   spawnWave(1);
