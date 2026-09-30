@@ -1161,7 +1161,7 @@ function startBoss() {
   e.isBoss = true; e.name = 'DREAD WARDEN';
   e.hp = e.maxhp = 900 + G.kills * 4; e.r = 34; e.speed = 95; e.atk = 22;
   e.resist = { tech: 0.5, magic: 0.1, hybrid: 0.3 }; // phase 1: tech-resistant
-  e.phase = 1; e.sprite = 'dreadwarden'; e.r = 46;
+  e.phase = 1; e.sprite = 'spore_knight'; e.r = 46;
   G.boss = e;
   document.getElementById('boss-bar-wrap').style.display = 'block';
   document.getElementById('boss-name').textContent = 'DREAD WARDEN';
@@ -1587,7 +1587,7 @@ function render() {
   for (const f of G.fx) {
     const set = SPRITES[f.kind];
     if (!set || !set.length) continue; // a missing fx sprite set must never kill the render loop
-    const fi = Math.min(set.length - 1, Math.floor(f.t / f.dur * set.length));
+    const fi = Math.max(0, Math.min(set.length - 1, Math.floor(f.t / f.dur * set.length)));
     const img = set[fi], s = (f.kind === 'burst' ? 120 : 150) * f.size;
     ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(f.rot || 0);
     ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
