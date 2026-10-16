@@ -1446,6 +1446,28 @@ const SPRITE_SRC = {
 "assets/sprites/proj-specter/frame-04.webp",
 "assets/sprites/proj-specter/frame-05.webp",
   ],
+
+  // arena (2026-10-16): Photoshop-Team-cleaned Arena assets. Single-frame
+  // entries (frame-00 only); animated sets cycle via SPRITE_ANIM as usual.
+  arena_hit_spark: ["assets/sprites/arena_hit_spark/frame-00.webp"],
+  arena_plasma_blast: ["assets/sprites/arena_plasma_blast/frame-00.webp"],
+  arena_arcane_burst: ["assets/sprites/arena_arcane_burst/frame-00.webp"],
+  arena_slime: ["assets/sprites/arena_slime/frame-00.webp"],
+  arena_skeleton: ["assets/sprites/arena_skeleton/frame-00.webp"],
+  arena_dread_warden: ["assets/sprites/arena_dread_warden/frame-00.webp"],
+  arena_potion: ["assets/sprites/arena_potion/frame-00.webp"],
+  arena_energy_bolt: ["assets/sprites/arena_energy_bolt/frame-00.webp"],
+  arena_gold_coin: ["assets/sprites/arena_gold_coin/frame-00.webp"],
+  arena_gem: ["assets/sprites/arena_gem/frame-00.webp"],
+  arena_ticket: ["assets/sprites/arena_ticket/frame-00.webp"],
+  arena_sword: ["assets/sprites/arena_sword/frame-00.webp"],
+  arena_staff: ["assets/sprites/arena_staff/frame-00.webp"],
+  arena_dagger: ["assets/sprites/arena_dagger/frame-00.webp"],
+  arena_hammer: ["assets/sprites/arena_hammer/frame-00.webp"],
+  arena_crown: ["assets/sprites/arena_crown/frame-00.webp"],
+  arena_armor: ["assets/sprites/arena_armor/frame-00.webp"],
+  arena_shield: ["assets/sprites/arena_shield/frame-00.webp"],
+  arena_forge_backdrop: ["assets/sprites/arena_forge_backdrop/frame-00.jpg"],
 };
 const SPRITES = {};
 // Phase 3: sprites start as placeholder Images (naturalWidth 0) so every
@@ -1750,6 +1772,7 @@ function damageEnemy(e, dmg, dtype, from) {
     }
     e.hurtT = 0.35;
     spawnFx(e.x, e.y, 'burst', { size: 2.2 });
+    spawnFx(e.x, e.y, 'arena_plasma_blast', { size: 1.4, dur: 0.4 }); // arena: additive boss-hit blast
     if (from && from.isPlayer && from.faction === 'purple' && from.alive) from.hp = Math.min(from.maxhp, from.hp + dealt * 0.06);
     if (e.hp <= 0 && e.alive) killEnemy(e);
     return;
@@ -1786,6 +1809,7 @@ function damageEnemy(e, dmg, dtype, from) {
   addParticles(e.x, e.y, e.color || '#f66', 4);
   e.hurtT = 0.35;
   spawnFx(e.x, e.y, 'burst', { size: e.isBoss ? 2.2 : e.elite ? 1.5 : 1 });
+  spawnFx(e.x, e.y, 'arena_hit_spark', { size: 0.8, dur: 0.3 }); // arena: additive hit spark
   if (from && heroCls(from.sprite) === 'mage') applyMageCc(e);
   if (from && from.isPlayer && from.faction === 'purple' && from.alive) {
     from.hp = Math.min(from.maxhp, from.hp + dealt * 0.06); // purple lifesteal
@@ -1821,6 +1845,7 @@ function damagePlayer(p, dmg, effect, source) {
 }
 function killEnemy(e) {
   e.alive = false; G.slain++; G.kills++; e.deathAnimT = 0; // hooks: reserved — enemies have no death frames, so no render path consumes this
+  spawnFx(e.x, e.y, 'arena_arcane_burst', { size: 1.0, dur: 0.4 }); // arena: additive kill burst
   // Combo counter (spec §2–§5): party-wide, run-scoped. Combo at kill
   // time is the POST-increment value — the kill that reaches ×5 earns +1.
   G.combo = (G.combo || 0) + 1;
@@ -2114,11 +2139,14 @@ const ETYPES = {
   shield_drone:   { hp: 110, speed: 70, r: 18, atk: 14, color: '#64748b', score: 2, tanky: true },
   spore_knight:   { hp: 130, speed: 65, r: 20, atk: 17, color: '#65a30d', score: 2, tanky: true, stuns: true },
   crystal_spider: { hp: 160, speed: 75, r: 22, atk: 20, color: '#22d3ee', score: 3, tanky: true, stuns: true },
+  // arena (2026-10-16): reskins — stats cloned from lava_imp / void_hound, no new AI, no balance change
+  arena_slime:    { hp: 26, speed: 165, r: 11, atk: 7,  color: '#4ade80', score: 1 },
+  arena_skeleton: { hp: 34, speed: 175, r: 13, atk: 9,  color: '#e7e5e4', score: 1 },
 };
 // weighted spawn pool — crystal_spider only joins from wave 3
 const EPOOL = ['lava_imp','lava_imp','void_hound','void_hound','twin_rat','twin_rat',
   'skeleton_archer','skeleton_archer','void_orb','void_eye',
-  'shield_drone','spore_knight'];
+  'shield_drone','spore_knight','arena_slime','arena_skeleton'];
 function spawnEnemy(type, x, y, elite) {
   const T = ETYPES[type];
   // Phase 3 integration: monster stats from Gameplay.monsterStats (tier-scaled,
@@ -2191,7 +2219,7 @@ function startBoss() {
     e.resist = { tech: 0.5, magic: 0.1, hybrid: 0.3 };
     e.phase = 1; e.shield = 0; e.shieldMax = 200; e.shieldType = 'aegis';
   }
-  e.r = 34; e.speed = 95; e.sprite = 'spore_knight'; e.r = 46;
+  e.r = 34; e.speed = 95; e.sprite = _tier >= 3 ? 'arena_dread_warden' : 'spore_knight'; e.r = 46; // arena: T3/T4 boss IS the Dread Warden — cleaned art
   G.boss = e;
   document.getElementById('boss-bar-wrap').style.display = 'block';
   document.getElementById('boss-name').textContent = e.name;
@@ -2510,6 +2538,10 @@ const SPRITE_ANIM = {
   rampart: { idle: [0, 7, 4], walk: [8, 17, 10], attack: [18, 29, 12], hurt: [30, 35, 15], death: [36, 43, 8], skill: [44, 53, 10] },
   dusk: { idle: [0, 7, 4], walk: [8, 17, 10], attack: [18, 29, 12], hurt: [30, 35, 15], death: [36, 43, 8], skill: [44, 53, 10] },
   specter: { idle: [0, 7, 4], walk: [8, 17, 10], attack: [18, 29, 12], hurt: [30, 35, 15], death: [36, 43, 8], skill: [44, 53, 10] },
+  // arena (2026-10-16): single static pose — all ranges [0,0], existing bob/sway juice applies
+  arena_slime: { idle: [0, 0, 4], walk: [0, 0, 7], attack: [0, 0, 12], hurt: [0, 0, 15] },
+  arena_skeleton: { idle: [0, 0, 4], walk: [0, 0, 7], attack: [0, 0, 12], hurt: [0, 0, 15] },
+  arena_dread_warden: { idle: [0, 0, 4], walk: [0, 0, 7], attack: [0, 0, 12], hurt: [0, 0, 15] },
 };
 function drawSpriteFighter(p) {
   const F = SPRITES[p.sprite] || SPRITES.bastion;
@@ -2673,10 +2705,16 @@ function render() {
       ctx.drawImage(pi, pr2.x - pw/2, pr2.y - ph/2, pw, ph);
     }
   }
-  // pickups
+  // pickups — arena icons with emoji fallback (visual only; kinds/timers unchanged)
   for (const pk of G.pickups) {
-    ctx.font = '18px sans-serif'; ctx.textAlign = 'center';
-    ctx.fillText(pk.kind === 'hp' ? '🧪' : '🔷', pk.x, pk.y + 6);
+    const _pkImg = SPRITES[pk.kind === 'hp' ? 'arena_potion' : pk.kind === 'en' ? 'arena_energy_bolt' : '']?.[0];
+    if (_pkImg && _pkImg.complete && _pkImg.naturalWidth) {
+      const _ps = 30, _ar = _pkImg.naturalHeight / (_pkImg.naturalWidth || 1);
+      ctx.drawImage(_pkImg, pk.x - _ps/2, pk.y - _ps*_ar/2, _ps, _ps*_ar);
+    } else {
+      ctx.font = '18px sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText(pk.kind === 'hp' ? '🧪' : '🔷', pk.x, pk.y + 6);
+    }
   }
   // pings
   for (const pg of pings) {

@@ -1,6 +1,6 @@
 {
-  "version": "phase3-1.2.0",
-  "generated": "2026-10-16 (12-hero sprite upgrade + VFX/death/skill hooks)",
+  "version": "phase3-1.3.0",
+  "generated": "2026-10-16 (Arena cleaned assets wired)",
   "sprites": {
     "bastion": {
       "count": 54,
@@ -1448,6 +1448,120 @@
         "assets/sprites/proj-specter/frame-04.webp",
         "assets/sprites/proj-specter/frame-05.webp"
       ]
+    },
+    "arena_hit_spark": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_hit_spark/frame-00.webp"
+      ]
+    },
+    "arena_plasma_blast": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_plasma_blast/frame-00.webp"
+      ]
+    },
+    "arena_arcane_burst": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_arcane_burst/frame-00.webp"
+      ]
+    },
+    "arena_slime": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_slime/frame-00.webp"
+      ]
+    },
+    "arena_skeleton": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_skeleton/frame-00.webp"
+      ]
+    },
+    "arena_dread_warden": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_dread_warden/frame-00.webp"
+      ]
+    },
+    "arena_potion": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_potion/frame-00.webp"
+      ]
+    },
+    "arena_energy_bolt": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_energy_bolt/frame-00.webp"
+      ]
+    },
+    "arena_gold_coin": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_gold_coin/frame-00.webp"
+      ]
+    },
+    "arena_gem": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_gem/frame-00.webp"
+      ]
+    },
+    "arena_ticket": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_ticket/frame-00.webp"
+      ]
+    },
+    "arena_sword": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_sword/frame-00.webp"
+      ]
+    },
+    "arena_staff": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_staff/frame-00.webp"
+      ]
+    },
+    "arena_dagger": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_dagger/frame-00.webp"
+      ]
+    },
+    "arena_hammer": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_hammer/frame-00.webp"
+      ]
+    },
+    "arena_crown": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_crown/frame-00.webp"
+      ]
+    },
+    "arena_armor": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_armor/frame-00.webp"
+      ]
+    },
+    "arena_shield": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_shield/frame-00.webp"
+      ]
+    },
+    "arena_forge_backdrop": {
+      "count": 1,
+      "files": [
+        "assets/sprites/arena_forge_backdrop/frame-00.jpg"
+      ]
     }
   },
   "env": {
@@ -1536,8 +1650,8 @@
     "assets/icon-192.png",
     "assets/icon-512.png"
   ],
-  "totalFiles": 1233,
-  "totalBytes": 11534063,
+  "totalFiles": 1252,
+  "totalBytes": 12155426,
   "files": [
     {
       "path": "assets/env/blue/accent-0.webp",
@@ -6470,6 +6584,82 @@
     {
       "path": "assets/sprites/proj-specter/frame-05.webp",
       "bytes": 776
+    },
+    {
+      "path": "assets/sprites/arena_hit_spark/frame-00.webp",
+      "bytes": 13300
+    },
+    {
+      "path": "assets/sprites/arena_plasma_blast/frame-00.webp",
+      "bytes": 6576
+    },
+    {
+      "path": "assets/sprites/arena_arcane_burst/frame-00.webp",
+      "bytes": 13076
+    },
+    {
+      "path": "assets/sprites/arena_slime/frame-00.webp",
+      "bytes": 7670
+    },
+    {
+      "path": "assets/sprites/arena_skeleton/frame-00.webp",
+      "bytes": 9532
+    },
+    {
+      "path": "assets/sprites/arena_dread_warden/frame-00.webp",
+      "bytes": 23000
+    },
+    {
+      "path": "assets/sprites/arena_potion/frame-00.webp",
+      "bytes": 8040
+    },
+    {
+      "path": "assets/sprites/arena_energy_bolt/frame-00.webp",
+      "bytes": 9520
+    },
+    {
+      "path": "assets/sprites/arena_gold_coin/frame-00.webp",
+      "bytes": 15616
+    },
+    {
+      "path": "assets/sprites/arena_gem/frame-00.webp",
+      "bytes": 10986
+    },
+    {
+      "path": "assets/sprites/arena_ticket/frame-00.webp",
+      "bytes": 14776
+    },
+    {
+      "path": "assets/sprites/arena_sword/frame-00.webp",
+      "bytes": 7006
+    },
+    {
+      "path": "assets/sprites/arena_staff/frame-00.webp",
+      "bytes": 7734
+    },
+    {
+      "path": "assets/sprites/arena_dagger/frame-00.webp",
+      "bytes": 13198
+    },
+    {
+      "path": "assets/sprites/arena_hammer/frame-00.webp",
+      "bytes": 16420
+    },
+    {
+      "path": "assets/sprites/arena_crown/frame-00.webp",
+      "bytes": 15926
+    },
+    {
+      "path": "assets/sprites/arena_armor/frame-00.webp",
+      "bytes": 12374
+    },
+    {
+      "path": "assets/sprites/arena_shield/frame-00.webp",
+      "bytes": 11546
+    },
+    {
+      "path": "assets/sprites/arena_forge_backdrop/frame-00.jpg",
+      "bytes": 405067
     }
   ]
 }

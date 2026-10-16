@@ -193,7 +193,8 @@
     crystal_spider:'fighter', lava_imp:'fighter',
     void_hound:'assassin', twin_rat:'assassin',
     skeleton_archer:'marksman',
-    void_orb:'mage', void_eye:'mage'
+    void_orb:'mage', void_eye:'mage',
+    arena_slime:'fighter', arena_skeleton:'assassin'
   };
 
   /* ---------- stacking rule + caps (Balance 7) ---------- */
@@ -221,7 +222,9 @@
     void_eye: { hp:30, speed:90, r:13, atk:9, ranged:true },
     shield_drone: { hp:110, speed:70, r:18, atk:14, tanky:true },
     spore_knight: { hp:130, speed:65, r:20, atk:17, tanky:true, stuns:true },
-    crystal_spider: { hp:160, speed:75, r:22, atk:20, tanky:true, stuns:true }
+    crystal_spider: { hp:160, speed:75, r:22, atk:20, tanky:true, stuns:true },
+    arena_slime: { hp:26, speed:165, r:11, atk:7 },
+    arena_skeleton: { hp:34, speed:175, r:13, atk:9 }
   };
   var TIER_SCALING = {
     1: { tierHP:1.0, tierATK:1.0, depthHP:0.08, depthATK:0.04 },
