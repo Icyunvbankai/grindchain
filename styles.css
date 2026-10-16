@@ -1,0 +1,263 @@
+
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { width:100%; height:100%; overflow:hidden; background:#050508; touch-action:none;
+    font-family:'Segoe UI',system-ui,sans-serif; color:#e8e8f0; user-select:none; -webkit-user-select:none; }
+  #game-container { position:fixed; inset:0; overflow:hidden; }
+  #game-canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+
+  /* ---------- START SCREEN ---------- */
+  #start-screen { position:absolute; inset:0; z-index:50; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; background:url('assets/sprites/arena_forge_backdrop/frame-00.jpg') center/cover, radial-gradient(ellipse at 50% 30%, #141422 0%, #050508 70%); padding:20px; }
+  #start-screen h1 { font-size:42px; letter-spacing:6px; margin-bottom:6px;
+    background:linear-gradient(180deg,#fff,#888); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  #start-screen p.sub { color:#8888aa; margin-bottom:28px; font-size:14px; letter-spacing:2px; }
+  .faction-cards { display:flex; gap:14px; width:100%; max-width:520px; }
+  .faction-card { flex:1; border:2px solid #333; border-radius:12px; padding:18px 10px; text-align:center;
+    cursor:pointer; background:#0c0c14; transition:transform .12s; }
+  .faction-card:active { transform:scale(.96); }
+  .faction-card h3 { font-size:16px; margin-bottom:8px; letter-spacing:1px; }
+  .faction-card p { font-size:11px; color:#999; line-height:1.5; }
+  .faction-card .dot { width:34px; height:34px; border-radius:50%; margin:0 auto 10px; }
+  #faction-red .dot { background:radial-gradient(circle,#ff6b6b,#a00); box-shadow:0 0 18px #f00; }
+  #faction-blue .dot { background:radial-gradient(circle,#6bb8ff,#0055aa); box-shadow:0 0 18px #06f; }
+  #faction-purple .dot { background:radial-gradient(circle,#c77dff,#5a189a); box-shadow:0 0 18px #a0f; }
+  #faction-red { border-color:#a33; } #faction-blue { border-color:#36c; } #faction-purple { border-color:#93c; }
+  .hero-pick { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
+  .hero-btn { min-width:60px; font-size:11px; padding:6px 2px; }
+  .hero-btn { flex:1; background:#14141f; color:#ccc; border:1px solid #444; border-radius:8px;
+    padding:8px 4px; font-size:10px; letter-spacing:1px; cursor:pointer; font-family:inherit; }
+  .hero-btn span { color:#888; font-size:9px; }
+  .hero-btn.sel { border-color:#ff6b6b; color:#fff; background:#2a1214;
+    box-shadow:0 0 12px rgba(255,60,60,.65), inset 0 0 8px rgba(255,60,60,.25); }
+
+  /* ---------- HUD ---------- */
+  #hud { position:absolute; inset:0; z-index:10; pointer-events:none; display:none; }
+  #hud.on { display:block; }
+  .hud-panel { pointer-events:auto; }
+
+  /* Top-left: minimap */
+  #minimap-wrap { position:absolute; top:calc(8px + env(safe-area-inset-top)); left:calc(8px + env(safe-area-inset-left)); width:128px; }
+  #minimap { width:128px; height:128px; border:2px solid #2a2a3a; border-radius:10px;
+    background:#0a0a12; box-shadow:0 0 0 1px #000, 0 0 12px rgba(0,0,0,.8); }
+  #minimap-zoom { display:flex; gap:6px; margin-top:4px; }
+  #minimap-zoom button { flex:1; background:#14141f; color:#aaa; border:1px solid #333; border-radius:6px;
+    font-size:16px; padding:2px 0; }
+  #minimap-wrap.expanded #minimap { width:70vw; height:70vw; max-width:340px; max-height:340px; }
+
+  /* Top-center: boss bar (Phase 4 rec-fix P4-BUG-01: shifted below the new top
+     strip so the strip + boss bar never share the top band). */
+  #boss-bar-wrap { position:absolute; top:calc(46px + env(safe-area-inset-top)); left:50%; transform:translateX(-50%);
+    width:min(40vw,340px); display:none; text-align:center; }
+  #boss-name { font-size:11px; letter-spacing:2px; color:#ff9d9d; margin-bottom:3px; text-shadow:0 0 8px #f00; }
+  #boss-bar-outer { height:14px; border:2px solid #4a2020; border-radius:7px; background:#100808; overflow:hidden; }
+  #boss-bar { height:100%; width:100%; background:linear-gradient(180deg,#ff5252,#a00); transition:width .2s; }
+  #boss-shield { height:5px; background:linear-gradient(180deg,#9fd8ff,#36c); width:0%; margin-top:2px; border-radius:3px; }
+
+  /* Phase 4 rec-fix P4-BUG-01: party-frames column DROPPED — #party-wrap and
+     .party-frame are gone (Adrian: "Drop the party column"). The surviving
+     HUD items live in a slim top strip: right-aligned, one row tall, above
+     the skill cluster (skills top out at bottom:160px + 44px height, so a
+     ~34px strip at top:8px clears them at every landscape height >= 360px).
+     Container is pointer-events:none (plaques must not block canvas taps);
+     the two sys buttons keep pointer-events:auto (P4-BUG-02 fix, preserved). */
+  #hud-top-strip { position:absolute; top:calc(8px + env(safe-area-inset-top)); right:calc(8px + env(safe-area-inset-right));
+    display:flex; gap:6px; align-items:center; max-width:calc(100% - 16px); flex-wrap:wrap; justify-content:flex-end; pointer-events:none; }
+  #objective { background:rgba(10,10,18,.85); border:1px solid #2a2a3a; border-radius:8px; padding:6px 8px;
+    font-size:16px; line-height:1.25; color:#ffd75e; white-space:nowrap; }
+  /* D3: live totem count on the Wave 1 HUD — same plaque treatment as #objective. */
+  #totem-count { background:rgba(10,10,18,.85); border:1px solid #2a2a3a; border-radius:8px; padding:6px 8px;
+    font-size:16px; line-height:1.25; color:#ffd75e; white-space:nowrap; }
+  /* Combo meter (spec §6): hidden when combo = 0; Systems toggles .show when
+     combo > 0 and sets #combo-bar width % inline (comboT / COMBO_WINDOW).
+     Positioned absolute against #hud-top-strip (top:100%+4px, left:0) so it
+     sits directly under #objective's left edge WITHOUT shifting #totem-count /
+     #sys-btns or entering the skills/party zones. Not color-only: COMBO label
+     + numerals + timer bar. Plaque treatment matches the #objective reskin. */
+  #combo { display:none; position:absolute; top:calc(100% + 4px); left:0;
+    min-width:150px; background:linear-gradient(180deg,#1e1e29,#0b0b11);
+    border:1px solid #000; box-shadow:0 0 0 1px #4e4e62; border-radius:4px;
+    padding:6px 8px; pointer-events:none; }
+  #combo.show { display:block; }
+  /* FIX 1 (T14(b), hide option): while the boss bar is visible, suppress
+     the meter — it sits at top:46px under the top strip, exactly where the
+     centered boss bar lives (150×46 overlap at 640×360). .boss-active
+     outranks .show (higher specificity: #id.class.class beats #id.class),
+     so the two classes never fight: .show keeps tracking combo > 0, and
+     removing .boss-active restores the normal placement with no position
+     change. display:none means zero rect, hence zero overlap at every
+     viewport/DPR — no shifted position to re-validate. */
+  #combo.show.boss-active { display:none; }
+  #combo-num { font-family:'Cinzel',serif; font-size:16px; line-height:1.25;
+    font-weight:700; letter-spacing:1px; color:#ffd75e; white-space:nowrap; }
+  #combo-bar-wrap { height:6px; background:#0a0a12; border:1px solid #2a2a3a;
+    border-radius:3px; overflow:hidden; margin-top:4px; }
+  #combo-bar { height:100%; width:100%; background:linear-gradient(90deg,#ffd75e,#ff6b6b); }
+  #sys-btns { display:flex; gap:6px; justify-content:flex-end; }
+  #sys-btns button { background:rgba(20,20,30,.9); color:#aaa; border:1px solid #333; border-radius:8px;
+    width:38px; height:32px; font-size:15px; pointer-events:auto; /* P4: #hud is pointer-events:none and the strip is deliberately not .hud-panel (plaques must not block canvas taps) — but these two buttons have click handlers (score toast / pause toggle) and were dead pre-P4-BUG-02. Scope auto to the buttons only, not the container. */ }
+
+  /* Bottom-left: joystick only (big thumb stick, MOBA-style) */
+  #joystick-zone { position:absolute; left:calc(18px + env(safe-area-inset-left)); bottom:calc(24px + env(safe-area-inset-bottom)); width:144px; height:144px; }
+  #joystick-base { position:absolute; inset:0; border-radius:50%; background:rgba(30,30,45,.35);
+    border:2px solid rgba(120,120,160,.35); }
+  #joystick-knob { position:absolute; left:50%; top:50%; width:56px; height:56px; border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #5a5a7a, #2a2a3a); border:2px solid rgba(160,160,200,.5);
+    transform:translate(-50%,-50%); }
+  /* Bottom-center: potion row (utility strip, MOBA-style) */
+  #potions { position:absolute; left:50%; transform:translateX(-50%);
+    bottom:calc(20px + env(safe-area-inset-bottom)); display:flex; gap:10px; }
+  .potion { width:52px; height:52px; border-radius:12px; background:rgba(20,12,12,.85); border:2px solid #633;
+    display:flex; align-items:center; justify-content:center; font-size:22px; position:relative; }
+  .potion .count { position:absolute; bottom:-6px; right:-6px; background:#c33; color:#fff; font-size:11px;
+    border-radius:8px; padding:1px 6px; font-weight:bold; }
+  .potion.cd { opacity:.4; }
+
+  /* Bottom-right: skill cluster — laid out on a grid so no buttons overlap */
+  #skills { position:absolute; right:calc(16px + env(safe-area-inset-right)); bottom:calc(24px + env(safe-area-inset-bottom)); width:216px; height:210px; }
+  .skill-btn { position:absolute; border-radius:50%; background:rgba(18,18,30,.88); border:2px solid #444;
+    display:flex; align-items:center; justify-content:center; font-weight:bold; color:#fff; overflow:hidden; }
+  .skill-btn .key { font-size:13px; z-index:2; text-shadow:0 1px 3px #000; }
+  .skill-btn .skill-icon { position:absolute; inset:0; width:100%; height:100%; border-radius:50%; object-fit:cover; }
+  #btn-skill1 .key, #btn-skill2 .key, #btn-ult .key { position:absolute; right:2px; bottom:2px; font-size:9px;
+    background:rgba(0,0,0,.7); border-radius:6px; padding:1px 5px; }
+  .skill-btn .cd-overlay { position:absolute; left:0; bottom:0; width:100%; background:rgba(0,0,0,.72); z-index:1; }
+  .skill-btn .cd-text { position:absolute; z-index:2; font-size:16px; color:#fff; text-shadow:0 1px 3px #000; display:none; }
+  #btn-attack { width:76px; height:76px; right:0; bottom:40px; border-color:#888; font-size:22px; }
+  #btn-skill1 { width:60px; height:60px; right:86px; bottom:88px; }
+  #btn-skill2 { width:60px; height:60px; right:10px; bottom:124px; }
+  #btn-ult { width:68px; height:68px; right:86px; bottom:8px; border-color:#c93; }
+  #btn-dash { width:52px; height:52px; right:160px; bottom:100px; border-color:#4af; font-size:18px; }
+  #btn-lock { width:44px; height:44px; right:164px; bottom:40px; border-color:#666; font-size:18px; }
+  #btn-lock.locked { border-color:#ff5252; box-shadow:0 0 10px #f33; }
+  /* Phase 4 rec-fix round 2 (D1): at narrow landscape widths the centered
+     potion row extends far enough right that .orb-en overlaps #btn-lock
+     (35×20 at 640×360; the row recenters, so shrinking it alone cannot
+     clear the orb). Lifting the whole skill cluster 32px clears btn-lock
+     vertically (12px gap to the orb) without moving any button relative to
+     another, shrinking any tap target, or touching the top strip / potions
+     row. Width-gated, not height: the x-overlap only exists below ~710px
+     wide, so 844×390+, tablet, and portrait are untouched. */
+  @media (max-width:720px) and (orientation:landscape) {
+    #skills { bottom:calc(56px + env(safe-area-inset-bottom)); }
+  }
+  #btn-interact { width:44px; height:44px; right:164px; bottom:160px; border-color:#6c6; font-size:18px; display:none; }
+
+  /* Player status (bottom-center, above the potion strip) */
+  #player-status { position:absolute; left:50%; transform:translateX(-50%);
+    bottom:calc(92px + env(safe-area-inset-bottom)); width:170px; }
+  #ps-hp-outer { height:12px; background:#1a0f0f; border:1px solid #533; border-radius:6px; overflow:hidden; }
+  #ps-hp { height:100%; width:100%; background:linear-gradient(180deg,#7dff8a,#2a5); transition:width .12s; }
+  #ps-en-outer { height:6px; background:#0f1420; border-radius:3px; overflow:hidden; margin-top:3px; }
+  #ps-en { height:100%; width:100%; background:#4da3ff; }
+  #status-icons { display:flex; gap:5px; margin-top:5px; font-size:15px; }
+
+  /* Damage vignette + messages */
+  #vignette { position:absolute; inset:0; pointer-events:none; z-index:9; opacity:0;
+    background:radial-gradient(ellipse at center, transparent 55%, rgba(200,0,0,.55) 100%); transition:opacity .1s; }
+  #toast { position:absolute; top:22%; width:100%; text-align:center; z-index:20; pointer-events:none;
+    font-size:26px; font-weight:bold; letter-spacing:3px; color:#ffd75e; text-shadow:0 0 16px #f80, 0 2px 4px #000;
+    opacity:0; transition:opacity .3s; }
+  #gameover { position:absolute; inset:0; z-index:60; display:none; flex-direction:column; align-items:center;
+    justify-content:center; background:rgba(5,5,10,.92); }
+  #gameover h2 { font-size:34px; letter-spacing:4px; margin-bottom:10px; }
+  #gameover p { color:#999; margin-bottom:24px; }
+  #gameover button { background:#c33; color:#fff; border:none; border-radius:10px; padding:14px 44px;
+    font-size:17px; font-weight:bold; letter-spacing:2px; }
+#rotate-overlay { position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center;
+  background:#0a0a12; color:#fff; text-align:center; padding:32px; }
+#rotate-overlay .ro-box { max-width:420px; }
+#rotate-overlay .ro-icon { font-size:64px; margin-bottom:16px; animation:ro-spin 1.6s ease-in-out infinite; display:inline-block; }
+#rotate-overlay h2 { margin:0 0 8px; letter-spacing:2px; }
+#rotate-overlay p { color:#aaa; margin:0; }
+@keyframes ro-spin { 0%,100% { transform:rotate(-14deg); } 50% { transform:rotate(14deg); } }
+
+/* ===== DARK FANTASY RESKIN — ornate metal, glowing orbs, beveled slots ===== */
+#potions { align-items:center; }
+.skill-btn {
+  background:radial-gradient(circle at 50% 28%, #3d3d4f 0%, #1c1c27 55%, #0c0c12 100%);
+  box-shadow:0 0 0 1px #000, 0 4px 10px rgba(0,0,0,.85),
+    inset 0 2px 5px rgba(255,255,255,.16), inset 0 -4px 8px rgba(0,0,0,.7);
+}
+.skill-btn .skill-icon { filter:saturate(1.1) contrast(1.05); }
+#btn-lock.locked { box-shadow:0 0 0 1px #000, 0 0 14px #f33, inset 0 2px 5px rgba(255,255,255,.16); }
+/* HP / energy orbs flanking the utility strip */
+.orb { position:relative; width:64px; height:64px; border-radius:50%; overflow:hidden; flex:0 0 auto;
+  border:3px solid #060608; background:#050508;
+  box-shadow:0 0 0 2px #6b6b80, 0 0 0 4px #14141c, 0 6px 14px rgba(0,0,0,.9), inset 0 3px 8px rgba(0,0,0,.8); }
+.orb-liquid { position:absolute; left:0; bottom:0; width:100%; height:100%; transition:height .15s; }
+.orb-hp .orb-liquid { background:linear-gradient(180deg,#ff7a6b 0%,#d42a1e 45%,#7a0f08 100%);
+  box-shadow:0 0 18px 4px rgba(255,60,40,.55), inset 0 2px 6px rgba(255,255,255,.35); }
+.orb-en .orb-liquid { background:linear-gradient(180deg,#7cc4ff 0%,#2a6fe0 45%,#0f2f7a 100%);
+  box-shadow:0 0 18px 4px rgba(60,140,255,.55), inset 0 2px 6px rgba(255,255,255,.35); }
+.orb-gloss { position:absolute; left:12%; top:8%; width:34%; height:22%; border-radius:50%;
+  background:radial-gradient(ellipse at center, rgba(255,255,255,.5), transparent 70%); pointer-events:none; }
+/* beveled potion slots */
+.potion { background:linear-gradient(180deg,#2c2c3a,#14141c); border:2px solid #000;
+  box-shadow:0 0 0 1px #5a5a6e, inset 0 2px 4px rgba(255,255,255,.15), inset 0 -3px 6px rgba(0,0,0,.7); }
+/* Phase 4 rec-fix P4-BUG-01: party-frame reskin rules removed with the party column. */
+/* circular ornate minimap */
+#minimap { border-radius:50%; border:4px solid #060608;
+  box-shadow:0 0 0 2px #6b6b80, 0 0 0 5px #14141c, 0 0 18px rgba(0,0,0,.9); }
+/* boss bar plaque */
+#boss-name { font-family:'Cinzel',serif; font-size:13px; letter-spacing:3px; color:#ffb3a6;
+  text-shadow:0 0 10px #f00, 0 2px 3px #000; }
+#boss-bar-outer { background:linear-gradient(180deg,#1a1a22,#0a0a0e); border:2px solid #000;
+  box-shadow:0 0 0 1px #5a2020, inset 0 2px 5px #000; border-radius:4px; }
+#boss-bar { background:linear-gradient(180deg,#ff9a86 0%,#e03424 40%,#8a130a 100%); }
+/* objective plaque + toast + gameover */
+#objective { font-family:'Cinzel',serif; background:linear-gradient(180deg,#1e1e29,#0b0b11);
+  border:1px solid #000; box-shadow:0 0 0 1px #4e4e62; letter-spacing:1px; border-radius:4px; }
+#toast { font-family:'Cinzel',serif; }
+#gameover h2 { font-family:'Cinzel',serif; }
+/* metal system buttons */
+#sys-btns button, #minimap-zoom button { background:linear-gradient(180deg,#2a2a38,#14141c);
+  border:1px solid #000; box-shadow:0 0 0 1px #4e4e62; color:#cfcfda; }
+/* joystick goes dark metal */
+#joystick-base { background:radial-gradient(circle at 50% 40%, rgba(60,60,78,.5), rgba(12,12,18,.5));
+  border:2px solid #000; box-shadow:0 0 0 1px #4e4e62, inset 0 2px 8px rgba(0,0,0,.6); }
+#joystick-knob { background:radial-gradient(circle at 35% 30%, #4a4a5e, #1a1a24 70%);
+  border:2px solid #000; box-shadow:0 0 0 1px #5a5a6e, 0 4px 10px rgba(0,0,0,.7); }
+/* old flat player bars retire — the orbs carry HP/energy now */
+#ps-hp-outer, #ps-en-outer { display:none; }
+#player-status { width:auto; bottom:calc(88px + env(safe-area-inset-bottom)); }
+#status-icons { justify-content:center; }
+
+/* ============ PHASE 3 additions ============ */
+@font-face { font-family:'Cinzel'; font-style:normal; font-weight:500; font-display:swap; src:url('assets/fonts/cinzel.woff2') format('woff2'); }
+@font-face { font-family:'Cinzel'; font-style:normal; font-weight:700; font-display:swap; src:url('assets/fonts/cinzel.woff2') format('woff2'); }
+#boss-shield { display:none !important; } /* BUG-03: dead UI hidden until Wave 2 wires it */
+#loading-screen { position:fixed; inset:0; z-index:300; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#050508; gap:16px; }
+#loading-screen h1 { font-size:38px; letter-spacing:8px; font-family:'Cinzel',serif; }
+#loading-bar-wrap { width:220px; height:8px; background:#1a1a28; border-radius:4px; overflow:hidden; }
+#loading-bar { height:100%; width:0%; background:linear-gradient(90deg,#ffd75e,#ff6b6b); transition:width .15s; }
+#loading-text { color:#8888aa; font-size:12px; letter-spacing:2px; }
+#pause-overlay { position:absolute; inset:0; z-index:150; display:none; align-items:center; justify-content:center; background:rgba(5,5,10,.72); }
+.pause-box { text-align:center; background:#0c0c14; border:2px solid #333; border-radius:12px; padding:28px 40px; }
+.pause-box h2 { font-size:26px; letter-spacing:4px; margin-bottom:8px; font-family:'Cinzel',serif; }
+.pause-box p { color:#999; font-size:12px; margin-bottom:20px; letter-spacing:1px; }
+.pause-box button { display:block; width:100%; background:#c33; color:#fff; border:none; border-radius:10px; padding:12px 28px; font-size:15px; font-weight:bold; letter-spacing:2px; margin-bottom:10px; cursor:pointer; }
+.pause-box button:last-child { background:#333; }
+#btn-continue { display:block; width:100%; max-width:520px; background:#1d5c2e; color:#fff; border:2px solid #2e8b47; border-radius:10px; padding:12px; font-size:14px; font-weight:bold; letter-spacing:2px; margin-top:16px; cursor:pointer; }
+#save-meta { color:#8888aa; font-size:11px; letter-spacing:1px; margin-top:10px; text-align:center; }
+#btn-clear-save { background:none; border:none; color:#555; font-size:10px; letter-spacing:1px; margin-top:6px; cursor:pointer; text-decoration:underline; }
+#gc-test-result { position:fixed; left:0; bottom:0; z-index:400; background:#000; color:#0f0; font-size:10px; padding:4px; max-width:100%; overflow:hidden; }
+
+/* ============ PHASE 3 INTEGRATION additions ============ */
+/* Boss shield bar (T3/T4 only), phase pips + persistent banner. Driven ONLY
+   by Game.getBossState() in updateHUD(); the dead #boss-shield stays hidden. */
+#gc-boss-shieldbar { display:none; height:22px; background:#101018; border:1px solid #2e9cff; border-radius:3px; overflow:hidden; position:relative; margin-top:4px; }
+#gc-boss-shieldfill { display:block; height:100%; width:0%; background:linear-gradient(90deg,#2e9cff,#7dd3fc); }
+#gc-boss-shieldlabel { position:absolute; inset:0; text-align:center; font-size:16px; font-weight:800; line-height:22px; color:#fff; text-shadow:0 1px 2px #000; }
+#gc-boss-pips { display:none; font-size:16px; font-weight:800; letter-spacing:1px; color:#ffd75e; margin-top:4px; }
+#gc-boss-banner { display:none; font-size:12px; font-weight:800; letter-spacing:1px; color:#ffd75e; border:1px solid #ffc93c; border-radius:6px; padding:4px 8px; margin-top:4px; background:rgba(0,0,0,.6); text-align:center; }
+/* Settings-driven text scaling on the Wave 1 HUD (Settings.apply tags <html>). */
+html[data-text-size="small"] #hud { font-size:12px; }
+html[data-text-size="large"] #hud { font-size:17px; }
+/* Integration checkpoint modal (draft + checkpoint shop, mid-run). */
+#gc-checkpoint { position:fixed; inset:0; z-index:9500; display:flex; align-items:center; justify-content:center; background:rgba(5,5,10,.82); }
+#gc-checkpoint .gc-cp-box { background:#14141f; border:2px solid #ffc93c; border-radius:12px; padding:18px; max-width:560px; width:92%; color:#ededf2; font-family:Rajdhani,'Segoe UI',system-ui,sans-serif; }
+#gc-checkpoint h2 { font-family:Cinzel,Georgia,serif; margin:0 0 8px; }
+#gc-checkpoint p { color:#9a9ab0; font-size:13px; }
+#gc-checkpoint button { display:block; width:100%; padding:11px; margin:6px 0; border-radius:8px; border:2px solid #2a2a3d; background:#2a2a3d; color:#fff; font-weight:800; font-size:14px; cursor:pointer; }
+#gc-checkpoint button.gc-cp-gold { background:linear-gradient(#ffd964,#e0a400); color:#221a00; }
+#gc-checkpoint button:disabled { opacity:.45; cursor:not-allowed; }
