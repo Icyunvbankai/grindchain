@@ -2083,6 +2083,11 @@ function meleeStrike(p, a, range, dmgMul, knockback, dtype) {
     }
     hit = true;
   }
+  // anim pass 2026-10-20: basic-attack hitstop for the PLAYER's melee only
+  // (skills already had 0.06-0.20 s; basic attacks had none). The hitstop
+  // path renders without stepping the sim, so every timer freezes uniformly
+  // — no damage/cooldown numbers change; pure impact feel.
+  if (hit && p.isPlayer) hitstop(0.03);
   return hit;
 }
 function tryAttack(p) {
@@ -2092,7 +2097,7 @@ function tryAttack(p) {
   const tgt = (p.isPlayer && G.locked && G.locked.alive) ? G.locked : nearestEnemy(p, heroCls(p.sprite) === 'marksman' ? 560 : 420);
   if (!tgt) return;
   p.atkCd = p.atkRate * (p.overdriveT > 0 ? 0.55 : 1);
-  p.atkAnimT = 0.35;
+  p.atkAnimT = 0.35; p.atkAnimDur = 0.35; // anim pass 2026-10-20: draw sweeps the attack range by progress (atkAnimT/atkAnimDur)
   const a = aimAt(p, tgt); p.face = a;
   if (heroCls(p.sprite) === 'support') { // SUPPORT: healing bolt on most-injured ally + shield
     let hurt = null, worst = 1;
@@ -2711,7 +2716,7 @@ function updateEnemies(dt) {
       if (!rooted && bd > 320) { const a = Math.atan2(tgt.y - e.y, tgt.x - e.x); e.x += Math.cos(a) * sp * dt; e.y += Math.sin(a) * sp * dt; }
       else if (!rooted && bd < 200) { const a = Math.atan2(e.y - tgt.y, e.x - tgt.x); e.x += Math.cos(a) * sp * dt; e.y += Math.sin(a) * sp * dt; }
       if (e.atkCd <= 0 && bd < 420) {
-        e.atkCd = 2.2; e.atkAnimT = 0.4; const a = Math.atan2(tgt.y - e.y, tgt.x - e.x);
+        e.atkCd = 2.2; e.atkAnimT = 0.4; e.atkAnimDur = 0.4; const a = Math.atan2(tgt.y - e.y, tgt.x - e.x);
         fireProjectile({ x: e.x, y: e.y, vx: Math.cos(a) * 300, vy: Math.sin(a) * 300,
           r: 6, dmg: e.atk, dtype: 'magic', from: e, life: 2, color: e.color, friendly: false, effect: 'poison' });
       }
@@ -2725,12 +2730,27 @@ function updateEnemies(dt) {
           e.windup += dt;
           if (e.windup > 0.35 && !e._telePlayed) { e._telePlayed = true; try { if (typeof GameAudio !== 'undefined') GameAudio.telegraph('stun'); } catch (err) {} }
           if (e.windup > 0.7 && e.atkCd <= 0) {
-            e.atkCd = 3; e.windup = 0; e._telePlayed = false; e.atkAnimT = 0.4; G.shake = 6;
+            e.atkCd = 3; e.windup = 0; e._telePlayed = false; e.atkAnimT = 0.4; e.atkAnimDur = 0.4; G.shake = 6;
             addParticles(e.x, e.y, '#c026d3', 20);
             if (dist(e, tgt) < 120) damagePlayer(tgt, e.atk, 'stun');
           }
         } else if (e.atkCd <= 0) {
-          e.atkCd = 1.4; e.atkAnimT = 0.35; damagePlayer(tgt, e.atk);
+          // Anim pass 2026-10-20: arena melee (slime/skeleton) gets a readable
+          // 0.30 s windup telegraph (crouch/swell + ring in the render pass)
+          // before its hit lands — their attack "animation" is a single static
+          // frame, so the instant hit was unreadable (and its [0,0] range was
+          // the sprite/camera crash root). atkCd drops 1.4 -> 1.1 so the
+          // steady-state hit rate is unchanged (0.3 windup + 1.1 cd = 1.4);
+          // damage per hit untouched. All other melee keeps the instant hit.
+          if (e.type === 'arena_slime' || e.type === 'arena_skeleton') {
+            e.windup = (e.windup || 0) + dt;
+            if (e.windup >= 0.3) {
+              e.windup = 0; e.atkCd = 1.1; e.atkAnimT = 0.35; e.atkAnimDur = 0.35;
+              if (dist(e, tgt) < e.r + (tgt.r || 14) + 14) damagePlayer(tgt, e.atk);
+            }
+          } else {
+            e.atkCd = 1.4; e.atkAnimT = 0.35; e.atkAnimDur = 0.35; damagePlayer(tgt, e.atk);
+          }
         }
       }
     }
@@ -2827,13 +2847,24 @@ function drawSpriteFighter(p) {
   let fi;
   // Hooks (2026-10-16): death anim wins over everything — a killing blow also
   // sets hurtT, and death must win. Only heroes have A.death (enemies don't).
-  if (!p.alive && p.deathAnimT !== undefined && p.deathAnimT < DEATH_ANIM_DUR && A.death) {
-    fi = A.death[0] + Math.min(A.death[1] - A.death[0], Math.floor(p.deathAnimT * 10));
+  if (p._deathFade !== undefined) {
+    fi = A.hurt ? A.hurt[0] : A.idle[0]; // anim pass 2026-10-20: enemy corpse freezes on its first hurt pose, then fades/sinks (see render pass)
+  }
+  else if (!p.alive && p.deathAnimT !== undefined && p.deathAnimT < DEATH_ANIM_DUR && A.death) {
+    // anim pass 2026-10-20: progress sweep — every death frame plays across
+    // DEATH_ANIM_DUR (the old floor(t*10) never reached the final frame).
+    fi = A.death[0] + Math.min(A.death[1] - A.death[0], Math.floor(p.deathAnimT / DEATH_ANIM_DUR * (A.death[1] - A.death[0] + 1)));
   }
   else if (p.atkAnimT > 0) {
-    const n = A.attack[1] - A.attack[0], half = Math.ceil((n + 1) / 2);
-    fi = p.atkAnimT > 0.18 ? A.attack[0] + (Math.floor(p.animT * A.attack[2]) % half)
-                           : A.attack[0] + half + (Math.floor(p.animT * A.attack[2]) % Math.max(1, n + 1 - half)); // BUGFIX 2026-10-20: single-frame attack ranges (arena_* [0,0]) made this divisor 0 -> % 0 = NaN -> F[NaN] undefined -> naturalWidth throw aborted render() mid-frame
+    // anim pass 2026-10-20: progress sweep — the attack range plays
+    // wind-up -> strike -> recover in authored order over the swing. The old
+    // formula sampled frames from global animT (phase-random per attack, ~4 of
+    // 12 frames, recovery poses during wind-up). Single-frame ranges
+    // (arena_* [0,0]) stay on frame 0; the NaN/out-of-range guard below (the
+    // 2026-10-20 crash fix) still catches any degenerate index.
+    const n = A.attack[1] - A.attack[0];
+    const prog = clamp(1 - p.atkAnimT / (p.atkAnimDur || 0.35), 0, 1);
+    fi = A.attack[0] + Math.min(n, Math.floor(prog * (n + 1)));
   }
   else if (p.hurtT > 0) fi = A.hurt[0] + Math.min(A.hurt[1] - A.hurt[0], Math.floor(Math.max(0, 0.4 - p.hurtT) * A.hurt[2]));
   else if (p.skillAnimT > 0 && A.skill) fi = _cyc(A.skill, (p.skillAnimDur || 1.0) - p.skillAnimT); // hooks: skill anim yields to attack/hurt
@@ -2841,11 +2872,12 @@ function drawSpriteFighter(p) {
   else fi = _cyc(A.idle, p.animT);
   if (!(fi >= 0) || fi >= F.length) fi = F.length - 1; // a short strip can never be indexed out of range; NaN/negative indices (degenerate range math) also land on a real frame
   const img = F[fi];
+  if (p._deathFade !== undefined) { ctx.save(); ctx.globalAlpha = 1 - 0.85 * p._deathFade; } // corpse fade (restored at function end)
   ctx.fillStyle = 'rgba(0,0,0,.4)';
   ctx.beginPath(); ctx.ellipse(p.x, p.y + p.r * 1.1, p.r * 1.1, p.r * 0.4, 0, 0, TAU); ctx.fill();
   const h = p.r * 5.2, w = h * ((img && img.naturalWidth) || 112) / ((img && img.naturalHeight) || 160); // BUGFIX 2026-10-20: never deref a missing frame — a bad draw degrades to shadow + HP bar (drawImage below is already img-guarded)
   // --- procedural animation juice ---
-  let ox = 0, oy = 0, rot = 0, sc = 1;
+  let ox = 0, oy = 0, rot = 0, sc = 1, windupFlash = false;
   const attacking = p.atkAnimT > 0, hurting = p.hurtT > 0;
   if (p.moving && !attacking && !hurting) {
     const wt = (p.walkPh || 0) * 11;         // walk bob + sway, phased to distance so bob and legs stay in sync
@@ -2860,6 +2892,12 @@ function drawSpriteFighter(p) {
     sc = 1 + 0.07 * k;
   }
   if (hurting) sc = 1 - 0.06 * clamp(p.hurtT / 0.4, 0, 1); // squash on hit
+  if ((p.windup || 0) > 0 && !attacking) { // anim pass 2026-10-20: windup anticipation — crouch + swell, flash as the strike nears (arena melee + brute slam)
+    const wk = clamp(p.windup / 0.3, 0, 1);
+    oy += 3 * wk; sc *= 1 + 0.10 * wk;
+    if (wk > 0.66) windupFlash = true;
+  }
+  if (p._deathFade !== undefined) { oy += p._deathFade * 18; sc *= 1 - 0.3 * p._deathFade; } // corpse sink + shrink
   ctx.save();
   ctx.translate(p.x + ox, p.y - p.r * 0.6 + oy);
   if (Math.cos(p.face) < 0) ctx.scale(-1, 1);
@@ -2867,9 +2905,11 @@ function drawSpriteFighter(p) {
   ctx.scale(sc, sc);
   // Phase 3: smoothing is batched by render(); only the hit-flash filter toggles here.
   if (hurting) ctx.filter = 'brightness(2.2)'; // white hit-flash
+  else if (windupFlash) ctx.filter = 'brightness(1.6)'; // anim pass: pre-strike flash
   if (img && img.complete && img.naturalWidth) ctx.drawImage(img, -w/2, -h/2, w, h);
-  if (hurting) ctx.filter = 'none';
+  if (hurting || windupFlash) ctx.filter = 'none';
   ctx.restore();
+  if (p._deathFade !== undefined) { ctx.restore(); return; } // corpse: closes the fade save; no HP bar / status icons for the dead
   if (p.stun > 0) { ctx.fillStyle = '#ffe14d'; ctx.font = '16px sans-serif'; ctx.textAlign = 'center'; ctx.fillText('💫', p.x, p.y - p.r * 2.6); }
   const bw = p.r * 2.4;
   ctx.fillStyle = 'rgba(0,0,0,.6)'; ctx.fillRect(p.x - bw/2, p.y - p.r * 2.6 - 8, bw, 6);
@@ -2998,13 +3038,18 @@ function render() {
   // pickups — arena icons with emoji fallback (visual only; kinds/timers unchanged)
   for (const pk of G.pickups) {
     const _pkImg = SPRITES[pk.kind === 'hp' ? 'arena_potion' : pk.kind === 'en' ? 'arena_energy_bolt' : '']?.[0];
+    // anim pass 2026-10-20: gentle bob so drops read as collectible, plus an
+    // expiry blink under 3 s (drops used to sit perfectly static, then vanish).
+    const _bob = Math.sin(G.time * 3 + pk.x * 0.7) * 2;
+    if (pk.t < 3) ctx.globalAlpha = 0.45 + 0.55 * Math.abs(Math.sin(G.time * 10));
     if (_pkImg && _pkImg.complete && _pkImg.naturalWidth) {
       const _ps = 30, _ar = _pkImg.naturalHeight / (_pkImg.naturalWidth || 1);
-      ctx.drawImage(_pkImg, pk.x - _ps/2, pk.y - _ps*_ar/2, _ps, _ps*_ar);
+      ctx.drawImage(_pkImg, pk.x - _ps/2, pk.y + _bob - _ps*_ar/2, _ps, _ps*_ar);
     } else {
       ctx.font = '18px sans-serif'; ctx.textAlign = 'center';
-      ctx.fillText(pk.kind === 'hp' ? '🧪' : '🔷', pk.x, pk.y + 6);
+      ctx.fillText(pk.kind === 'hp' ? '🧪' : '🔷', pk.x, pk.y + _bob + 6);
     }
+    ctx.globalAlpha = 1;
   }
   // pings
   for (const pg of pings) {
@@ -3028,10 +3073,21 @@ function render() {
   // enemies + fighters: smoothing ON once for all sprite draws (Phase 3 perf)
   ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
   for (const e of G.enemies) {
-    if (!e.alive) continue;
+    if (!e.alive) {
+      // anim pass 2026-10-20: corpses stay visible for their 0.5 s linger
+      // (fade + sink in drawSpriteFighter) instead of popping out of
+      // existence on the kill frame.
+      const _df = clamp((e.deathT || 0) / 0.5, 0, 1);
+      if (_df < 1) drawFighter({ ...e, _deathFade: _df, face: Math.atan2((player.y - e.y), (player.x - e.x)), isPlayer: false, color: e.color, hp: e.hp, maxhp: e.maxhp, r: e.r, stun: 0, poisonT: 0, shield: 0 });
+      continue;
+    }
     if (e.windup > 0.35) { // telegraph
       ctx.strokeStyle = 'rgba(255,60,60,.8)'; ctx.lineWidth = 3;
       ctx.beginPath(); ctx.arc(e.x, e.y, 120, 0, TAU); ctx.stroke();
+    }
+    else if (e.windup > 0 && (e.type === 'arena_slime' || e.type === 'arena_skeleton')) { // anim pass: arena windup ring, ramps with the 0.30 s windup
+      ctx.strokeStyle = `rgba(255,60,60,${0.25 + 0.55 * clamp(e.windup / 0.3, 0, 1)})`; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(e.x, e.y, e.r + 28, 0, TAU); ctx.stroke();
     }
     drawFighter({ ...e, face: Math.atan2((player.y - e.y), (player.x - e.x)), isPlayer: false, color: e.color, hp: e.hp, maxhp: e.maxhp, r: e.r, stun: e.stun, poisonT: e.poisonT, shield: e.shield });
     if (e.rootT > 0) { ctx.strokeStyle = 'rgba(125,211,252,.9)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(e.x, e.y, e.r + 6, 0, TAU); ctx.stroke(); }

@@ -1,6 +1,6 @@
 {
- "version": "phase3-1.4.8",
- "generated": "2026-10-20 (graphics scale-up part 2: 2x hi-res assets integrated - heroes/boss/VFX/icons at 352x320, 704x640, 512x512; see qc-log/2026-10-20-graphics-hires-assets.md)",
+ "version": "phase3-1.4.9",
+ "generated": "2026-10-20 (animation & gameplay-feel pass: attack/death progress-sweep frame selection, arena melee windup telegraphs, corpse fade rendering, player melee hitstop, pickup bob/blink, Sentinel+Hymn idle re-anchor, 10 loop-seam crossfades; see qc-log/2026-10-20-animation-play-pass.md)",
  "sprites": {
   "bastion": {
    "count": 54,
@@ -1837,7 +1837,7 @@
   "assets/icon-512.png"
  ],
  "totalFiles": 1393,
- "totalBytes": 30196861,
+ "totalBytes": 30637181,
  "files": [
   {
    "path": "assets/env/blue/accent-0.webp",
@@ -2041,7 +2041,7 @@
   },
   {
    "path": "assets/manifest.json",
-   "bytes": 174274
+   "bytes": 174390
   },
   {
    "path": "assets/sprites/burst/frame-00.png",
@@ -2237,7 +2237,7 @@
   },
   {
    "path": "assets/sprites/lava_imp/frame-04.webp",
-   "bytes": 5192
+   "bytes": 8780
   },
   {
    "path": "assets/sprites/lava_imp/frame-05.webp",
@@ -2541,7 +2541,7 @@
   },
   {
    "path": "assets/sprites/skeleton_archer/frame-14.webp",
-   "bytes": 3074
+   "bytes": 4748
   },
   {
    "path": "assets/sprites/skeleton_archer/frame-15.webp",
@@ -2817,7 +2817,7 @@
   },
   {
    "path": "assets/sprites/spore_knight/frame-14.webp",
-   "bytes": 5564
+   "bytes": 8748
   },
   {
    "path": "assets/sprites/spore_knight/frame-15.webp",
@@ -2937,7 +2937,7 @@
   },
   {
    "path": "assets/sprites/twin_rat/frame-14.webp",
-   "bytes": 3570
+   "bytes": 5656
   },
   {
    "path": "assets/sprites/twin_rat/frame-15.webp",
@@ -3157,7 +3157,7 @@
   },
   {
    "path": "assets/sprites/void_eye/frame-14.webp",
-   "bytes": 4010
+   "bytes": 5324
   },
   {
    "path": "assets/sprites/void_eye/frame-15.webp",
@@ -3289,7 +3289,7 @@
   },
   {
    "path": "assets/sprites/void_hound/frame-17.webp",
-   "bytes": 4838
+   "bytes": 8162
   },
   {
    "path": "assets/sprites/void_hound/frame-18.webp",
@@ -3969,7 +3969,7 @@
   },
   {
    "path": "assets/sprites/dusk/frame-07.webp",
-   "bytes": 22440
+   "bytes": 21718
   },
   {
    "path": "assets/sprites/dusk/frame-08.webp",
@@ -4185,7 +4185,7 @@
   },
   {
    "path": "assets/sprites/ember/frame-07.webp",
-   "bytes": 38430
+   "bytes": 37878
   },
   {
    "path": "assets/sprites/ember/frame-08.webp",
@@ -4833,7 +4833,7 @@
   },
   {
    "path": "assets/sprites/rampart/frame-07.webp",
-   "bytes": 32160
+   "bytes": 31196
   },
   {
    "path": "assets/sprites/rampart/frame-08.webp",
@@ -5889,15 +5889,15 @@
   },
   {
    "path": "assets/sprites/sentinel/frame-01.webp",
-   "bytes": 31660
+   "bytes": 70058
   },
   {
    "path": "assets/sprites/sentinel/frame-02.webp",
-   "bytes": 31990
+   "bytes": 70168
   },
   {
    "path": "assets/sprites/sentinel/frame-03.webp",
-   "bytes": 31660
+   "bytes": 70058
   },
   {
    "path": "assets/sprites/sentinel/frame-04.webp",
@@ -5905,15 +5905,15 @@
   },
   {
    "path": "assets/sprites/sentinel/frame-05.webp",
-   "bytes": 31598
+   "bytes": 69232
   },
   {
    "path": "assets/sprites/sentinel/frame-06.webp",
-   "bytes": 31382
+   "bytes": 68630
   },
   {
    "path": "assets/sprites/sentinel/frame-07.webp",
-   "bytes": 31598
+   "bytes": 69232
   },
   {
    "path": "assets/sprites/sentinel/frame-08.webp",
@@ -5953,7 +5953,7 @@
   },
   {
    "path": "assets/sprites/sentinel/frame-17.webp",
-   "bytes": 23534
+   "bytes": 24738
   },
   {
    "path": "assets/sprites/sentinel/frame-18.webp",
@@ -6105,15 +6105,15 @@
   },
   {
    "path": "assets/sprites/hymn/frame-01.webp",
-   "bytes": 29158
+   "bytes": 62590
   },
   {
    "path": "assets/sprites/hymn/frame-02.webp",
-   "bytes": 29058
+   "bytes": 62588
   },
   {
    "path": "assets/sprites/hymn/frame-03.webp",
-   "bytes": 29158
+   "bytes": 62590
   },
   {
    "path": "assets/sprites/hymn/frame-04.webp",
@@ -6121,15 +6121,15 @@
   },
   {
    "path": "assets/sprites/hymn/frame-05.webp",
-   "bytes": 28866
+   "bytes": 61614
   },
   {
    "path": "assets/sprites/hymn/frame-06.webp",
-   "bytes": 28974
+   "bytes": 61662
   },
   {
    "path": "assets/sprites/hymn/frame-07.webp",
-   "bytes": 28866
+   "bytes": 61614
   },
   {
    "path": "assets/sprites/hymn/frame-08.webp",
