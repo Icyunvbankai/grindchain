@@ -2833,17 +2833,17 @@ function drawSpriteFighter(p) {
   else if (p.atkAnimT > 0) {
     const n = A.attack[1] - A.attack[0], half = Math.ceil((n + 1) / 2);
     fi = p.atkAnimT > 0.18 ? A.attack[0] + (Math.floor(p.animT * A.attack[2]) % half)
-                           : A.attack[0] + half + (Math.floor(p.animT * A.attack[2]) % (n + 1 - half));
+                           : A.attack[0] + half + (Math.floor(p.animT * A.attack[2]) % Math.max(1, n + 1 - half)); // BUGFIX 2026-10-20: single-frame attack ranges (arena_* [0,0]) made this divisor 0 -> % 0 = NaN -> F[NaN] undefined -> naturalWidth throw aborted render() mid-frame
   }
   else if (p.hurtT > 0) fi = A.hurt[0] + Math.min(A.hurt[1] - A.hurt[0], Math.floor(Math.max(0, 0.4 - p.hurtT) * A.hurt[2]));
   else if (p.skillAnimT > 0 && A.skill) fi = _cyc(A.skill, (p.skillAnimDur || 1.0) - p.skillAnimT); // hooks: skill anim yields to attack/hurt
   else if (p.moving) fi = _cyc(A.walk, p.walkPh || 0); // distance-based phase (movement pass 2026-10-20)
   else fi = _cyc(A.idle, p.animT);
-  if (fi >= F.length) fi = F.length - 1; // a short strip can never be indexed out of range
+  if (!(fi >= 0) || fi >= F.length) fi = F.length - 1; // a short strip can never be indexed out of range; NaN/negative indices (degenerate range math) also land on a real frame
   const img = F[fi];
   ctx.fillStyle = 'rgba(0,0,0,.4)';
   ctx.beginPath(); ctx.ellipse(p.x, p.y + p.r * 1.1, p.r * 1.1, p.r * 0.4, 0, 0, TAU); ctx.fill();
-  const h = p.r * 5.2, w = h * (img.naturalWidth || 112) / (img.naturalHeight || 160);
+  const h = p.r * 5.2, w = h * ((img && img.naturalWidth) || 112) / ((img && img.naturalHeight) || 160); // BUGFIX 2026-10-20: never deref a missing frame — a bad draw degrades to shadow + HP bar (drawImage below is already img-guarded)
   // --- procedural animation juice ---
   let ox = 0, oy = 0, rot = 0, sc = 1;
   const attacking = p.atkAnimT > 0, hurting = p.hurtT > 0;
@@ -3272,6 +3272,17 @@ function stepSim(dt) {
   updateProjectiles(dt);
   updateCamera();
 }
+// BUGFIX 2026-10-20 (sprite/camera freeze): a render() exception must degrade
+// to a dropped frame — never abort the frame's remaining draws or its HUD
+// update, and never recur silently. Count every catch; log the first and each
+// 300th so a bad draw stays visible in the console without spamming it.
+let _renderErrCount = 0;
+function safeRender() {
+  try { render(); } catch (e) {
+    _renderErrCount++;
+    if (_renderErrCount === 1 || _renderErrCount % 300 === 0) { try { console.warn('[gc] render error #' + _renderErrCount, e); } catch (err) {} }
+  }
+}
 function loop(t) {
   if (!G.running) { loopActive = false; rafId = 0; return; }
   // Phase 4 rec-fix OBS-02 (crash): STOP rAF while paused / hidden /
@@ -3290,12 +3301,12 @@ function loop(t) {
   rafId = requestAnimationFrame(loop);
   if (window.__gcTest && !window.__gcTest.done) window.__gcTest.frames++;
   const frameDt = Math.min(0.1, (t - lastT) / 1000 || FIXED_DT); lastT = t;
-  if (G.hitstop > 0) { G.hitstop -= frameDt; render(); updateHUD(); return; }
+  if (G.hitstop > 0) { G.hitstop -= frameDt; safeRender(); updateHUD(); return; }
   acc += frameDt;
   let steps = 0;
   while (acc >= FIXED_DT && steps < 5) { stepSim(FIXED_DT); acc -= FIXED_DT; steps++; }
   if (steps === 5) acc = 0;
-  render();
+  safeRender();
   updateHUD();
 }
 function startLoop() {
