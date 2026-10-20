@@ -1650,7 +1650,7 @@ async function loadAllAssets(onProgress) {
   // ENV sets are built here (async) instead of at parse time.
   for (const f of ['red', 'blue', 'purple']) {
     const r = ENV_RAW[f];
-    const set = { floors: [], accents: [], wall: new Image(), props: [], propW: r.propW.slice() };
+    const set = { floors: [], accents: [], wall: new Image(), props: [], propW: r.propW.slice(), faction: f };
     ENV_SETS[f] = set;
     r.floors.forEach((url, i) => { tasks.push(async () => { set.floors[i] = await loadImage(url, 30000, lateFill(url, v => { if (set.floors[i] && !set.floors[i].naturalWidth) set.floors[i] = v; })); tick(); }); });
     r.accents.forEach((a, i) => { tasks.push(async () => { const img = await loadImage(a[3], 30000, lateFill(a[3], v => { if (set.accents[i] && set.accents[i].img && !set.accents[i].img.naturalWidth) set.accents[i].img = v; })); set.accents[i] = { x: a[0], y: a[1], s: a[2], img }; tick(); }); });
@@ -2505,12 +2505,73 @@ function updatePotionUI() {
 }
 
 function collideWalls(o) {
-  for (const w of walls) {
-    const nx = clamp(o.x, w.x, w.x + w.w), ny = clamp(o.y, w.y, w.y + w.h);
-    const d = Math.hypot(o.x - nx, o.y - ny);
-    if (d < o.r && d > 0.01) { o.x = nx + (o.x - nx) / d * o.r; o.y = ny + (o.y - ny) / d * o.r; }
+  // Movement pass (2026-10-20): two resolution passes + center-inside escape.
+  // The old single pass skipped resolution entirely when the center was
+  // inside a rect (d < 0.01 guard): a unit knocked/teleported inside a wall
+  // stayed buried (measured: center 100px inside a block, still inside
+  // after 90 idle steps, zero collision while walking out through it).
+  // Pass 2 also clears the residual penetration when resolving wall A
+  // pushes the unit into an adjacent wall B at concave corners.
+  for (let pass = 0; pass < 2; pass++) {
+    for (const w of walls) {
+      const nx = clamp(o.x, w.x, w.x + w.w), ny = clamp(o.y, w.y, w.y + w.h);
+      const dx = o.x - nx, dy = o.y - ny;
+      const d = Math.hypot(dx, dy);
+      if (d >= o.r) continue;
+      if (d > 0.01) { o.x = nx + dx / d * o.r; o.y = ny + dy / d * o.r; }
+      else {
+        // center inside the rect: escape along the smallest penetration axis
+        const pl = o.x - w.x, pr = w.x + w.w - o.x, pt = o.y - w.y, pb = w.y + w.h - o.y;
+        const m = Math.min(pl, pr, pt, pb);
+        if (m === pl) o.x = w.x - o.r; else if (m === pr) o.x = w.x + w.w + o.r;
+        else if (m === pt) o.y = w.y - o.r; else o.y = w.y + w.h + o.r;
+      }
+    }
   }
   o.x = clamp(o.x, o.r, ARENA.w - o.r); o.y = clamp(o.y, o.r, ARENA.h - o.r);
+}
+
+// Movement pass (2026-10-20): unit separation. There was NO unit-vs-unit
+// separation anywhere: units chasing the same target converged to the
+// identical point (measured: 6 melee enemies spawned apart ended at
+// pairwise distance 0.0 — a single stacked sprite). Positional push-apart
+// only, applied once per step; the player is never pushed, bosses are
+// immovable. Pushed units are re-resolved against walls.
+function separateUnits() {
+  const pair = (a, b, fa, fb) => {
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const min = (a.r + b.r) * 0.85;
+    const d2 = dx * dx + dy * dy;
+    if (d2 >= min * min) return false;
+    let ux, uy, ov;
+    if (d2 > 0.0001) { const d = Math.sqrt(d2); ux = dx / d; uy = dy / d; ov = min - d; }
+    else { ux = ((a.x * 31 + b.y * 17) % 2) ? 1 : -1; uy = 0; ov = min; } // exact overlap: deterministic split
+    a.x -= ux * ov * fa; a.y -= uy * ov * fa;
+    b.x += ux * ov * fb; b.y += uy * ov * fb;
+    return true;
+  };
+  const es = G.enemies;
+  for (let i = 0; i < es.length; i++) {
+    const a = es[i]; if (!a.alive) continue;
+    let pushed = false;
+    for (let j = i + 1; j < es.length; j++) {
+      const b = es[j]; if (!b.alive) continue;
+      if (a.isBoss && b.isBoss) continue;
+      if (a.isBoss) pushed = pair(b, a, 1, 0) || pushed;
+      else if (b.isBoss) pushed = pair(a, b, 1, 0) || pushed;
+      else pushed = pair(a, b, 0.5, 0.5) || pushed;
+    }
+    if (pushed) collideWalls(a);
+  }
+  for (let i = 0; i < allies.length; i++) {
+    const a = allies[i]; if (!a || !a.alive) continue;
+    let pushed = pair(a, player, 1, 0);
+    for (let j = i + 1; j < allies.length; j++) {
+      const b = allies[j]; if (!b || !b.alive) continue;
+      pushed = pair(a, b, 0.5, 0.5) || pushed;
+    }
+    if (pushed) collideWalls(a);
+  }
 }
 function inBush(o) { return bushes.some(b => o.x > b.x && o.x < b.x + b.w && o.y > b.y && o.y < b.y + b.h); }
 
@@ -2567,18 +2628,39 @@ function updatePlayer(p, dt, isMain) {
     const tgt = nearestEnemy(p, 460);
     if (p.stun <= 0 && tgt) {
       const d = dist(p, tgt);
-      if (d > 260) { const a = Math.atan2(tgt.y - p.y, tgt.x - p.x); p.x += Math.cos(a) * p.speed * 0.85 * dt; p.y += Math.sin(a) * p.speed * 0.85 * dt; p.face = a; }
+      // Movement pass (2026-10-20): engage hysteresis. The single 260px
+      // threshold toggled allies between chase and stand on every step a
+      // target drifted across it. Chase until inside 245, hold the stance
+      // until the target is past 275.
+      if (d > 275) p.ai.hold = false; else if (d < 245) p.ai.hold = true;
+      if (!p.ai.hold) { const a = Math.atan2(tgt.y - p.y, tgt.x - p.x); p.x += Math.cos(a) * p.speed * 0.85 * dt; p.y += Math.sin(a) * p.speed * 0.85 * dt; p.face = a; }
       else { p.face = Math.atan2(tgt.y - p.y, tgt.x - p.x); tryAttack(p); }
-    } else if (dist(p, player) > 130) {
-      const a = Math.atan2(player.y - p.y, player.x - p.x);
-      p.x += Math.cos(a) * p.speed * 0.9 * dt; p.y += Math.sin(a) * p.speed * 0.9 * dt;
+    } else if (p.stun <= 0) {
+      // Follow hysteresis (start past 150, stop inside 115) — same fix.
+      // Also gated on stun now: the old else-if could move a stunned ally.
+      const pd = dist(p, player);
+      if (pd > 150) p.ai.follow = true; else if (pd < 115) p.ai.follow = false;
+      if (p.ai.follow) {
+        const a = Math.atan2(player.y - p.y, player.x - p.x);
+        p.x += Math.cos(a) * p.speed * 0.9 * dt; p.y += Math.sin(a) * p.speed * 0.9 * dt;
+      }
     }
   }
   p.atkAnimT = Math.max(0, p.atkAnimT - dt);
   p.hurtT = Math.max(0, p.hurtT - dt);
   p.skillAnimT = Math.max(0, (p.skillAnimT || 0) - dt); // hooks: skill anim
   p.animT += dt;
-  p.moving = Math.hypot(p.x - p.px, p.y - p.py) > 0.6;
+  const _disp = Math.hypot(p.x - p.px, p.y - p.py);
+  p.moving = _disp > 0.6;
+  // Movement pass (2026-10-20): walk phase advances with DISTANCE, not
+  // time. The time-based cycle desynced legs from ground whenever actual
+  // speed differed from the cycle's implicit rate: slowed movement (0.55x)
+  // kept full-rate legs (measured stride 127px/cycle vs 231 normal),
+  // allies at 0.85/0.9x slid ~15%, fast heroes slid more than slow ones.
+  // 230px of travel = one full walk cycle for every unit and state.
+  // Phase freezes during a dash (a dash is a glide, not a run) and the
+  // per-step advance is capped so teleports/respawns can't spin the cycle.
+  if ((p.dashT || 0) <= 0) p.walkPh = (p.walkPh || 0) + Math.min(_disp, 8) / 230;
   p.px = p.x; p.py = p.y;
   collideWalls(p);
 }
@@ -2600,7 +2682,9 @@ function updateEnemies(dt) {
     e.atkAnimT = Math.max(0, (e.atkAnimT || 0) - dt);
     e.hurtT = Math.max(0, (e.hurtT || 0) - dt);
     e.animT = (e.animT || 0) + dt;
-    e.moving = Math.hypot(e.x - e.px, e.y - e.py) > 0.6;
+    const _ed = Math.hypot(e.x - e.px, e.y - e.py);
+    e.moving = _ed > 0.6;
+    e.walkPh = (e.walkPh || 0) + Math.min(_ed, 8) / 230; // see updatePlayer: distance-based walk phase
     e.px = e.x; e.py = e.y;
     if (e.kbx || e.kby) {
       e.x += e.kbx * dt; e.y += e.kby * dt;
@@ -2753,7 +2837,7 @@ function drawSpriteFighter(p) {
   }
   else if (p.hurtT > 0) fi = A.hurt[0] + Math.min(A.hurt[1] - A.hurt[0], Math.floor(Math.max(0, 0.4 - p.hurtT) * A.hurt[2]));
   else if (p.skillAnimT > 0 && A.skill) fi = _cyc(A.skill, (p.skillAnimDur || 1.0) - p.skillAnimT); // hooks: skill anim yields to attack/hurt
-  else if (p.moving) fi = _cyc(A.walk, p.animT);
+  else if (p.moving) fi = _cyc(A.walk, p.walkPh || 0); // distance-based phase (movement pass 2026-10-20)
   else fi = _cyc(A.idle, p.animT);
   if (fi >= F.length) fi = F.length - 1; // a short strip can never be indexed out of range
   const img = F[fi];
@@ -2764,7 +2848,7 @@ function drawSpriteFighter(p) {
   let ox = 0, oy = 0, rot = 0, sc = 1;
   const attacking = p.atkAnimT > 0, hurting = p.hurtT > 0;
   if (p.moving && !attacking && !hurting) {
-    const wt = p.animT * 11;                 // walk bob + sway sells the 2-frame cycle
+    const wt = (p.walkPh || 0) * 11;         // walk bob + sway, phased to distance so bob and legs stay in sync
     oy = -Math.abs(Math.sin(wt)) * 3;
     rot = Math.sin(wt) * 0.035;
   } else if (!attacking && !hurting) {
@@ -2830,6 +2914,8 @@ function drawFighter(p) {
   if (p.poisonT > 0) { ctx.fillStyle = '#a3e635'; ctx.font = '11px sans-serif'; ctx.textAlign = 'center'; ctx.fillText('☠', p.x + p.r + 8, p.y); }
   if (p.shield > 0) { ctx.strokeStyle = '#9fd8ff'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p.x, p.y, p.r + 5, 0, TAU); ctx.stroke(); }
 }
+// Wall top-cap tints per faction (wall readability pass, 2026-10-20).
+const WALL_CAP = { red: 'rgba(255,166,120,0.55)', blue: 'rgba(168,204,255,0.55)', purple: 'rgba(226,188,255,0.55)' };
 function render() {
   ctx.save();
   ctx.imageSmoothingEnabled = false;
@@ -2865,8 +2951,16 @@ function render() {
       ctx.fillStyle = 'rgba(20,80,30,.5)'; ctx.fillRect(b.x, b.y, b.w, b.h);
     }
   }
-  // walls
+  // walls — readability pass (2026-10-20, player report "hard to tell where
+  // the walls are"): wall.webp used to be byte-identical to floor-0.webp
+  // (ΔL = 0) with only a 2px mid-grey stroke as the boundary cue. Now: raised
+  // wall textures (per-faction wall.webp re-valued) + drop shadow on the
+  // floor + lit top cap in the faction tint + hard dark outline. Visuals stay
+  // inside the exact collision rects (shadow excepted — it shades the floor
+  // south-east of a real wall, standard height cue, not a fake wall).
   for (const w of walls) {
+    ctx.fillStyle = 'rgba(0,0,0,0.38)';
+    ctx.fillRect(w.x + 4, w.y + 8, w.w, w.h);
     if (ENV.wall && ENV.wall.complete && ENV.wall.naturalWidth) {
       ctx.save(); ctx.beginPath(); ctx.rect(w.x, w.y, w.w, w.h); ctx.clip();
       const ts = 128;
@@ -2874,11 +2968,14 @@ function render() {
         for (let tx = w.x; tx < w.x + w.w; tx += ts)
           ctx.drawImage(ENV.wall, tx, ty, ts, ts);
       ctx.restore();
-      ctx.strokeStyle = '#3a3a4f'; ctx.lineWidth = 2; ctx.strokeRect(w.x, w.y, w.w, w.h);
     } else {
-      ctx.fillStyle = '#23232f'; ctx.fillRect(w.x, w.y, w.w, w.h);
-      ctx.strokeStyle = '#3a3a4f'; ctx.strokeRect(w.x, w.y, w.w, w.h);
+      ctx.fillStyle = '#2c2c3d'; ctx.fillRect(w.x, w.y, w.w, w.h);
     }
+    ctx.fillStyle = WALL_CAP[(ENV && ENV.faction) || ''] || 'rgba(255,255,255,0.35)';
+    ctx.fillRect(w.x, w.y, w.w, 6);
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.fillRect(w.x, w.y, w.w, 2);
+    ctx.strokeStyle = 'rgba(6,5,12,0.9)'; ctx.lineWidth = 3; ctx.strokeRect(w.x, w.y, w.w, w.h);
   }
   // chests
   for (const c of chests) {
@@ -3171,6 +3268,7 @@ function stepSim(dt) {
   updatePlayer(player, dt, true);
   for (const a of allies) updatePlayer(a, dt, false);
   updateEnemies(dt);
+  separateUnits();
   updateProjectiles(dt);
   updateCamera();
 }
