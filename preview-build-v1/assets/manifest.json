@@ -1,6 +1,6 @@
 {
- "version": "phase3-1.4.5",
- "generated": "2026-10-20 (wall readability fix: re-valued wall.webp x3 + app.js wall pass)",
+ "version": "phase3-1.4.7",
+ "generated": "2026-10-20 (graphics scale-up part 2: 2x hi-res assets integrated - heroes/boss/VFX/icons at 352x320, 704x640, 512x512; see qc-log/2026-10-20-graphics-hires-assets.md)",
  "sprites": {
   "bastion": {
    "count": 54,
@@ -1837,7 +1837,7 @@
   "assets/icon-512.png"
  ],
  "totalFiles": 1393,
- "totalBytes": 16835204,
+ "totalBytes": 30196861,
  "files": [
   {
    "path": "assets/env/blue/accent-0.webp",
@@ -2041,7 +2041,7 @@
   },
   {
    "path": "assets/manifest.json",
-   "bytes": 173805
+   "bytes": 174274
   },
   {
    "path": "assets/sprites/burst/frame-00.png",
@@ -3509,3771 +3509,3771 @@
   },
   {
    "path": "assets/sprites/bastion/frame-00.webp",
-   "bytes": 8662
+   "bytes": 22530
   },
   {
    "path": "assets/sprites/bastion/frame-01.webp",
-   "bytes": 8638
-  },
-  {
-   "path": "assets/sprites/bastion/frame-02.webp",
-   "bytes": 8790
-  },
-  {
-   "path": "assets/sprites/bastion/frame-03.webp",
-   "bytes": 8638
-  },
-  {
-   "path": "assets/sprites/bastion/frame-04.webp",
-   "bytes": 8662
-  },
-  {
-   "path": "assets/sprites/bastion/frame-05.webp",
-   "bytes": 8650
-  },
-  {
-   "path": "assets/sprites/bastion/frame-06.webp",
-   "bytes": 8458
-  },
-  {
-   "path": "assets/sprites/bastion/frame-07.webp",
-   "bytes": 8650
-  },
-  {
-   "path": "assets/sprites/bastion/frame-08.webp",
-   "bytes": 10624
-  },
-  {
-   "path": "assets/sprites/bastion/frame-09.webp",
-   "bytes": 10754
-  },
-  {
-   "path": "assets/sprites/bastion/frame-10.webp",
-   "bytes": 10688
-  },
-  {
-   "path": "assets/sprites/bastion/frame-11.webp",
-   "bytes": 10688
-  },
-  {
-   "path": "assets/sprites/bastion/frame-12.webp",
-   "bytes": 10754
-  },
-  {
-   "path": "assets/sprites/bastion/frame-13.webp",
-   "bytes": 10606
-  },
-  {
-   "path": "assets/sprites/bastion/frame-14.webp",
-   "bytes": 10780
-  },
-  {
-   "path": "assets/sprites/bastion/frame-15.webp",
-   "bytes": 10816
-  },
-  {
-   "path": "assets/sprites/bastion/frame-16.webp",
-   "bytes": 10816
-  },
-  {
-   "path": "assets/sprites/bastion/frame-17.webp",
-   "bytes": 10780
-  },
-  {
-   "path": "assets/sprites/bastion/frame-18.webp",
-   "bytes": 10980
-  },
-  {
-   "path": "assets/sprites/bastion/frame-19.webp",
-   "bytes": 11034
-  },
-  {
-   "path": "assets/sprites/bastion/frame-20.webp",
-   "bytes": 11054
-  },
-  {
-   "path": "assets/sprites/bastion/frame-21.webp",
-   "bytes": 12148
-  },
-  {
-   "path": "assets/sprites/bastion/frame-22.webp",
-   "bytes": 12816
-  },
-  {
-   "path": "assets/sprites/bastion/frame-23.webp",
-   "bytes": 12090
-  },
-  {
-   "path": "assets/sprites/bastion/frame-24.webp",
-   "bytes": 12090
-  },
-  {
-   "path": "assets/sprites/bastion/frame-25.webp",
-   "bytes": 11536
-  },
-  {
-   "path": "assets/sprites/bastion/frame-26.webp",
-   "bytes": 11474
-  },
-  {
-   "path": "assets/sprites/bastion/frame-27.webp",
-   "bytes": 11554
-  },
-  {
-   "path": "assets/sprites/bastion/frame-28.webp",
-   "bytes": 11518
-  },
-  {
-   "path": "assets/sprites/bastion/frame-29.webp",
-   "bytes": 11518
-  },
-  {
-   "path": "assets/sprites/bastion/frame-30.webp",
-   "bytes": 11548
-  },
-  {
-   "path": "assets/sprites/bastion/frame-31.webp",
-   "bytes": 12098
-  },
-  {
-   "path": "assets/sprites/bastion/frame-32.webp",
-   "bytes": 12610
-  },
-  {
-   "path": "assets/sprites/bastion/frame-33.webp",
-   "bytes": 13012
-  },
-  {
-   "path": "assets/sprites/bastion/frame-34.webp",
-   "bytes": 13078
-  },
-  {
-   "path": "assets/sprites/bastion/frame-35.webp",
-   "bytes": 11150
-  },
-  {
-   "path": "assets/sprites/bastion/frame-36.webp",
-   "bytes": 8600
-  },
-  {
-   "path": "assets/sprites/bastion/frame-37.webp",
-   "bytes": 7768
-  },
-  {
-   "path": "assets/sprites/bastion/frame-38.webp",
-   "bytes": 7160
-  },
-  {
-   "path": "assets/sprites/bastion/frame-39.webp",
-   "bytes": 6300
-  },
-  {
-   "path": "assets/sprites/bastion/frame-40.webp",
-   "bytes": 5482
-  },
-  {
-   "path": "assets/sprites/bastion/frame-41.webp",
-   "bytes": 4488
-  },
-  {
-   "path": "assets/sprites/bastion/frame-42.webp",
-   "bytes": 3980
-  },
-  {
-   "path": "assets/sprites/bastion/frame-43.webp",
-   "bytes": 3670
-  },
-  {
-   "path": "assets/sprites/bastion/frame-44.webp",
-   "bytes": 13458
-  },
-  {
-   "path": "assets/sprites/bastion/frame-45.webp",
-   "bytes": 13956
-  },
-  {
-   "path": "assets/sprites/bastion/frame-46.webp",
-   "bytes": 15050
-  },
-  {
-   "path": "assets/sprites/bastion/frame-47.webp",
-   "bytes": 14400
-  },
-  {
-   "path": "assets/sprites/bastion/frame-48.webp",
-   "bytes": 14644
-  },
-  {
-   "path": "assets/sprites/bastion/frame-49.webp",
-   "bytes": 15278
-  },
-  {
-   "path": "assets/sprites/bastion/frame-50.webp",
-   "bytes": 14318
-  },
-  {
-   "path": "assets/sprites/bastion/frame-51.webp",
-   "bytes": 14370
-  },
-  {
-   "path": "assets/sprites/bastion/frame-52.webp",
-   "bytes": 14508
-  },
-  {
-   "path": "assets/sprites/bastion/frame-53.webp",
-   "bytes": 13478
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-00.webp",
-   "bytes": 8448
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-01.webp",
-   "bytes": 8600
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-02.webp",
-   "bytes": 8630
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-03.webp",
-   "bytes": 8600
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-04.webp",
-   "bytes": 8448
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-05.webp",
-   "bytes": 8378
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-06.webp",
-   "bytes": 8294
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-07.webp",
-   "bytes": 8378
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-08.webp",
-   "bytes": 9230
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-09.webp",
-   "bytes": 9284
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-10.webp",
-   "bytes": 9382
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-11.webp",
-   "bytes": 9382
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-12.webp",
-   "bytes": 9284
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-13.webp",
-   "bytes": 9208
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-14.webp",
-   "bytes": 9304
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-15.webp",
-   "bytes": 9374
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-16.webp",
-   "bytes": 9374
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-17.webp",
-   "bytes": 9304
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-18.webp",
-   "bytes": 8992
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-19.webp",
-   "bytes": 8878
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-20.webp",
-   "bytes": 8972
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-21.webp",
-   "bytes": 10234
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-22.webp",
-   "bytes": 10492
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-23.webp",
-   "bytes": 10534
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-24.webp",
-   "bytes": 9706
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-25.webp",
-   "bytes": 9148
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-26.webp",
-   "bytes": 9188
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-27.webp",
-   "bytes": 9050
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-28.webp",
-   "bytes": 9124
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-29.webp",
-   "bytes": 9124
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-30.webp",
-   "bytes": 9418
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-31.webp",
-   "bytes": 9850
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-32.webp",
-   "bytes": 10184
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-33.webp",
-   "bytes": 10438
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-34.webp",
-   "bytes": 10680
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-35.webp",
-   "bytes": 9766
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-36.webp",
-   "bytes": 8818
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-37.webp",
-   "bytes": 8106
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-38.webp",
-   "bytes": 7572
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-39.webp",
-   "bytes": 6912
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-40.webp",
-   "bytes": 6174
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-41.webp",
-   "bytes": 5346
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-42.webp",
-   "bytes": 4780
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-43.webp",
-   "bytes": 4402
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-44.webp",
-   "bytes": 11718
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-45.webp",
-   "bytes": 12090
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-46.webp",
-   "bytes": 12406
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-47.webp",
-   "bytes": 12600
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-48.webp",
-   "bytes": 12680
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-49.webp",
-   "bytes": 12476
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-50.webp",
-   "bytes": 12570
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-51.webp",
-   "bytes": 12450
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-52.webp",
-   "bytes": 12066
-  },
-  {
-   "path": "assets/sprites/deadeye/frame-53.webp",
-   "bytes": 11752
-  },
-  {
-   "path": "assets/sprites/dusk/frame-00.webp",
-   "bytes": 8400
-  },
-  {
-   "path": "assets/sprites/dusk/frame-01.webp",
-   "bytes": 8534
-  },
-  {
-   "path": "assets/sprites/dusk/frame-02.webp",
-   "bytes": 8626
-  },
-  {
-   "path": "assets/sprites/dusk/frame-03.webp",
-   "bytes": 8534
-  },
-  {
-   "path": "assets/sprites/dusk/frame-04.webp",
-   "bytes": 8400
-  },
-  {
-   "path": "assets/sprites/dusk/frame-05.webp",
-   "bytes": 8324
-  },
-  {
-   "path": "assets/sprites/dusk/frame-06.webp",
-   "bytes": 8360
-  },
-  {
-   "path": "assets/sprites/dusk/frame-07.webp",
-   "bytes": 8324
-  },
-  {
-   "path": "assets/sprites/dusk/frame-08.webp",
-   "bytes": 9252
-  },
-  {
-   "path": "assets/sprites/dusk/frame-09.webp",
-   "bytes": 9392
-  },
-  {
-   "path": "assets/sprites/dusk/frame-10.webp",
-   "bytes": 9254
-  },
-  {
-   "path": "assets/sprites/dusk/frame-11.webp",
-   "bytes": 9254
-  },
-  {
-   "path": "assets/sprites/dusk/frame-12.webp",
-   "bytes": 9392
-  },
-  {
-   "path": "assets/sprites/dusk/frame-13.webp",
-   "bytes": 9246
-  },
-  {
-   "path": "assets/sprites/dusk/frame-14.webp",
-   "bytes": 9454
-  },
-  {
-   "path": "assets/sprites/dusk/frame-15.webp",
-   "bytes": 9350
-  },
-  {
-   "path": "assets/sprites/dusk/frame-16.webp",
-   "bytes": 9350
-  },
-  {
-   "path": "assets/sprites/dusk/frame-17.webp",
-   "bytes": 9454
-  },
-  {
-   "path": "assets/sprites/dusk/frame-18.webp",
-   "bytes": 8344
-  },
-  {
-   "path": "assets/sprites/dusk/frame-19.webp",
-   "bytes": 8212
-  },
-  {
-   "path": "assets/sprites/dusk/frame-20.webp",
-   "bytes": 8252
-  },
-  {
-   "path": "assets/sprites/dusk/frame-21.webp",
-   "bytes": 9254
-  },
-  {
-   "path": "assets/sprites/dusk/frame-22.webp",
-   "bytes": 9254
-  },
-  {
-   "path": "assets/sprites/dusk/frame-23.webp",
-   "bytes": 9410
-  },
-  {
-   "path": "assets/sprites/dusk/frame-24.webp",
-   "bytes": 9034
-  },
-  {
-   "path": "assets/sprites/dusk/frame-25.webp",
-   "bytes": 8682
-  },
-  {
-   "path": "assets/sprites/dusk/frame-26.webp",
-   "bytes": 8572
-  },
-  {
-   "path": "assets/sprites/dusk/frame-27.webp",
-   "bytes": 8602
-  },
-  {
-   "path": "assets/sprites/dusk/frame-28.webp",
-   "bytes": 8612
-  },
-  {
-   "path": "assets/sprites/dusk/frame-29.webp",
-   "bytes": 8612
-  },
-  {
-   "path": "assets/sprites/dusk/frame-30.webp",
-   "bytes": 9420
-  },
-  {
-   "path": "assets/sprites/dusk/frame-31.webp",
-   "bytes": 9670
-  },
-  {
-   "path": "assets/sprites/dusk/frame-32.webp",
-   "bytes": 10076
-  },
-  {
-   "path": "assets/sprites/dusk/frame-33.webp",
-   "bytes": 10480
-  },
-  {
-   "path": "assets/sprites/dusk/frame-34.webp",
-   "bytes": 10554
-  },
-  {
-   "path": "assets/sprites/dusk/frame-35.webp",
-   "bytes": 9120
-  },
-  {
-   "path": "assets/sprites/dusk/frame-36.webp",
-   "bytes": 6292
-  },
-  {
-   "path": "assets/sprites/dusk/frame-37.webp",
-   "bytes": 6076
-  },
-  {
-   "path": "assets/sprites/dusk/frame-38.webp",
-   "bytes": 5584
-  },
-  {
-   "path": "assets/sprites/dusk/frame-39.webp",
-   "bytes": 5074
-  },
-  {
-   "path": "assets/sprites/dusk/frame-40.webp",
-   "bytes": 4532
-  },
-  {
-   "path": "assets/sprites/dusk/frame-41.webp",
-   "bytes": 3822
-  },
-  {
-   "path": "assets/sprites/dusk/frame-42.webp",
-   "bytes": 3546
-  },
-  {
-   "path": "assets/sprites/dusk/frame-43.webp",
-   "bytes": 3308
-  },
-  {
-   "path": "assets/sprites/dusk/frame-44.webp",
-   "bytes": 10048
-  },
-  {
-   "path": "assets/sprites/dusk/frame-45.webp",
-   "bytes": 10260
-  },
-  {
-   "path": "assets/sprites/dusk/frame-46.webp",
-   "bytes": 10320
-  },
-  {
-   "path": "assets/sprites/dusk/frame-47.webp",
-   "bytes": 10562
-  },
-  {
-   "path": "assets/sprites/dusk/frame-48.webp",
-   "bytes": 10700
-  },
-  {
-   "path": "assets/sprites/dusk/frame-49.webp",
-   "bytes": 11158
-  },
-  {
-   "path": "assets/sprites/dusk/frame-50.webp",
-   "bytes": 11038
-  },
-  {
-   "path": "assets/sprites/dusk/frame-51.webp",
-   "bytes": 11388
-  },
-  {
-   "path": "assets/sprites/dusk/frame-52.webp",
-   "bytes": 11416
-  },
-  {
-   "path": "assets/sprites/dusk/frame-53.webp",
-   "bytes": 11386
-  },
-  {
-   "path": "assets/sprites/ember/frame-00.webp",
-   "bytes": 12906
-  },
-  {
-   "path": "assets/sprites/ember/frame-01.webp",
-   "bytes": 13136
-  },
-  {
-   "path": "assets/sprites/ember/frame-02.webp",
-   "bytes": 13252
-  },
-  {
-   "path": "assets/sprites/ember/frame-03.webp",
-   "bytes": 13136
-  },
-  {
-   "path": "assets/sprites/ember/frame-04.webp",
-   "bytes": 12906
-  },
-  {
-   "path": "assets/sprites/ember/frame-05.webp",
-   "bytes": 12906
-  },
-  {
-   "path": "assets/sprites/ember/frame-06.webp",
-   "bytes": 12888
-  },
-  {
-   "path": "assets/sprites/ember/frame-07.webp",
-   "bytes": 12906
-  },
-  {
-   "path": "assets/sprites/ember/frame-08.webp",
-   "bytes": 17050
-  },
-  {
-   "path": "assets/sprites/ember/frame-09.webp",
-   "bytes": 17252
-  },
-  {
-   "path": "assets/sprites/ember/frame-10.webp",
-   "bytes": 17252
-  },
-  {
-   "path": "assets/sprites/ember/frame-11.webp",
-   "bytes": 17252
-  },
-  {
-   "path": "assets/sprites/ember/frame-12.webp",
-   "bytes": 17252
-  },
-  {
-   "path": "assets/sprites/ember/frame-13.webp",
-   "bytes": 17028
-  },
-  {
-   "path": "assets/sprites/ember/frame-14.webp",
-   "bytes": 17184
-  },
-  {
-   "path": "assets/sprites/ember/frame-15.webp",
-   "bytes": 17346
-  },
-  {
-   "path": "assets/sprites/ember/frame-16.webp",
-   "bytes": 17346
-  },
-  {
-   "path": "assets/sprites/ember/frame-17.webp",
-   "bytes": 17184
-  },
-  {
-   "path": "assets/sprites/ember/frame-18.webp",
-   "bytes": 17230
-  },
-  {
-   "path": "assets/sprites/ember/frame-19.webp",
-   "bytes": 17276
-  },
-  {
-   "path": "assets/sprites/ember/frame-20.webp",
-   "bytes": 17198
-  },
-  {
-   "path": "assets/sprites/ember/frame-21.webp",
-   "bytes": 18506
-  },
-  {
-   "path": "assets/sprites/ember/frame-22.webp",
-   "bytes": 18688
-  },
-  {
-   "path": "assets/sprites/ember/frame-23.webp",
-   "bytes": 18910
-  },
-  {
-   "path": "assets/sprites/ember/frame-24.webp",
-   "bytes": 18540
-  },
-  {
-   "path": "assets/sprites/ember/frame-25.webp",
-   "bytes": 17710
-  },
-  {
-   "path": "assets/sprites/ember/frame-26.webp",
-   "bytes": 17762
-  },
-  {
-   "path": "assets/sprites/ember/frame-27.webp",
-   "bytes": 17754
-  },
-  {
-   "path": "assets/sprites/ember/frame-28.webp",
-   "bytes": 17796
-  },
-  {
-   "path": "assets/sprites/ember/frame-29.webp",
-   "bytes": 17796
-  },
-  {
-   "path": "assets/sprites/ember/frame-30.webp",
-   "bytes": 18504
-  },
-  {
-   "path": "assets/sprites/ember/frame-31.webp",
-   "bytes": 19522
-  },
-  {
-   "path": "assets/sprites/ember/frame-32.webp",
-   "bytes": 19960
-  },
-  {
-   "path": "assets/sprites/ember/frame-33.webp",
-   "bytes": 20574
-  },
-  {
-   "path": "assets/sprites/ember/frame-34.webp",
-   "bytes": 20582
-  },
-  {
-   "path": "assets/sprites/ember/frame-35.webp",
-   "bytes": 19528
-  },
-  {
-   "path": "assets/sprites/ember/frame-36.webp",
-   "bytes": 11518
-  },
-  {
-   "path": "assets/sprites/ember/frame-37.webp",
-   "bytes": 11032
-  },
-  {
-   "path": "assets/sprites/ember/frame-38.webp",
-   "bytes": 10254
-  },
-  {
-   "path": "assets/sprites/ember/frame-39.webp",
-   "bytes": 9234
-  },
-  {
-   "path": "assets/sprites/ember/frame-40.webp",
-   "bytes": 7994
-  },
-  {
-   "path": "assets/sprites/ember/frame-41.webp",
-   "bytes": 6434
-  },
-  {
-   "path": "assets/sprites/ember/frame-42.webp",
-   "bytes": 5722
-  },
-  {
-   "path": "assets/sprites/ember/frame-43.webp",
-   "bytes": 5164
-  },
-  {
-   "path": "assets/sprites/ember/frame-44.webp",
-   "bytes": 15646
-  },
-  {
-   "path": "assets/sprites/ember/frame-45.webp",
-   "bytes": 16080
-  },
-  {
-   "path": "assets/sprites/ember/frame-46.webp",
-   "bytes": 16686
-  },
-  {
-   "path": "assets/sprites/ember/frame-47.webp",
-   "bytes": 16934
-  },
-  {
-   "path": "assets/sprites/ember/frame-48.webp",
-   "bytes": 17064
-  },
-  {
-   "path": "assets/sprites/ember/frame-49.webp",
-   "bytes": 17068
-  },
-  {
-   "path": "assets/sprites/ember/frame-50.webp",
-   "bytes": 16852
-  },
-  {
-   "path": "assets/sprites/ember/frame-51.webp",
-   "bytes": 16668
-  },
-  {
-   "path": "assets/sprites/ember/frame-52.webp",
-   "bytes": 16102
-  },
-  {
-   "path": "assets/sprites/ember/frame-53.webp",
-   "bytes": 15732
-  },
-  {
-   "path": "assets/sprites/hex/frame-00.webp",
-   "bytes": 9190
-  },
-  {
-   "path": "assets/sprites/hex/frame-01.webp",
-   "bytes": 9340
-  },
-  {
-   "path": "assets/sprites/hex/frame-02.webp",
-   "bytes": 9262
-  },
-  {
-   "path": "assets/sprites/hex/frame-03.webp",
-   "bytes": 9340
-  },
-  {
-   "path": "assets/sprites/hex/frame-04.webp",
-   "bytes": 9190
-  },
-  {
-   "path": "assets/sprites/hex/frame-05.webp",
-   "bytes": 8980
-  },
-  {
-   "path": "assets/sprites/hex/frame-06.webp",
-   "bytes": 8878
-  },
-  {
-   "path": "assets/sprites/hex/frame-07.webp",
-   "bytes": 8980
-  },
-  {
-   "path": "assets/sprites/hex/frame-08.webp",
-   "bytes": 9608
-  },
-  {
-   "path": "assets/sprites/hex/frame-09.webp",
-   "bytes": 9666
-  },
-  {
-   "path": "assets/sprites/hex/frame-10.webp",
-   "bytes": 9732
-  },
-  {
-   "path": "assets/sprites/hex/frame-11.webp",
-   "bytes": 9732
-  },
-  {
-   "path": "assets/sprites/hex/frame-12.webp",
-   "bytes": 9666
-  },
-  {
-   "path": "assets/sprites/hex/frame-13.webp",
-   "bytes": 9616
-  },
-  {
-   "path": "assets/sprites/hex/frame-14.webp",
-   "bytes": 9774
-  },
-  {
-   "path": "assets/sprites/hex/frame-15.webp",
-   "bytes": 9852
-  },
-  {
-   "path": "assets/sprites/hex/frame-16.webp",
-   "bytes": 9852
-  },
-  {
-   "path": "assets/sprites/hex/frame-17.webp",
-   "bytes": 9774
-  },
-  {
-   "path": "assets/sprites/hex/frame-18.webp",
-   "bytes": 9178
-  },
-  {
-   "path": "assets/sprites/hex/frame-19.webp",
-   "bytes": 9236
-  },
-  {
-   "path": "assets/sprites/hex/frame-20.webp",
-   "bytes": 9232
-  },
-  {
-   "path": "assets/sprites/hex/frame-21.webp",
-   "bytes": 9876
-  },
-  {
-   "path": "assets/sprites/hex/frame-22.webp",
-   "bytes": 11340
-  },
-  {
-   "path": "assets/sprites/hex/frame-23.webp",
-   "bytes": 11074
-  },
-  {
-   "path": "assets/sprites/hex/frame-24.webp",
-   "bytes": 9712
-  },
-  {
-   "path": "assets/sprites/hex/frame-25.webp",
-   "bytes": 9400
-  },
-  {
-   "path": "assets/sprites/hex/frame-26.webp",
-   "bytes": 9452
-  },
-  {
-   "path": "assets/sprites/hex/frame-27.webp",
-   "bytes": 9468
-  },
-  {
-   "path": "assets/sprites/hex/frame-28.webp",
-   "bytes": 9510
-  },
-  {
-   "path": "assets/sprites/hex/frame-29.webp",
-   "bytes": 9510
-  },
-  {
-   "path": "assets/sprites/hex/frame-30.webp",
-   "bytes": 10664
-  },
-  {
-   "path": "assets/sprites/hex/frame-31.webp",
-   "bytes": 11382
-  },
-  {
-   "path": "assets/sprites/hex/frame-32.webp",
-   "bytes": 11824
-  },
-  {
-   "path": "assets/sprites/hex/frame-33.webp",
-   "bytes": 12398
-  },
-  {
-   "path": "assets/sprites/hex/frame-34.webp",
-   "bytes": 12670
-  },
-  {
-   "path": "assets/sprites/hex/frame-35.webp",
-   "bytes": 11352
-  },
-  {
-   "path": "assets/sprites/hex/frame-36.webp",
-   "bytes": 10370
-  },
-  {
-   "path": "assets/sprites/hex/frame-37.webp",
-   "bytes": 9498
-  },
-  {
-   "path": "assets/sprites/hex/frame-38.webp",
-   "bytes": 8390
-  },
-  {
-   "path": "assets/sprites/hex/frame-39.webp",
-   "bytes": 6934
-  },
-  {
-   "path": "assets/sprites/hex/frame-40.webp",
-   "bytes": 5726
-  },
-  {
-   "path": "assets/sprites/hex/frame-41.webp",
-   "bytes": 4252
-  },
-  {
-   "path": "assets/sprites/hex/frame-42.webp",
-   "bytes": 3886
-  },
-  {
-   "path": "assets/sprites/hex/frame-43.webp",
-   "bytes": 3386
-  },
-  {
-   "path": "assets/sprites/hex/frame-44.webp",
-   "bytes": 12112
-  },
-  {
-   "path": "assets/sprites/hex/frame-45.webp",
-   "bytes": 12152
-  },
-  {
-   "path": "assets/sprites/hex/frame-46.webp",
-   "bytes": 12476
-  },
-  {
-   "path": "assets/sprites/hex/frame-47.webp",
-   "bytes": 12770
-  },
-  {
-   "path": "assets/sprites/hex/frame-48.webp",
-   "bytes": 12976
-  },
-  {
-   "path": "assets/sprites/hex/frame-49.webp",
-   "bytes": 13240
-  },
-  {
-   "path": "assets/sprites/hex/frame-50.webp",
-   "bytes": 13680
-  },
-  {
-   "path": "assets/sprites/hex/frame-51.webp",
-   "bytes": 13954
-  },
-  {
-   "path": "assets/sprites/hex/frame-52.webp",
-   "bytes": 14180
-  },
-  {
-   "path": "assets/sprites/hex/frame-53.webp",
-   "bytes": 13062
-  },
-  {
-   "path": "assets/sprites/mercy/frame-00.webp",
-   "bytes": 6726
-  },
-  {
-   "path": "assets/sprites/mercy/frame-01.webp",
-   "bytes": 6730
-  },
-  {
-   "path": "assets/sprites/mercy/frame-02.webp",
-   "bytes": 6784
-  },
-  {
-   "path": "assets/sprites/mercy/frame-03.webp",
-   "bytes": 6730
-  },
-  {
-   "path": "assets/sprites/mercy/frame-04.webp",
-   "bytes": 6726
-  },
-  {
-   "path": "assets/sprites/mercy/frame-05.webp",
-   "bytes": 6634
-  },
-  {
-   "path": "assets/sprites/mercy/frame-06.webp",
-   "bytes": 6638
-  },
-  {
-   "path": "assets/sprites/mercy/frame-07.webp",
-   "bytes": 6634
-  },
-  {
-   "path": "assets/sprites/mercy/frame-08.webp",
-   "bytes": 6360
-  },
-  {
-   "path": "assets/sprites/mercy/frame-09.webp",
-   "bytes": 6420
-  },
-  {
-   "path": "assets/sprites/mercy/frame-10.webp",
-   "bytes": 6502
-  },
-  {
-   "path": "assets/sprites/mercy/frame-11.webp",
-   "bytes": 6502
-  },
-  {
-   "path": "assets/sprites/mercy/frame-12.webp",
-   "bytes": 6420
-  },
-  {
-   "path": "assets/sprites/mercy/frame-13.webp",
-   "bytes": 6340
-  },
-  {
-   "path": "assets/sprites/mercy/frame-14.webp",
-   "bytes": 6548
-  },
-  {
-   "path": "assets/sprites/mercy/frame-15.webp",
-   "bytes": 6432
-  },
-  {
-   "path": "assets/sprites/mercy/frame-16.webp",
-   "bytes": 6432
-  },
-  {
-   "path": "assets/sprites/mercy/frame-17.webp",
-   "bytes": 6548
-  },
-  {
-   "path": "assets/sprites/mercy/frame-18.webp",
-   "bytes": 9738
-  },
-  {
-   "path": "assets/sprites/mercy/frame-19.webp",
-   "bytes": 9708
-  },
-  {
-   "path": "assets/sprites/mercy/frame-20.webp",
-   "bytes": 9710
-  },
-  {
-   "path": "assets/sprites/mercy/frame-21.webp",
-   "bytes": 11136
-  },
-  {
-   "path": "assets/sprites/mercy/frame-22.webp",
-   "bytes": 11848
-  },
-  {
-   "path": "assets/sprites/mercy/frame-23.webp",
-   "bytes": 12232
-  },
-  {
-   "path": "assets/sprites/mercy/frame-24.webp",
-   "bytes": 10554
-  },
-  {
-   "path": "assets/sprites/mercy/frame-25.webp",
-   "bytes": 10062
-  },
-  {
-   "path": "assets/sprites/mercy/frame-26.webp",
-   "bytes": 10012
-  },
-  {
-   "path": "assets/sprites/mercy/frame-27.webp",
-   "bytes": 10076
-  },
-  {
-   "path": "assets/sprites/mercy/frame-28.webp",
-   "bytes": 10094
-  },
-  {
-   "path": "assets/sprites/mercy/frame-29.webp",
-   "bytes": 10094
-  },
-  {
-   "path": "assets/sprites/mercy/frame-30.webp",
-   "bytes": 10424
-  },
-  {
-   "path": "assets/sprites/mercy/frame-31.webp",
-   "bytes": 10758
-  },
-  {
-   "path": "assets/sprites/mercy/frame-32.webp",
-   "bytes": 11086
-  },
-  {
-   "path": "assets/sprites/mercy/frame-33.webp",
-   "bytes": 11496
-  },
-  {
-   "path": "assets/sprites/mercy/frame-34.webp",
-   "bytes": 11596
-  },
-  {
-   "path": "assets/sprites/mercy/frame-35.webp",
-   "bytes": 10076
-  },
-  {
-   "path": "assets/sprites/mercy/frame-36.webp",
-   "bytes": 4482
-  },
-  {
-   "path": "assets/sprites/mercy/frame-37.webp",
-   "bytes": 4080
-  },
-  {
-   "path": "assets/sprites/mercy/frame-38.webp",
-   "bytes": 3750
-  },
-  {
-   "path": "assets/sprites/mercy/frame-39.webp",
-   "bytes": 3374
-  },
-  {
-   "path": "assets/sprites/mercy/frame-40.webp",
-   "bytes": 2850
-  },
-  {
-   "path": "assets/sprites/mercy/frame-41.webp",
-   "bytes": 2450
-  },
-  {
-   "path": "assets/sprites/mercy/frame-42.webp",
-   "bytes": 2168
-  },
-  {
-   "path": "assets/sprites/mercy/frame-43.webp",
-   "bytes": 2026
-  },
-  {
-   "path": "assets/sprites/mercy/frame-44.webp",
-   "bytes": 9438
-  },
-  {
-   "path": "assets/sprites/mercy/frame-45.webp",
-   "bytes": 9888
-  },
-  {
-   "path": "assets/sprites/mercy/frame-46.webp",
-   "bytes": 10090
-  },
-  {
-   "path": "assets/sprites/mercy/frame-47.webp",
-   "bytes": 10444
-  },
-  {
-   "path": "assets/sprites/mercy/frame-48.webp",
-   "bytes": 10672
-  },
-  {
-   "path": "assets/sprites/mercy/frame-49.webp",
-   "bytes": 10886
-  },
-  {
-   "path": "assets/sprites/mercy/frame-50.webp",
-   "bytes": 10804
-  },
-  {
-   "path": "assets/sprites/mercy/frame-51.webp",
-   "bytes": 10782
-  },
-  {
-   "path": "assets/sprites/mercy/frame-52.webp",
-   "bytes": 10990
-  },
-  {
-   "path": "assets/sprites/mercy/frame-53.webp",
-   "bytes": 10932
-  },
-  {
-   "path": "assets/sprites/rampart/frame-00.webp",
-   "bytes": 11086
-  },
-  {
-   "path": "assets/sprites/rampart/frame-01.webp",
-   "bytes": 11344
-  },
-  {
-   "path": "assets/sprites/rampart/frame-02.webp",
-   "bytes": 11246
-  },
-  {
-   "path": "assets/sprites/rampart/frame-03.webp",
-   "bytes": 11344
-  },
-  {
-   "path": "assets/sprites/rampart/frame-04.webp",
-   "bytes": 11086
-  },
-  {
-   "path": "assets/sprites/rampart/frame-05.webp",
-   "bytes": 11116
-  },
-  {
-   "path": "assets/sprites/rampart/frame-06.webp",
-   "bytes": 10930
-  },
-  {
-   "path": "assets/sprites/rampart/frame-07.webp",
-   "bytes": 11116
-  },
-  {
-   "path": "assets/sprites/rampart/frame-08.webp",
-   "bytes": 11698
-  },
-  {
-   "path": "assets/sprites/rampart/frame-09.webp",
-   "bytes": 11944
-  },
-  {
-   "path": "assets/sprites/rampart/frame-10.webp",
-   "bytes": 11912
-  },
-  {
-   "path": "assets/sprites/rampart/frame-11.webp",
-   "bytes": 11912
-  },
-  {
-   "path": "assets/sprites/rampart/frame-12.webp",
-   "bytes": 11944
-  },
-  {
-   "path": "assets/sprites/rampart/frame-13.webp",
-   "bytes": 11562
-  },
-  {
-   "path": "assets/sprites/rampart/frame-14.webp",
-   "bytes": 11888
-  },
-  {
-   "path": "assets/sprites/rampart/frame-15.webp",
-   "bytes": 11820
-  },
-  {
-   "path": "assets/sprites/rampart/frame-16.webp",
-   "bytes": 11820
-  },
-  {
-   "path": "assets/sprites/rampart/frame-17.webp",
-   "bytes": 11888
-  },
-  {
-   "path": "assets/sprites/rampart/frame-18.webp",
-   "bytes": 9792
-  },
-  {
-   "path": "assets/sprites/rampart/frame-19.webp",
-   "bytes": 9752
-  },
-  {
-   "path": "assets/sprites/rampart/frame-20.webp",
-   "bytes": 9778
-  },
-  {
-   "path": "assets/sprites/rampart/frame-21.webp",
-   "bytes": 10498
-  },
-  {
-   "path": "assets/sprites/rampart/frame-22.webp",
-   "bytes": 10522
-  },
-  {
-   "path": "assets/sprites/rampart/frame-23.webp",
-   "bytes": 10634
-  },
-  {
-   "path": "assets/sprites/rampart/frame-24.webp",
-   "bytes": 10310
-  },
-  {
-   "path": "assets/sprites/rampart/frame-25.webp",
-   "bytes": 9946
-  },
-  {
-   "path": "assets/sprites/rampart/frame-26.webp",
-   "bytes": 9880
-  },
-  {
-   "path": "assets/sprites/rampart/frame-27.webp",
-   "bytes": 10014
-  },
-  {
-   "path": "assets/sprites/rampart/frame-28.webp",
-   "bytes": 9994
-  },
-  {
-   "path": "assets/sprites/rampart/frame-29.webp",
-   "bytes": 9994
-  },
-  {
-   "path": "assets/sprites/rampart/frame-30.webp",
-   "bytes": 11094
-  },
-  {
-   "path": "assets/sprites/rampart/frame-31.webp",
-   "bytes": 11494
-  },
-  {
-   "path": "assets/sprites/rampart/frame-32.webp",
-   "bytes": 11972
-  },
-  {
-   "path": "assets/sprites/rampart/frame-33.webp",
-   "bytes": 12354
-  },
-  {
-   "path": "assets/sprites/rampart/frame-34.webp",
-   "bytes": 12624
-  },
-  {
-   "path": "assets/sprites/rampart/frame-35.webp",
-   "bytes": 11656
-  },
-  {
-   "path": "assets/sprites/rampart/frame-36.webp",
-   "bytes": 9026
-  },
-  {
-   "path": "assets/sprites/rampart/frame-37.webp",
-   "bytes": 8378
-  },
-  {
-   "path": "assets/sprites/rampart/frame-38.webp",
-   "bytes": 7742
-  },
-  {
-   "path": "assets/sprites/rampart/frame-39.webp",
-   "bytes": 7192
-  },
-  {
-   "path": "assets/sprites/rampart/frame-40.webp",
-   "bytes": 6260
-  },
-  {
-   "path": "assets/sprites/rampart/frame-41.webp",
-   "bytes": 5378
-  },
-  {
-   "path": "assets/sprites/rampart/frame-42.webp",
-   "bytes": 4978
-  },
-  {
-   "path": "assets/sprites/rampart/frame-43.webp",
-   "bytes": 4518
-  },
-  {
-   "path": "assets/sprites/rampart/frame-44.webp",
-   "bytes": 12216
-  },
-  {
-   "path": "assets/sprites/rampart/frame-45.webp",
-   "bytes": 12592
-  },
-  {
-   "path": "assets/sprites/rampart/frame-46.webp",
-   "bytes": 12868
-  },
-  {
-   "path": "assets/sprites/rampart/frame-47.webp",
-   "bytes": 13002
-  },
-  {
-   "path": "assets/sprites/rampart/frame-48.webp",
-   "bytes": 13034
-  },
-  {
-   "path": "assets/sprites/rampart/frame-49.webp",
-   "bytes": 13086
-  },
-  {
-   "path": "assets/sprites/rampart/frame-50.webp",
-   "bytes": 12970
-  },
-  {
-   "path": "assets/sprites/rampart/frame-51.webp",
-   "bytes": 12850
-  },
-  {
-   "path": "assets/sprites/rampart/frame-52.webp",
-   "bytes": 13048
-  },
-  {
-   "path": "assets/sprites/rampart/frame-53.webp",
-   "bytes": 12990
-  },
-  {
-   "path": "assets/sprites/rook/frame-00.webp",
-   "bytes": 8502
-  },
-  {
-   "path": "assets/sprites/rook/frame-01.webp",
-   "bytes": 8576
-  },
-  {
-   "path": "assets/sprites/rook/frame-02.webp",
-   "bytes": 8652
-  },
-  {
-   "path": "assets/sprites/rook/frame-03.webp",
-   "bytes": 8576
-  },
-  {
-   "path": "assets/sprites/rook/frame-04.webp",
-   "bytes": 8502
-  },
-  {
-   "path": "assets/sprites/rook/frame-05.webp",
-   "bytes": 8536
-  },
-  {
-   "path": "assets/sprites/rook/frame-06.webp",
-   "bytes": 8510
-  },
-  {
-   "path": "assets/sprites/rook/frame-07.webp",
-   "bytes": 8536
-  },
-  {
-   "path": "assets/sprites/rook/frame-08.webp",
-   "bytes": 8378
-  },
-  {
-   "path": "assets/sprites/rook/frame-09.webp",
-   "bytes": 8544
-  },
-  {
-   "path": "assets/sprites/rook/frame-10.webp",
-   "bytes": 8546
-  },
-  {
-   "path": "assets/sprites/rook/frame-11.webp",
-   "bytes": 8546
-  },
-  {
-   "path": "assets/sprites/rook/frame-12.webp",
-   "bytes": 8544
-  },
-  {
-   "path": "assets/sprites/rook/frame-13.webp",
-   "bytes": 8384
-  },
-  {
-   "path": "assets/sprites/rook/frame-14.webp",
-   "bytes": 8508
-  },
-  {
-   "path": "assets/sprites/rook/frame-15.webp",
-   "bytes": 8488
-  },
-  {
-   "path": "assets/sprites/rook/frame-16.webp",
-   "bytes": 8488
-  },
-  {
-   "path": "assets/sprites/rook/frame-17.webp",
-   "bytes": 8508
-  },
-  {
-   "path": "assets/sprites/rook/frame-18.webp",
-   "bytes": 9006
-  },
-  {
-   "path": "assets/sprites/rook/frame-19.webp",
-   "bytes": 9074
-  },
-  {
-   "path": "assets/sprites/rook/frame-20.webp",
-   "bytes": 9008
-  },
-  {
-   "path": "assets/sprites/rook/frame-21.webp",
-   "bytes": 10516
-  },
-  {
-   "path": "assets/sprites/rook/frame-22.webp",
-   "bytes": 12366
-  },
-  {
-   "path": "assets/sprites/rook/frame-23.webp",
-   "bytes": 13674
-  },
-  {
-   "path": "assets/sprites/rook/frame-24.webp",
-   "bytes": 9630
-  },
-  {
-   "path": "assets/sprites/rook/frame-25.webp",
-   "bytes": 9216
-  },
-  {
-   "path": "assets/sprites/rook/frame-26.webp",
-   "bytes": 9234
-  },
-  {
-   "path": "assets/sprites/rook/frame-27.webp",
-   "bytes": 9178
-  },
-  {
-   "path": "assets/sprites/rook/frame-28.webp",
-   "bytes": 9278
-  },
-  {
-   "path": "assets/sprites/rook/frame-29.webp",
-   "bytes": 9278
-  },
-  {
-   "path": "assets/sprites/rook/frame-30.webp",
-   "bytes": 8242
-  },
-  {
-   "path": "assets/sprites/rook/frame-31.webp",
-   "bytes": 8746
-  },
-  {
-   "path": "assets/sprites/rook/frame-32.webp",
-   "bytes": 8996
-  },
-  {
-   "path": "assets/sprites/rook/frame-33.webp",
-   "bytes": 9266
-  },
-  {
-   "path": "assets/sprites/rook/frame-34.webp",
-   "bytes": 9334
-  },
-  {
-   "path": "assets/sprites/rook/frame-35.webp",
-   "bytes": 8658
-  },
-  {
-   "path": "assets/sprites/rook/frame-36.webp",
-   "bytes": 7086
-  },
-  {
-   "path": "assets/sprites/rook/frame-37.webp",
-   "bytes": 7008
-  },
-  {
-   "path": "assets/sprites/rook/frame-38.webp",
-   "bytes": 6458
-  },
-  {
-   "path": "assets/sprites/rook/frame-39.webp",
-   "bytes": 5930
-  },
-  {
-   "path": "assets/sprites/rook/frame-40.webp",
-   "bytes": 5136
-  },
-  {
-   "path": "assets/sprites/rook/frame-41.webp",
-   "bytes": 4282
-  },
-  {
-   "path": "assets/sprites/rook/frame-42.webp",
-   "bytes": 3782
-  },
-  {
-   "path": "assets/sprites/rook/frame-43.webp",
-   "bytes": 3314
-  },
-  {
-   "path": "assets/sprites/rook/frame-44.webp",
-   "bytes": 16058
-  },
-  {
-   "path": "assets/sprites/rook/frame-45.webp",
-   "bytes": 16444
-  },
-  {
-   "path": "assets/sprites/rook/frame-46.webp",
-   "bytes": 16784
-  },
-  {
-   "path": "assets/sprites/rook/frame-47.webp",
-   "bytes": 17054
-  },
-  {
-   "path": "assets/sprites/rook/frame-48.webp",
-   "bytes": 17178
-  },
-  {
-   "path": "assets/sprites/rook/frame-49.webp",
-   "bytes": 17580
-  },
-  {
-   "path": "assets/sprites/rook/frame-50.webp",
-   "bytes": 17604
-  },
-  {
-   "path": "assets/sprites/rook/frame-51.webp",
-   "bytes": 17554
-  },
-  {
-   "path": "assets/sprites/rook/frame-52.webp",
-   "bytes": 17318
-  },
-  {
-   "path": "assets/sprites/rook/frame-53.webp",
-   "bytes": 17032
-  },
-  {
-   "path": "assets/sprites/sage/frame-00.webp",
-   "bytes": 7758
-  },
-  {
-   "path": "assets/sprites/sage/frame-01.webp",
-   "bytes": 7848
-  },
-  {
-   "path": "assets/sprites/sage/frame-02.webp",
-   "bytes": 7826
-  },
-  {
-   "path": "assets/sprites/sage/frame-03.webp",
-   "bytes": 7848
-  },
-  {
-   "path": "assets/sprites/sage/frame-04.webp",
-   "bytes": 7758
-  },
-  {
-   "path": "assets/sprites/sage/frame-05.webp",
-   "bytes": 7736
-  },
-  {
-   "path": "assets/sprites/sage/frame-06.webp",
-   "bytes": 7684
-  },
-  {
-   "path": "assets/sprites/sage/frame-07.webp",
-   "bytes": 7736
-  },
-  {
-   "path": "assets/sprites/sage/frame-08.webp",
-   "bytes": 9300
-  },
-  {
-   "path": "assets/sprites/sage/frame-09.webp",
-   "bytes": 9480
-  },
-  {
-   "path": "assets/sprites/sage/frame-10.webp",
-   "bytes": 9554
-  },
-  {
-   "path": "assets/sprites/sage/frame-11.webp",
-   "bytes": 9554
-  },
-  {
-   "path": "assets/sprites/sage/frame-12.webp",
-   "bytes": 9480
-  },
-  {
-   "path": "assets/sprites/sage/frame-13.webp",
-   "bytes": 9288
-  },
-  {
-   "path": "assets/sprites/sage/frame-14.webp",
-   "bytes": 9528
-  },
-  {
-   "path": "assets/sprites/sage/frame-15.webp",
-   "bytes": 9536
-  },
-  {
-   "path": "assets/sprites/sage/frame-16.webp",
-   "bytes": 9536
-  },
-  {
-   "path": "assets/sprites/sage/frame-17.webp",
-   "bytes": 9528
-  },
-  {
-   "path": "assets/sprites/sage/frame-18.webp",
-   "bytes": 8322
-  },
-  {
-   "path": "assets/sprites/sage/frame-19.webp",
-   "bytes": 8386
-  },
-  {
-   "path": "assets/sprites/sage/frame-20.webp",
-   "bytes": 8528
-  },
-  {
-   "path": "assets/sprites/sage/frame-21.webp",
-   "bytes": 9472
-  },
-  {
-   "path": "assets/sprites/sage/frame-22.webp",
-   "bytes": 10154
-  },
-  {
-   "path": "assets/sprites/sage/frame-23.webp",
-   "bytes": 12004
-  },
-  {
-   "path": "assets/sprites/sage/frame-24.webp",
-   "bytes": 9104
-  },
-  {
-   "path": "assets/sprites/sage/frame-25.webp",
-   "bytes": 8800
-  },
-  {
-   "path": "assets/sprites/sage/frame-26.webp",
-   "bytes": 8718
-  },
-  {
-   "path": "assets/sprites/sage/frame-27.webp",
-   "bytes": 8754
-  },
-  {
-   "path": "assets/sprites/sage/frame-28.webp",
-   "bytes": 8726
-  },
-  {
-   "path": "assets/sprites/sage/frame-29.webp",
-   "bytes": 8726
-  },
-  {
-   "path": "assets/sprites/sage/frame-30.webp",
-   "bytes": 7874
-  },
-  {
-   "path": "assets/sprites/sage/frame-31.webp",
-   "bytes": 8046
-  },
-  {
-   "path": "assets/sprites/sage/frame-32.webp",
-   "bytes": 8298
-  },
-  {
-   "path": "assets/sprites/sage/frame-33.webp",
-   "bytes": 8594
-  },
-  {
-   "path": "assets/sprites/sage/frame-34.webp",
-   "bytes": 8700
-  },
-  {
-   "path": "assets/sprites/sage/frame-35.webp",
-   "bytes": 8480
-  },
-  {
-   "path": "assets/sprites/sage/frame-36.webp",
-   "bytes": 7052
-  },
-  {
-   "path": "assets/sprites/sage/frame-37.webp",
-   "bytes": 6830
-  },
-  {
-   "path": "assets/sprites/sage/frame-38.webp",
-   "bytes": 6226
-  },
-  {
-   "path": "assets/sprites/sage/frame-39.webp",
-   "bytes": 5656
-  },
-  {
-   "path": "assets/sprites/sage/frame-40.webp",
-   "bytes": 4976
-  },
-  {
-   "path": "assets/sprites/sage/frame-41.webp",
-   "bytes": 4210
-  },
-  {
-   "path": "assets/sprites/sage/frame-42.webp",
-   "bytes": 3842
-  },
-  {
-   "path": "assets/sprites/sage/frame-43.webp",
-   "bytes": 3512
-  },
-  {
-   "path": "assets/sprites/sage/frame-44.webp",
-   "bytes": 8758
-  },
-  {
-   "path": "assets/sprites/sage/frame-45.webp",
-   "bytes": 9070
-  },
-  {
-   "path": "assets/sprites/sage/frame-46.webp",
-   "bytes": 9508
-  },
-  {
-   "path": "assets/sprites/sage/frame-47.webp",
-   "bytes": 9966
-  },
-  {
-   "path": "assets/sprites/sage/frame-48.webp",
-   "bytes": 10064
-  },
-  {
-   "path": "assets/sprites/sage/frame-49.webp",
-   "bytes": 10340
-  },
-  {
-   "path": "assets/sprites/sage/frame-50.webp",
-   "bytes": 10326
-  },
-  {
-   "path": "assets/sprites/sage/frame-51.webp",
-   "bytes": 10502
-  },
-  {
-   "path": "assets/sprites/sage/frame-52.webp",
-   "bytes": 10616
-  },
-  {
-   "path": "assets/sprites/sage/frame-53.webp",
-   "bytes": 11334
-  },
-  {
-   "path": "assets/sprites/shade/frame-00.webp",
-   "bytes": 11446
-  },
-  {
-   "path": "assets/sprites/shade/frame-01.webp",
-   "bytes": 11432
-  },
-  {
-   "path": "assets/sprites/shade/frame-02.webp",
-   "bytes": 11532
-  },
-  {
-   "path": "assets/sprites/shade/frame-03.webp",
-   "bytes": 11432
-  },
-  {
-   "path": "assets/sprites/shade/frame-04.webp",
-   "bytes": 11446
-  },
-  {
-   "path": "assets/sprites/shade/frame-05.webp",
-   "bytes": 11266
-  },
-  {
-   "path": "assets/sprites/shade/frame-06.webp",
-   "bytes": 11310
-  },
-  {
-   "path": "assets/sprites/shade/frame-07.webp",
-   "bytes": 11266
-  },
-  {
-   "path": "assets/sprites/shade/frame-08.webp",
-   "bytes": 10738
-  },
-  {
-   "path": "assets/sprites/shade/frame-09.webp",
-   "bytes": 10928
-  },
-  {
-   "path": "assets/sprites/shade/frame-10.webp",
-   "bytes": 10790
-  },
-  {
-   "path": "assets/sprites/shade/frame-11.webp",
-   "bytes": 10790
-  },
-  {
-   "path": "assets/sprites/shade/frame-12.webp",
-   "bytes": 10928
-  },
-  {
-   "path": "assets/sprites/shade/frame-13.webp",
-   "bytes": 10752
-  },
-  {
-   "path": "assets/sprites/shade/frame-14.webp",
-   "bytes": 10990
-  },
-  {
-   "path": "assets/sprites/shade/frame-15.webp",
-   "bytes": 11012
-  },
-  {
-   "path": "assets/sprites/shade/frame-16.webp",
-   "bytes": 11012
-  },
-  {
-   "path": "assets/sprites/shade/frame-17.webp",
-   "bytes": 10990
-  },
-  {
-   "path": "assets/sprites/shade/frame-18.webp",
-   "bytes": 12156
-  },
-  {
-   "path": "assets/sprites/shade/frame-19.webp",
-   "bytes": 12250
-  },
-  {
-   "path": "assets/sprites/shade/frame-20.webp",
-   "bytes": 12254
-  },
-  {
-   "path": "assets/sprites/shade/frame-21.webp",
-   "bytes": 13518
-  },
-  {
-   "path": "assets/sprites/shade/frame-22.webp",
-   "bytes": 13370
-  },
-  {
-   "path": "assets/sprites/shade/frame-23.webp",
-   "bytes": 14534
-  },
-  {
-   "path": "assets/sprites/shade/frame-24.webp",
-   "bytes": 13020
-  },
-  {
-   "path": "assets/sprites/shade/frame-25.webp",
-   "bytes": 12542
-  },
-  {
-   "path": "assets/sprites/shade/frame-26.webp",
-   "bytes": 12600
-  },
-  {
-   "path": "assets/sprites/shade/frame-27.webp",
-   "bytes": 12598
-  },
-  {
-   "path": "assets/sprites/shade/frame-28.webp",
-   "bytes": 12556
-  },
-  {
-   "path": "assets/sprites/shade/frame-29.webp",
-   "bytes": 12556
-  },
-  {
-   "path": "assets/sprites/shade/frame-30.webp",
-   "bytes": 11358
-  },
-  {
-   "path": "assets/sprites/shade/frame-31.webp",
-   "bytes": 11726
-  },
-  {
-   "path": "assets/sprites/shade/frame-32.webp",
-   "bytes": 12278
-  },
-  {
-   "path": "assets/sprites/shade/frame-33.webp",
-   "bytes": 12530
-  },
-  {
-   "path": "assets/sprites/shade/frame-34.webp",
-   "bytes": 12694
-  },
-  {
-   "path": "assets/sprites/shade/frame-35.webp",
-   "bytes": 10928
-  },
-  {
-   "path": "assets/sprites/shade/frame-36.webp",
-   "bytes": 8410
-  },
-  {
-   "path": "assets/sprites/shade/frame-37.webp",
-   "bytes": 7556
-  },
-  {
-   "path": "assets/sprites/shade/frame-38.webp",
-   "bytes": 6822
-  },
-  {
-   "path": "assets/sprites/shade/frame-39.webp",
-   "bytes": 5864
-  },
-  {
-   "path": "assets/sprites/shade/frame-40.webp",
-   "bytes": 5004
-  },
-  {
-   "path": "assets/sprites/shade/frame-41.webp",
-   "bytes": 3996
-  },
-  {
-   "path": "assets/sprites/shade/frame-42.webp",
-   "bytes": 3572
-  },
-  {
-   "path": "assets/sprites/shade/frame-43.webp",
-   "bytes": 3244
-  },
-  {
-   "path": "assets/sprites/shade/frame-44.webp",
-   "bytes": 11954
-  },
-  {
-   "path": "assets/sprites/shade/frame-45.webp",
-   "bytes": 11808
-  },
-  {
-   "path": "assets/sprites/shade/frame-46.webp",
-   "bytes": 11978
-  },
-  {
-   "path": "assets/sprites/shade/frame-47.webp",
-   "bytes": 12254
-  },
-  {
-   "path": "assets/sprites/shade/frame-48.webp",
-   "bytes": 12248
-  },
-  {
-   "path": "assets/sprites/shade/frame-49.webp",
-   "bytes": 12218
-  },
-  {
-   "path": "assets/sprites/shade/frame-50.webp",
-   "bytes": 12324
-  },
-  {
-   "path": "assets/sprites/shade/frame-51.webp",
-   "bytes": 12584
-  },
-  {
-   "path": "assets/sprites/shade/frame-52.webp",
-   "bytes": 12964
-  },
-  {
-   "path": "assets/sprites/shade/frame-53.webp",
-   "bytes": 13154
-  },
-  {
-   "path": "assets/sprites/specter/frame-00.webp",
-   "bytes": 6962
-  },
-  {
-   "path": "assets/sprites/specter/frame-01.webp",
-   "bytes": 7014
-  },
-  {
-   "path": "assets/sprites/specter/frame-02.webp",
-   "bytes": 7098
-  },
-  {
-   "path": "assets/sprites/specter/frame-03.webp",
-   "bytes": 7014
-  },
-  {
-   "path": "assets/sprites/specter/frame-04.webp",
-   "bytes": 6962
-  },
-  {
-   "path": "assets/sprites/specter/frame-05.webp",
-   "bytes": 6936
-  },
-  {
-   "path": "assets/sprites/specter/frame-06.webp",
-   "bytes": 6758
-  },
-  {
-   "path": "assets/sprites/specter/frame-07.webp",
-   "bytes": 6936
-  },
-  {
-   "path": "assets/sprites/specter/frame-08.webp",
-   "bytes": 7920
-  },
-  {
-   "path": "assets/sprites/specter/frame-09.webp",
-   "bytes": 8156
-  },
-  {
-   "path": "assets/sprites/specter/frame-10.webp",
-   "bytes": 8054
-  },
-  {
-   "path": "assets/sprites/specter/frame-11.webp",
-   "bytes": 8054
-  },
-  {
-   "path": "assets/sprites/specter/frame-12.webp",
-   "bytes": 8156
-  },
-  {
-   "path": "assets/sprites/specter/frame-13.webp",
-   "bytes": 7920
-  },
-  {
-   "path": "assets/sprites/specter/frame-14.webp",
-   "bytes": 8260
-  },
-  {
-   "path": "assets/sprites/specter/frame-15.webp",
-   "bytes": 8120
-  },
-  {
-   "path": "assets/sprites/specter/frame-16.webp",
-   "bytes": 8120
-  },
-  {
-   "path": "assets/sprites/specter/frame-17.webp",
-   "bytes": 8260
-  },
-  {
-   "path": "assets/sprites/specter/frame-18.webp",
-   "bytes": 8570
-  },
-  {
-   "path": "assets/sprites/specter/frame-19.webp",
-   "bytes": 8584
-  },
-  {
-   "path": "assets/sprites/specter/frame-20.webp",
-   "bytes": 8620
-  },
-  {
-   "path": "assets/sprites/specter/frame-21.webp",
-   "bytes": 9446
-  },
-  {
-   "path": "assets/sprites/specter/frame-22.webp",
-   "bytes": 9496
-  },
-  {
-   "path": "assets/sprites/specter/frame-23.webp",
-   "bytes": 9500
-  },
-  {
-   "path": "assets/sprites/specter/frame-24.webp",
-   "bytes": 9136
-  },
-  {
-   "path": "assets/sprites/specter/frame-25.webp",
-   "bytes": 8754
-  },
-  {
-   "path": "assets/sprites/specter/frame-26.webp",
-   "bytes": 8736
-  },
-  {
-   "path": "assets/sprites/specter/frame-27.webp",
-   "bytes": 8798
-  },
-  {
-   "path": "assets/sprites/specter/frame-28.webp",
-   "bytes": 8606
-  },
-  {
-   "path": "assets/sprites/specter/frame-29.webp",
-   "bytes": 8606
-  },
-  {
-   "path": "assets/sprites/specter/frame-30.webp",
-   "bytes": 8750
-  },
-  {
-   "path": "assets/sprites/specter/frame-31.webp",
-   "bytes": 9296
-  },
-  {
-   "path": "assets/sprites/specter/frame-32.webp",
-   "bytes": 9732
-  },
-  {
-   "path": "assets/sprites/specter/frame-33.webp",
-   "bytes": 10282
-  },
-  {
-   "path": "assets/sprites/specter/frame-34.webp",
-   "bytes": 10910
-  },
-  {
-   "path": "assets/sprites/specter/frame-35.webp",
-   "bytes": 10204
-  },
-  {
-   "path": "assets/sprites/specter/frame-36.webp",
-   "bytes": 10380
-  },
-  {
-   "path": "assets/sprites/specter/frame-37.webp",
-   "bytes": 10006
-  },
-  {
-   "path": "assets/sprites/specter/frame-38.webp",
-   "bytes": 9194
-  },
-  {
-   "path": "assets/sprites/specter/frame-39.webp",
-   "bytes": 8408
-  },
-  {
-   "path": "assets/sprites/specter/frame-40.webp",
-   "bytes": 7472
-  },
-  {
-   "path": "assets/sprites/specter/frame-41.webp",
-   "bytes": 6272
-  },
-  {
-   "path": "assets/sprites/specter/frame-42.webp",
-   "bytes": 5910
-  },
-  {
-   "path": "assets/sprites/specter/frame-43.webp",
-   "bytes": 5372
-  },
-  {
-   "path": "assets/sprites/specter/frame-44.webp",
-   "bytes": 10930
-  },
-  {
-   "path": "assets/sprites/specter/frame-45.webp",
-   "bytes": 10920
-  },
-  {
-   "path": "assets/sprites/specter/frame-46.webp",
-   "bytes": 11104
-  },
-  {
-   "path": "assets/sprites/specter/frame-47.webp",
-   "bytes": 11344
-  },
-  {
-   "path": "assets/sprites/specter/frame-48.webp",
-   "bytes": 11662
-  },
-  {
-   "path": "assets/sprites/specter/frame-49.webp",
-   "bytes": 11670
-  },
-  {
-   "path": "assets/sprites/specter/frame-50.webp",
-   "bytes": 11386
-  },
-  {
-   "path": "assets/sprites/specter/frame-51.webp",
-   "bytes": 11270
-  },
-  {
-   "path": "assets/sprites/specter/frame-52.webp",
-   "bytes": 11116
-  },
-  {
-   "path": "assets/sprites/specter/frame-53.webp",
-   "bytes": 11256
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-00.webp",
-   "bytes": 11398
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-01.webp",
-   "bytes": 11480
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-02.webp",
-   "bytes": 11604
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-03.webp",
-   "bytes": 11480
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-04.webp",
-   "bytes": 11398
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-05.webp",
-   "bytes": 11380
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-06.webp",
-   "bytes": 11432
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-07.webp",
-   "bytes": 11380
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-08.webp",
-   "bytes": 8676
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-09.webp",
-   "bytes": 8796
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-10.webp",
-   "bytes": 8676
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-11.webp",
-   "bytes": 8676
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-12.webp",
-   "bytes": 8796
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-13.webp",
-   "bytes": 8676
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-14.webp",
-   "bytes": 8612
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-15.webp",
-   "bytes": 8680
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-16.webp",
-   "bytes": 8680
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-17.webp",
-   "bytes": 8612
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-18.webp",
-   "bytes": 16362
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-19.webp",
-   "bytes": 16450
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-20.webp",
-   "bytes": 16984
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-21.webp",
-   "bytes": 16854
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-22.webp",
-   "bytes": 16884
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-23.webp",
-   "bytes": 16720
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-24.webp",
-   "bytes": 16680
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-25.webp",
-   "bytes": 16326
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-26.webp",
-   "bytes": 11398
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-27.webp",
-   "bytes": 11470
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-28.webp",
-   "bytes": 11470
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-29.webp",
-   "bytes": 11470
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-30.webp",
-   "bytes": 6892
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-31.webp",
-   "bytes": 6642
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-32.webp",
-   "bytes": 6614
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-33.webp",
-   "bytes": 6604
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-34.webp",
-   "bytes": 6540
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-35.webp",
-   "bytes": 6596
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-36.webp",
-   "bytes": 7714
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-37.webp",
-   "bytes": 7958
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-38.webp",
-   "bytes": 7614
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-39.webp",
-   "bytes": 6926
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-40.webp",
-   "bytes": 6722
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-41.webp",
-   "bytes": 6040
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-42.webp",
-   "bytes": 5396
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-43.webp",
-   "bytes": 4966
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-44.webp",
-   "bytes": 13600
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-45.webp",
-   "bytes": 14022
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-46.webp",
-   "bytes": 14126
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-47.webp",
-   "bytes": 14104
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-48.webp",
-   "bytes": 13748
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-49.webp",
-   "bytes": 13676
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-50.webp",
-   "bytes": 11398
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-51.webp",
-   "bytes": 11470
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-52.webp",
-   "bytes": 11470
-  },
-  {
-   "path": "assets/sprites/sentinel/frame-53.webp",
-   "bytes": 11470
-  },
-  {
-   "path": "assets/sprites/hymn/frame-00.webp",
-   "bytes": 10316
-  },
-  {
-   "path": "assets/sprites/hymn/frame-01.webp",
-   "bytes": 10538
-  },
-  {
-   "path": "assets/sprites/hymn/frame-02.webp",
-   "bytes": 10522
-  },
-  {
-   "path": "assets/sprites/hymn/frame-03.webp",
-   "bytes": 10538
-  },
-  {
-   "path": "assets/sprites/hymn/frame-04.webp",
-   "bytes": 10316
-  },
-  {
-   "path": "assets/sprites/hymn/frame-05.webp",
-   "bytes": 10378
-  },
-  {
-   "path": "assets/sprites/hymn/frame-06.webp",
-   "bytes": 10462
-  },
-  {
-   "path": "assets/sprites/hymn/frame-07.webp",
-   "bytes": 10378
-  },
-  {
-   "path": "assets/sprites/hymn/frame-08.webp",
-   "bytes": 11742
-  },
-  {
-   "path": "assets/sprites/hymn/frame-09.webp",
-   "bytes": 11876
-  },
-  {
-   "path": "assets/sprites/hymn/frame-10.webp",
-   "bytes": 12086
-  },
-  {
-   "path": "assets/sprites/hymn/frame-11.webp",
-   "bytes": 12086
-  },
-  {
-   "path": "assets/sprites/hymn/frame-12.webp",
-   "bytes": 11876
-  },
-  {
-   "path": "assets/sprites/hymn/frame-13.webp",
-   "bytes": 11742
-  },
-  {
-   "path": "assets/sprites/hymn/frame-14.webp",
-   "bytes": 11756
-  },
-  {
-   "path": "assets/sprites/hymn/frame-15.webp",
-   "bytes": 11926
-  },
-  {
-   "path": "assets/sprites/hymn/frame-16.webp",
-   "bytes": 11926
-  },
-  {
-   "path": "assets/sprites/hymn/frame-17.webp",
-   "bytes": 11756
-  },
-  {
-   "path": "assets/sprites/hymn/frame-18.webp",
-   "bytes": 16156
-  },
-  {
-   "path": "assets/sprites/hymn/frame-19.webp",
-   "bytes": 16026
-  },
-  {
-   "path": "assets/sprites/hymn/frame-20.webp",
-   "bytes": 16714
-  },
-  {
-   "path": "assets/sprites/hymn/frame-21.webp",
-   "bytes": 16600
-  },
-  {
-   "path": "assets/sprites/hymn/frame-22.webp",
-   "bytes": 16390
-  },
-  {
-   "path": "assets/sprites/hymn/frame-23.webp",
-   "bytes": 16270
-  },
-  {
-   "path": "assets/sprites/hymn/frame-24.webp",
-   "bytes": 16238
-  },
-  {
-   "path": "assets/sprites/hymn/frame-25.webp",
-   "bytes": 15974
-  },
-  {
-   "path": "assets/sprites/hymn/frame-26.webp",
-   "bytes": 10316
-  },
-  {
-   "path": "assets/sprites/hymn/frame-27.webp",
-   "bytes": 10454
-  },
-  {
-   "path": "assets/sprites/hymn/frame-28.webp",
-   "bytes": 10454
-  },
-  {
-   "path": "assets/sprites/hymn/frame-29.webp",
-   "bytes": 10454
-  },
-  {
-   "path": "assets/sprites/hymn/frame-30.webp",
-   "bytes": 11600
-  },
-  {
-   "path": "assets/sprites/hymn/frame-31.webp",
-   "bytes": 11418
-  },
-  {
-   "path": "assets/sprites/hymn/frame-32.webp",
-   "bytes": 11132
-  },
-  {
-   "path": "assets/sprites/hymn/frame-33.webp",
-   "bytes": 11104
-  },
-  {
-   "path": "assets/sprites/hymn/frame-34.webp",
-   "bytes": 11050
-  },
-  {
-   "path": "assets/sprites/hymn/frame-35.webp",
-   "bytes": 11234
-  },
-  {
-   "path": "assets/sprites/hymn/frame-36.webp",
-   "bytes": 7434
-  },
-  {
-   "path": "assets/sprites/hymn/frame-37.webp",
-   "bytes": 7436
-  },
-  {
-   "path": "assets/sprites/hymn/frame-38.webp",
-   "bytes": 7068
-  },
-  {
-   "path": "assets/sprites/hymn/frame-39.webp",
-   "bytes": 6364
-  },
-  {
-   "path": "assets/sprites/hymn/frame-40.webp",
-   "bytes": 6036
-  },
-  {
-   "path": "assets/sprites/hymn/frame-41.webp",
-   "bytes": 5356
-  },
-  {
-   "path": "assets/sprites/hymn/frame-42.webp",
-   "bytes": 4934
-  },
-  {
-   "path": "assets/sprites/hymn/frame-43.webp",
-   "bytes": 4874
-  },
-  {
-   "path": "assets/sprites/hymn/frame-44.webp",
-   "bytes": 19478
-  },
-  {
-   "path": "assets/sprites/hymn/frame-45.webp",
-   "bytes": 19754
-  },
-  {
-   "path": "assets/sprites/hymn/frame-46.webp",
-   "bytes": 20022
-  },
-  {
-   "path": "assets/sprites/hymn/frame-47.webp",
-   "bytes": 20530
-  },
-  {
-   "path": "assets/sprites/hymn/frame-48.webp",
-   "bytes": 19494
-  },
-  {
-   "path": "assets/sprites/hymn/frame-49.webp",
-   "bytes": 19658
-  },
-  {
-   "path": "assets/sprites/hymn/frame-50.webp",
-   "bytes": 10316
-  },
-  {
-   "path": "assets/sprites/hymn/frame-51.webp",
-   "bytes": 10454
-  },
-  {
-   "path": "assets/sprites/hymn/frame-52.webp",
-   "bytes": 10454
-  },
-  {
-   "path": "assets/sprites/hymn/frame-53.webp",
-   "bytes": 10454
-  },
-  {
-   "path": "assets/sprites/vigil/frame-00.webp",
-   "bytes": 6466
-  },
-  {
-   "path": "assets/sprites/vigil/frame-01.webp",
-   "bytes": 6574
-  },
-  {
-   "path": "assets/sprites/vigil/frame-02.webp",
-   "bytes": 6558
-  },
-  {
-   "path": "assets/sprites/vigil/frame-03.webp",
-   "bytes": 6574
-  },
-  {
-   "path": "assets/sprites/vigil/frame-04.webp",
-   "bytes": 6466
-  },
-  {
-   "path": "assets/sprites/vigil/frame-05.webp",
-   "bytes": 6490
-  },
-  {
-   "path": "assets/sprites/vigil/frame-06.webp",
-   "bytes": 6362
-  },
-  {
-   "path": "assets/sprites/vigil/frame-07.webp",
-   "bytes": 6490
-  },
-  {
-   "path": "assets/sprites/vigil/frame-08.webp",
-   "bytes": 7784
-  },
-  {
-   "path": "assets/sprites/vigil/frame-09.webp",
-   "bytes": 7766
-  },
-  {
-   "path": "assets/sprites/vigil/frame-10.webp",
-   "bytes": 7818
-  },
-  {
-   "path": "assets/sprites/vigil/frame-11.webp",
-   "bytes": 7818
-  },
-  {
-   "path": "assets/sprites/vigil/frame-12.webp",
-   "bytes": 7766
-  },
-  {
-   "path": "assets/sprites/vigil/frame-13.webp",
-   "bytes": 7788
-  },
-  {
-   "path": "assets/sprites/vigil/frame-14.webp",
-   "bytes": 7712
-  },
-  {
-   "path": "assets/sprites/vigil/frame-15.webp",
-   "bytes": 7850
-  },
-  {
-   "path": "assets/sprites/vigil/frame-16.webp",
-   "bytes": 7850
-  },
-  {
-   "path": "assets/sprites/vigil/frame-17.webp",
-   "bytes": 7712
-  },
-  {
-   "path": "assets/sprites/vigil/frame-18.webp",
-   "bytes": 7596
-  },
-  {
-   "path": "assets/sprites/vigil/frame-19.webp",
-   "bytes": 7560
-  },
-  {
-   "path": "assets/sprites/vigil/frame-20.webp",
-   "bytes": 7596
-  },
-  {
-   "path": "assets/sprites/vigil/frame-21.webp",
-   "bytes": 8286
-  },
-  {
-   "path": "assets/sprites/vigil/frame-22.webp",
-   "bytes": 8632
-  },
-  {
-   "path": "assets/sprites/vigil/frame-23.webp",
-   "bytes": 8670
-  },
-  {
-   "path": "assets/sprites/vigil/frame-24.webp",
-   "bytes": 8116
-  },
-  {
-   "path": "assets/sprites/vigil/frame-25.webp",
-   "bytes": 7668
-  },
-  {
-   "path": "assets/sprites/vigil/frame-26.webp",
-   "bytes": 7712
-  },
-  {
-   "path": "assets/sprites/vigil/frame-27.webp",
-   "bytes": 7644
-  },
-  {
-   "path": "assets/sprites/vigil/frame-28.webp",
-   "bytes": 7762
-  },
-  {
-   "path": "assets/sprites/vigil/frame-29.webp",
-   "bytes": 7762
-  },
-  {
-   "path": "assets/sprites/vigil/frame-30.webp",
-   "bytes": 7822
-  },
-  {
-   "path": "assets/sprites/vigil/frame-31.webp",
-   "bytes": 8098
-  },
-  {
-   "path": "assets/sprites/vigil/frame-32.webp",
-   "bytes": 8434
-  },
-  {
-   "path": "assets/sprites/vigil/frame-33.webp",
-   "bytes": 8648
-  },
-  {
-   "path": "assets/sprites/vigil/frame-34.webp",
-   "bytes": 8814
-  },
-  {
-   "path": "assets/sprites/vigil/frame-35.webp",
-   "bytes": 7732
-  },
-  {
-   "path": "assets/sprites/vigil/frame-36.webp",
-   "bytes": 8758
-  },
-  {
-   "path": "assets/sprites/vigil/frame-37.webp",
-   "bytes": 8190
-  },
-  {
-   "path": "assets/sprites/vigil/frame-38.webp",
-   "bytes": 7714
-  },
-  {
-   "path": "assets/sprites/vigil/frame-39.webp",
-   "bytes": 7118
-  },
-  {
-   "path": "assets/sprites/vigil/frame-40.webp",
-   "bytes": 6286
-  },
-  {
-   "path": "assets/sprites/vigil/frame-41.webp",
-   "bytes": 5542
-  },
-  {
-   "path": "assets/sprites/vigil/frame-42.webp",
-   "bytes": 5144
-  },
-  {
-   "path": "assets/sprites/vigil/frame-43.webp",
-   "bytes": 4718
-  },
-  {
-   "path": "assets/sprites/vigil/frame-44.webp",
-   "bytes": 11040
-  },
-  {
-   "path": "assets/sprites/vigil/frame-45.webp",
-   "bytes": 11394
-  },
-  {
-   "path": "assets/sprites/vigil/frame-46.webp",
-   "bytes": 11800
-  },
-  {
-   "path": "assets/sprites/vigil/frame-47.webp",
-   "bytes": 12340
-  },
-  {
-   "path": "assets/sprites/vigil/frame-48.webp",
-   "bytes": 12576
-  },
-  {
-   "path": "assets/sprites/vigil/frame-49.webp",
-   "bytes": 13008
-  },
-  {
-   "path": "assets/sprites/vigil/frame-50.webp",
-   "bytes": 13368
-  },
-  {
-   "path": "assets/sprites/vigil/frame-51.webp",
-   "bytes": 13528
-  },
-  {
-   "path": "assets/sprites/vigil/frame-52.webp",
-   "bytes": 13680
-  },
-  {
-   "path": "assets/sprites/vigil/frame-53.webp",
-   "bytes": 13834
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-00.webp",
-   "bytes": 484
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-01.webp",
-   "bytes": 2538
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-02.webp",
-   "bytes": 3558
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-03.webp",
-   "bytes": 2166
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-04.webp",
-   "bytes": 3660
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-05.webp",
-   "bytes": 1864
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-06.webp",
-   "bytes": 2986
-  },
-  {
-   "path": "assets/sprites/vfx-bastion/frame-07.webp",
-   "bytes": 152
-  },
-  {
-   "path": "assets/sprites/proj-bastion/frame-00.webp",
-   "bytes": 904
-  },
-  {
-   "path": "assets/sprites/proj-bastion/frame-01.webp",
-   "bytes": 1346
-  },
-  {
-   "path": "assets/sprites/proj-bastion/frame-02.webp",
-   "bytes": 1322
-  },
-  {
-   "path": "assets/sprites/proj-bastion/frame-03.webp",
-   "bytes": 1342
-  },
-  {
-   "path": "assets/sprites/proj-bastion/frame-04.webp",
-   "bytes": 1318
-  },
-  {
-   "path": "assets/sprites/proj-bastion/frame-05.webp",
-   "bytes": 1378
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-00.webp",
-   "bytes": 5652
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-01.webp",
-   "bytes": 6632
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-02.webp",
-   "bytes": 6938
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-03.webp",
-   "bytes": 5758
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-04.webp",
-   "bytes": 6356
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-05.webp",
-   "bytes": 5602
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-06.webp",
-   "bytes": 6700
-  },
-  {
-   "path": "assets/sprites/vfx-rampart/frame-07.webp",
-   "bytes": 5568
-  },
-  {
-   "path": "assets/sprites/proj-rampart/frame-00.webp",
-   "bytes": 1904
-  },
-  {
-   "path": "assets/sprites/proj-rampart/frame-01.webp",
-   "bytes": 2654
-  },
-  {
-   "path": "assets/sprites/proj-rampart/frame-02.webp",
-   "bytes": 2676
-  },
-  {
-   "path": "assets/sprites/proj-rampart/frame-03.webp",
-   "bytes": 2692
-  },
-  {
-   "path": "assets/sprites/proj-rampart/frame-04.webp",
-   "bytes": 2686
-  },
-  {
-   "path": "assets/sprites/proj-rampart/frame-05.webp",
-   "bytes": 2666
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-00.webp",
-   "bytes": 2892
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-01.webp",
-   "bytes": 3042
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-02.webp",
-   "bytes": 3446
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-03.webp",
-   "bytes": 3910
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-04.webp",
-   "bytes": 4866
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-05.webp",
-   "bytes": 5296
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-06.webp",
-   "bytes": 5592
-  },
-  {
-   "path": "assets/sprites/vfx-deadeye/frame-07.webp",
-   "bytes": 6120
-  },
-  {
-   "path": "assets/sprites/proj-deadeye/frame-00.webp",
-   "bytes": 1020
-  },
-  {
-   "path": "assets/sprites/proj-deadeye/frame-01.webp",
-   "bytes": 1002
-  },
-  {
-   "path": "assets/sprites/proj-deadeye/frame-02.webp",
-   "bytes": 1020
-  },
-  {
-   "path": "assets/sprites/proj-deadeye/frame-03.webp",
-   "bytes": 1022
-  },
-  {
-   "path": "assets/sprites/proj-deadeye/frame-04.webp",
-   "bytes": 1014
-  },
-  {
-   "path": "assets/sprites/proj-deadeye/frame-05.webp",
-   "bytes": 1004
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-00.webp",
-   "bytes": 972
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-01.webp",
-   "bytes": 1542
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-02.webp",
-   "bytes": 2320
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-03.webp",
-   "bytes": 3100
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-04.webp",
-   "bytes": 3850
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-05.webp",
-   "bytes": 4538
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-06.webp",
-   "bytes": 5110
-  },
-  {
-   "path": "assets/sprites/vfx-vigil/frame-07.webp",
-   "bytes": 5392
-  },
-  {
-   "path": "assets/sprites/proj-vigil/frame-00.webp",
-   "bytes": 946
-  },
-  {
-   "path": "assets/sprites/proj-vigil/frame-01.webp",
-   "bytes": 1000
-  },
-  {
-   "path": "assets/sprites/proj-vigil/frame-02.webp",
-   "bytes": 1038
-  },
-  {
-   "path": "assets/sprites/proj-vigil/frame-03.webp",
-   "bytes": 974
-  },
-  {
-   "path": "assets/sprites/proj-vigil/frame-04.webp",
-   "bytes": 1004
-  },
-  {
-   "path": "assets/sprites/proj-vigil/frame-05.webp",
-   "bytes": 962
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-00.webp",
-   "bytes": 674
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-01.webp",
-   "bytes": 1508
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-02.webp",
-   "bytes": 2992
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-03.webp",
-   "bytes": 4224
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-04.webp",
-   "bytes": 5338
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-05.webp",
-   "bytes": 5774
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-06.webp",
-   "bytes": 5952
-  },
-  {
-   "path": "assets/sprites/vfx-hex/frame-07.webp",
-   "bytes": 3318
-  },
-  {
-   "path": "assets/sprites/proj-hex/frame-00.webp",
-   "bytes": 904
-  },
-  {
-   "path": "assets/sprites/proj-hex/frame-01.webp",
-   "bytes": 1380
-  },
-  {
-   "path": "assets/sprites/proj-hex/frame-02.webp",
-   "bytes": 1384
-  },
-  {
-   "path": "assets/sprites/proj-hex/frame-03.webp",
-   "bytes": 1398
-  },
-  {
-   "path": "assets/sprites/proj-hex/frame-04.webp",
-   "bytes": 1358
-  },
-  {
-   "path": "assets/sprites/proj-hex/frame-05.webp",
-   "bytes": 1398
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-00.webp",
-   "bytes": 1698
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-01.webp",
-   "bytes": 2262
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-02.webp",
-   "bytes": 4012
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-03.webp",
-   "bytes": 5584
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-04.webp",
-   "bytes": 7306
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-05.webp",
-   "bytes": 8390
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-06.webp",
-   "bytes": 9154
-  },
-  {
-   "path": "assets/sprites/vfx-ember/frame-07.webp",
-   "bytes": 9966
-  },
-  {
-   "path": "assets/sprites/proj-ember/frame-00.webp",
-   "bytes": 1248
-  },
-  {
-   "path": "assets/sprites/proj-ember/frame-01.webp",
-   "bytes": 1488
-  },
-  {
-   "path": "assets/sprites/proj-ember/frame-02.webp",
-   "bytes": 1500
-  },
-  {
-   "path": "assets/sprites/proj-ember/frame-03.webp",
-   "bytes": 1486
-  },
-  {
-   "path": "assets/sprites/proj-ember/frame-04.webp",
-   "bytes": 1546
-  },
-  {
-   "path": "assets/sprites/proj-ember/frame-05.webp",
-   "bytes": 1512
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-00.webp",
-   "bytes": 1790
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-01.webp",
-   "bytes": 2312
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-02.webp",
-   "bytes": 2752
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-03.webp",
-   "bytes": 2840
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-04.webp",
-   "bytes": 2974
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-05.webp",
-   "bytes": 3404
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-06.webp",
-   "bytes": 3756
-  },
-  {
-   "path": "assets/sprites/vfx-mercy/frame-07.webp",
-   "bytes": 3956
-  },
-  {
-   "path": "assets/sprites/proj-mercy/frame-00.webp",
-   "bytes": 882
-  },
-  {
-   "path": "assets/sprites/proj-mercy/frame-01.webp",
-   "bytes": 1336
-  },
-  {
-   "path": "assets/sprites/proj-mercy/frame-02.webp",
-   "bytes": 1356
-  },
-  {
-   "path": "assets/sprites/proj-mercy/frame-03.webp",
-   "bytes": 1348
-  },
-  {
-   "path": "assets/sprites/proj-mercy/frame-04.webp",
-   "bytes": 1334
-  },
-  {
-   "path": "assets/sprites/proj-mercy/frame-05.webp",
-   "bytes": 1376
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-00.webp",
-   "bytes": 1732
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-01.webp",
-   "bytes": 2710
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-02.webp",
-   "bytes": 4030
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-03.webp",
-   "bytes": 5430
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-04.webp",
-   "bytes": 6756
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-05.webp",
-   "bytes": 7770
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-06.webp",
-   "bytes": 9656
-  },
-  {
-   "path": "assets/sprites/vfx-sage/frame-07.webp",
-   "bytes": 11828
-  },
-  {
-   "path": "assets/sprites/proj-sage/frame-00.webp",
-   "bytes": 818
-  },
-  {
-   "path": "assets/sprites/proj-sage/frame-01.webp",
-   "bytes": 1246
-  },
-  {
-   "path": "assets/sprites/proj-sage/frame-02.webp",
-   "bytes": 1160
-  },
-  {
-   "path": "assets/sprites/proj-sage/frame-03.webp",
-   "bytes": 1204
-  },
-  {
-   "path": "assets/sprites/proj-sage/frame-04.webp",
-   "bytes": 1266
-  },
-  {
-   "path": "assets/sprites/proj-sage/frame-05.webp",
-   "bytes": 1178
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-00.webp",
-   "bytes": 2166
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-01.webp",
-   "bytes": 3484
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-02.webp",
-   "bytes": 4608
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-03.webp",
-   "bytes": 5754
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-04.webp",
-   "bytes": 6328
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-05.webp",
-   "bytes": 6590
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-06.webp",
-   "bytes": 5122
-  },
-  {
-   "path": "assets/sprites/vfx-rook/frame-07.webp",
-   "bytes": 5264
-  },
-  {
-   "path": "assets/sprites/proj-rook/frame-00.webp",
-   "bytes": 956
-  },
-  {
-   "path": "assets/sprites/proj-rook/frame-01.webp",
-   "bytes": 1470
-  },
-  {
-   "path": "assets/sprites/proj-rook/frame-02.webp",
-   "bytes": 1514
-  },
-  {
-   "path": "assets/sprites/proj-rook/frame-03.webp",
-   "bytes": 1516
-  },
-  {
-   "path": "assets/sprites/proj-rook/frame-04.webp",
-   "bytes": 1476
-  },
-  {
-   "path": "assets/sprites/proj-rook/frame-05.webp",
-   "bytes": 1530
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-00.webp",
-   "bytes": 1758
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-01.webp",
-   "bytes": 1932
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-02.webp",
-   "bytes": 2368
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-03.webp",
-   "bytes": 2718
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-04.webp",
-   "bytes": 2876
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-05.webp",
-   "bytes": 3184
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-06.webp",
-   "bytes": 3592
-  },
-  {
-   "path": "assets/sprites/vfx-dusk/frame-07.webp",
-   "bytes": 3550
-  },
-  {
-   "path": "assets/sprites/proj-dusk/frame-00.webp",
-   "bytes": 802
-  },
-  {
-   "path": "assets/sprites/proj-dusk/frame-01.webp",
-   "bytes": 1048
-  },
-  {
-   "path": "assets/sprites/proj-dusk/frame-02.webp",
-   "bytes": 1186
-  },
-  {
-   "path": "assets/sprites/proj-dusk/frame-03.webp",
-   "bytes": 1118
-  },
-  {
-   "path": "assets/sprites/proj-dusk/frame-04.webp",
-   "bytes": 1116
-  },
-  {
-   "path": "assets/sprites/proj-dusk/frame-05.webp",
-   "bytes": 1124
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-00.webp",
-   "bytes": 2790
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-01.webp",
-   "bytes": 2770
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-02.webp",
-   "bytes": 2674
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-03.webp",
-   "bytes": 2576
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-04.webp",
-   "bytes": 2590
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-05.webp",
-   "bytes": 2744
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-06.webp",
-   "bytes": 2756
-  },
-  {
-   "path": "assets/sprites/vfx-shade/frame-07.webp",
-   "bytes": 2772
-  },
-  {
-   "path": "assets/sprites/proj-shade/frame-00.webp",
-   "bytes": 928
-  },
-  {
-   "path": "assets/sprites/proj-shade/frame-01.webp",
-   "bytes": 1380
-  },
-  {
-   "path": "assets/sprites/proj-shade/frame-02.webp",
-   "bytes": 1382
-  },
-  {
-   "path": "assets/sprites/proj-shade/frame-03.webp",
-   "bytes": 1386
-  },
-  {
-   "path": "assets/sprites/proj-shade/frame-04.webp",
-   "bytes": 1362
-  },
-  {
-   "path": "assets/sprites/proj-shade/frame-05.webp",
-   "bytes": 1456
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-00.webp",
-   "bytes": 1520
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-01.webp",
-   "bytes": 2108
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-02.webp",
-   "bytes": 2664
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-03.webp",
-   "bytes": 3296
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-04.webp",
-   "bytes": 3876
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-05.webp",
-   "bytes": 4322
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-06.webp",
-   "bytes": 4696
-  },
-  {
-   "path": "assets/sprites/vfx-specter/frame-07.webp",
-   "bytes": 4578
-  },
-  {
-   "path": "assets/sprites/proj-specter/frame-00.webp",
-   "bytes": 692
-  },
-  {
-   "path": "assets/sprites/proj-specter/frame-01.webp",
-   "bytes": 796
-  },
-  {
-   "path": "assets/sprites/proj-specter/frame-02.webp",
-   "bytes": 776
-  },
-  {
-   "path": "assets/sprites/proj-specter/frame-03.webp",
-   "bytes": 776
-  },
-  {
-   "path": "assets/sprites/proj-specter/frame-04.webp",
-   "bytes": 776
-  },
-  {
-   "path": "assets/sprites/proj-specter/frame-05.webp",
-   "bytes": 776
-  },
-  {
-   "path": "assets/sprites/arena_hit_spark/frame-00.webp",
-   "bytes": 13300
-  },
-  {
-   "path": "assets/sprites/arena_plasma_blast/frame-00.webp",
-   "bytes": 6576
-  },
-  {
-   "path": "assets/sprites/arena_arcane_burst/frame-00.webp",
-   "bytes": 13076
-  },
-  {
-   "path": "assets/sprites/arena_slime/frame-00.webp",
-   "bytes": 7670
-  },
-  {
-   "path": "assets/sprites/arena_skeleton/frame-00.webp",
-   "bytes": 9532
-  },
-  {
-   "path": "assets/sprites/arena_dread_warden/frame-00.webp",
    "bytes": 23000
   },
   {
+   "path": "assets/sprites/bastion/frame-02.webp",
+   "bytes": 23210
+  },
+  {
+   "path": "assets/sprites/bastion/frame-03.webp",
+   "bytes": 23000
+  },
+  {
+   "path": "assets/sprites/bastion/frame-04.webp",
+   "bytes": 22530
+  },
+  {
+   "path": "assets/sprites/bastion/frame-05.webp",
+   "bytes": 22324
+  },
+  {
+   "path": "assets/sprites/bastion/frame-06.webp",
+   "bytes": 22174
+  },
+  {
+   "path": "assets/sprites/bastion/frame-07.webp",
+   "bytes": 22324
+  },
+  {
+   "path": "assets/sprites/bastion/frame-08.webp",
+   "bytes": 27848
+  },
+  {
+   "path": "assets/sprites/bastion/frame-09.webp",
+   "bytes": 27598
+  },
+  {
+   "path": "assets/sprites/bastion/frame-10.webp",
+   "bytes": 27834
+  },
+  {
+   "path": "assets/sprites/bastion/frame-11.webp",
+   "bytes": 27834
+  },
+  {
+   "path": "assets/sprites/bastion/frame-12.webp",
+   "bytes": 27598
+  },
+  {
+   "path": "assets/sprites/bastion/frame-13.webp",
+   "bytes": 27818
+  },
+  {
+   "path": "assets/sprites/bastion/frame-14.webp",
+   "bytes": 27996
+  },
+  {
+   "path": "assets/sprites/bastion/frame-15.webp",
+   "bytes": 28016
+  },
+  {
+   "path": "assets/sprites/bastion/frame-16.webp",
+   "bytes": 28016
+  },
+  {
+   "path": "assets/sprites/bastion/frame-17.webp",
+   "bytes": 27996
+  },
+  {
+   "path": "assets/sprites/bastion/frame-18.webp",
+   "bytes": 30316
+  },
+  {
+   "path": "assets/sprites/bastion/frame-19.webp",
+   "bytes": 30304
+  },
+  {
+   "path": "assets/sprites/bastion/frame-20.webp",
+   "bytes": 30234
+  },
+  {
+   "path": "assets/sprites/bastion/frame-21.webp",
+   "bytes": 32756
+  },
+  {
+   "path": "assets/sprites/bastion/frame-22.webp",
+   "bytes": 33884
+  },
+  {
+   "path": "assets/sprites/bastion/frame-23.webp",
+   "bytes": 32664
+  },
+  {
+   "path": "assets/sprites/bastion/frame-24.webp",
+   "bytes": 32664
+  },
+  {
+   "path": "assets/sprites/bastion/frame-25.webp",
+   "bytes": 31112
+  },
+  {
+   "path": "assets/sprites/bastion/frame-26.webp",
+   "bytes": 31140
+  },
+  {
+   "path": "assets/sprites/bastion/frame-27.webp",
+   "bytes": 31206
+  },
+  {
+   "path": "assets/sprites/bastion/frame-28.webp",
+   "bytes": 31158
+  },
+  {
+   "path": "assets/sprites/bastion/frame-29.webp",
+   "bytes": 31158
+  },
+  {
+   "path": "assets/sprites/bastion/frame-30.webp",
+   "bytes": 24574
+  },
+  {
+   "path": "assets/sprites/bastion/frame-31.webp",
+   "bytes": 26316
+  },
+  {
+   "path": "assets/sprites/bastion/frame-32.webp",
+   "bytes": 28358
+  },
+  {
+   "path": "assets/sprites/bastion/frame-33.webp",
+   "bytes": 30530
+  },
+  {
+   "path": "assets/sprites/bastion/frame-34.webp",
+   "bytes": 32532
+  },
+  {
+   "path": "assets/sprites/bastion/frame-35.webp",
+   "bytes": 30478
+  },
+  {
+   "path": "assets/sprites/bastion/frame-36.webp",
+   "bytes": 23400
+  },
+  {
+   "path": "assets/sprites/bastion/frame-37.webp",
+   "bytes": 21920
+  },
+  {
+   "path": "assets/sprites/bastion/frame-38.webp",
+   "bytes": 20126
+  },
+  {
+   "path": "assets/sprites/bastion/frame-39.webp",
+   "bytes": 17238
+  },
+  {
+   "path": "assets/sprites/bastion/frame-40.webp",
+   "bytes": 15132
+  },
+  {
+   "path": "assets/sprites/bastion/frame-41.webp",
+   "bytes": 12452
+  },
+  {
+   "path": "assets/sprites/bastion/frame-42.webp",
+   "bytes": 11372
+  },
+  {
+   "path": "assets/sprites/bastion/frame-43.webp",
+   "bytes": 10472
+  },
+  {
+   "path": "assets/sprites/bastion/frame-44.webp",
+   "bytes": 38212
+  },
+  {
+   "path": "assets/sprites/bastion/frame-45.webp",
+   "bytes": 40068
+  },
+  {
+   "path": "assets/sprites/bastion/frame-46.webp",
+   "bytes": 42058
+  },
+  {
+   "path": "assets/sprites/bastion/frame-47.webp",
+   "bytes": 41000
+  },
+  {
+   "path": "assets/sprites/bastion/frame-48.webp",
+   "bytes": 41350
+  },
+  {
+   "path": "assets/sprites/bastion/frame-49.webp",
+   "bytes": 42578
+  },
+  {
+   "path": "assets/sprites/bastion/frame-50.webp",
+   "bytes": 40872
+  },
+  {
+   "path": "assets/sprites/bastion/frame-51.webp",
+   "bytes": 40778
+  },
+  {
+   "path": "assets/sprites/bastion/frame-52.webp",
+   "bytes": 41478
+  },
+  {
+   "path": "assets/sprites/bastion/frame-53.webp",
+   "bytes": 38498
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-00.webp",
+   "bytes": 23120
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-01.webp",
+   "bytes": 23772
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-02.webp",
+   "bytes": 23954
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-03.webp",
+   "bytes": 23772
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-04.webp",
+   "bytes": 23120
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-05.webp",
+   "bytes": 23588
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-06.webp",
+   "bytes": 23436
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-07.webp",
+   "bytes": 23588
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-08.webp",
+   "bytes": 25444
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-09.webp",
+   "bytes": 25524
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-10.webp",
+   "bytes": 25584
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-11.webp",
+   "bytes": 25584
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-12.webp",
+   "bytes": 25524
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-13.webp",
+   "bytes": 25434
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-14.webp",
+   "bytes": 25790
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-15.webp",
+   "bytes": 25768
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-16.webp",
+   "bytes": 25768
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-17.webp",
+   "bytes": 25790
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-18.webp",
+   "bytes": 24536
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-19.webp",
+   "bytes": 24624
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-20.webp",
+   "bytes": 24506
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-21.webp",
+   "bytes": 27430
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-22.webp",
+   "bytes": 27856
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-23.webp",
+   "bytes": 27652
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-24.webp",
+   "bytes": 26382
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-25.webp",
+   "bytes": 24728
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-26.webp",
+   "bytes": 24716
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-27.webp",
+   "bytes": 24588
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-28.webp",
+   "bytes": 24528
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-29.webp",
+   "bytes": 24528
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-30.webp",
+   "bytes": 20372
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-31.webp",
+   "bytes": 21746
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-32.webp",
+   "bytes": 23026
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-33.webp",
+   "bytes": 24706
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-34.webp",
+   "bytes": 26312
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-35.webp",
+   "bytes": 26510
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-36.webp",
+   "bytes": 24268
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-37.webp",
+   "bytes": 22750
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-38.webp",
+   "bytes": 21412
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-39.webp",
+   "bytes": 19100
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-40.webp",
+   "bytes": 17702
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-41.webp",
+   "bytes": 15732
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-42.webp",
+   "bytes": 14758
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-43.webp",
+   "bytes": 13892
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-44.webp",
+   "bytes": 30244
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-45.webp",
+   "bytes": 31102
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-46.webp",
+   "bytes": 31504
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-47.webp",
+   "bytes": 32092
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-48.webp",
+   "bytes": 32438
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-49.webp",
+   "bytes": 32360
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-50.webp",
+   "bytes": 32012
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-51.webp",
+   "bytes": 31124
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-52.webp",
+   "bytes": 31106
+  },
+  {
+   "path": "assets/sprites/deadeye/frame-53.webp",
+   "bytes": 29782
+  },
+  {
+   "path": "assets/sprites/dusk/frame-00.webp",
+   "bytes": 21916
+  },
+  {
+   "path": "assets/sprites/dusk/frame-01.webp",
+   "bytes": 22546
+  },
+  {
+   "path": "assets/sprites/dusk/frame-02.webp",
+   "bytes": 22712
+  },
+  {
+   "path": "assets/sprites/dusk/frame-03.webp",
+   "bytes": 22546
+  },
+  {
+   "path": "assets/sprites/dusk/frame-04.webp",
+   "bytes": 21916
+  },
+  {
+   "path": "assets/sprites/dusk/frame-05.webp",
+   "bytes": 22440
+  },
+  {
+   "path": "assets/sprites/dusk/frame-06.webp",
+   "bytes": 22558
+  },
+  {
+   "path": "assets/sprites/dusk/frame-07.webp",
+   "bytes": 22440
+  },
+  {
+   "path": "assets/sprites/dusk/frame-08.webp",
+   "bytes": 23812
+  },
+  {
+   "path": "assets/sprites/dusk/frame-09.webp",
+   "bytes": 24498
+  },
+  {
+   "path": "assets/sprites/dusk/frame-10.webp",
+   "bytes": 24320
+  },
+  {
+   "path": "assets/sprites/dusk/frame-11.webp",
+   "bytes": 24320
+  },
+  {
+   "path": "assets/sprites/dusk/frame-12.webp",
+   "bytes": 24498
+  },
+  {
+   "path": "assets/sprites/dusk/frame-13.webp",
+   "bytes": 23648
+  },
+  {
+   "path": "assets/sprites/dusk/frame-14.webp",
+   "bytes": 24718
+  },
+  {
+   "path": "assets/sprites/dusk/frame-15.webp",
+   "bytes": 24460
+  },
+  {
+   "path": "assets/sprites/dusk/frame-16.webp",
+   "bytes": 24460
+  },
+  {
+   "path": "assets/sprites/dusk/frame-17.webp",
+   "bytes": 24718
+  },
+  {
+   "path": "assets/sprites/dusk/frame-18.webp",
+   "bytes": 21084
+  },
+  {
+   "path": "assets/sprites/dusk/frame-19.webp",
+   "bytes": 21296
+  },
+  {
+   "path": "assets/sprites/dusk/frame-20.webp",
+   "bytes": 21286
+  },
+  {
+   "path": "assets/sprites/dusk/frame-21.webp",
+   "bytes": 23410
+  },
+  {
+   "path": "assets/sprites/dusk/frame-22.webp",
+   "bytes": 23826
+  },
+  {
+   "path": "assets/sprites/dusk/frame-23.webp",
+   "bytes": 23684
+  },
+  {
+   "path": "assets/sprites/dusk/frame-24.webp",
+   "bytes": 22596
+  },
+  {
+   "path": "assets/sprites/dusk/frame-25.webp",
+   "bytes": 21466
+  },
+  {
+   "path": "assets/sprites/dusk/frame-26.webp",
+   "bytes": 21424
+  },
+  {
+   "path": "assets/sprites/dusk/frame-27.webp",
+   "bytes": 21388
+  },
+  {
+   "path": "assets/sprites/dusk/frame-28.webp",
+   "bytes": 21546
+  },
+  {
+   "path": "assets/sprites/dusk/frame-29.webp",
+   "bytes": 21546
+  },
+  {
+   "path": "assets/sprites/dusk/frame-30.webp",
+   "bytes": 20150
+  },
+  {
+   "path": "assets/sprites/dusk/frame-31.webp",
+   "bytes": 21570
+  },
+  {
+   "path": "assets/sprites/dusk/frame-32.webp",
+   "bytes": 22802
+  },
+  {
+   "path": "assets/sprites/dusk/frame-33.webp",
+   "bytes": 24498
+  },
+  {
+   "path": "assets/sprites/dusk/frame-34.webp",
+   "bytes": 25900
+  },
+  {
+   "path": "assets/sprites/dusk/frame-35.webp",
+   "bytes": 23490
+  },
+  {
+   "path": "assets/sprites/dusk/frame-36.webp",
+   "bytes": 15976
+  },
+  {
+   "path": "assets/sprites/dusk/frame-37.webp",
+   "bytes": 15018
+  },
+  {
+   "path": "assets/sprites/dusk/frame-38.webp",
+   "bytes": 14026
+  },
+  {
+   "path": "assets/sprites/dusk/frame-39.webp",
+   "bytes": 12346
+  },
+  {
+   "path": "assets/sprites/dusk/frame-40.webp",
+   "bytes": 11194
+  },
+  {
+   "path": "assets/sprites/dusk/frame-41.webp",
+   "bytes": 9732
+  },
+  {
+   "path": "assets/sprites/dusk/frame-42.webp",
+   "bytes": 9026
+  },
+  {
+   "path": "assets/sprites/dusk/frame-43.webp",
+   "bytes": 8618
+  },
+  {
+   "path": "assets/sprites/dusk/frame-44.webp",
+   "bytes": 26670
+  },
+  {
+   "path": "assets/sprites/dusk/frame-45.webp",
+   "bytes": 27462
+  },
+  {
+   "path": "assets/sprites/dusk/frame-46.webp",
+   "bytes": 28330
+  },
+  {
+   "path": "assets/sprites/dusk/frame-47.webp",
+   "bytes": 28310
+  },
+  {
+   "path": "assets/sprites/dusk/frame-48.webp",
+   "bytes": 28702
+  },
+  {
+   "path": "assets/sprites/dusk/frame-49.webp",
+   "bytes": 29432
+  },
+  {
+   "path": "assets/sprites/dusk/frame-50.webp",
+   "bytes": 29150
+  },
+  {
+   "path": "assets/sprites/dusk/frame-51.webp",
+   "bytes": 29750
+  },
+  {
+   "path": "assets/sprites/dusk/frame-52.webp",
+   "bytes": 29260
+  },
+  {
+   "path": "assets/sprites/dusk/frame-53.webp",
+   "bytes": 28450
+  },
+  {
+   "path": "assets/sprites/ember/frame-00.webp",
+   "bytes": 36458
+  },
+  {
+   "path": "assets/sprites/ember/frame-01.webp",
+   "bytes": 39140
+  },
+  {
+   "path": "assets/sprites/ember/frame-02.webp",
+   "bytes": 39192
+  },
+  {
+   "path": "assets/sprites/ember/frame-03.webp",
+   "bytes": 39140
+  },
+  {
+   "path": "assets/sprites/ember/frame-04.webp",
+   "bytes": 36458
+  },
+  {
+   "path": "assets/sprites/ember/frame-05.webp",
+   "bytes": 38430
+  },
+  {
+   "path": "assets/sprites/ember/frame-06.webp",
+   "bytes": 38316
+  },
+  {
+   "path": "assets/sprites/ember/frame-07.webp",
+   "bytes": 38430
+  },
+  {
+   "path": "assets/sprites/ember/frame-08.webp",
+   "bytes": 46632
+  },
+  {
+   "path": "assets/sprites/ember/frame-09.webp",
+   "bytes": 47820
+  },
+  {
+   "path": "assets/sprites/ember/frame-10.webp",
+   "bytes": 47470
+  },
+  {
+   "path": "assets/sprites/ember/frame-11.webp",
+   "bytes": 47470
+  },
+  {
+   "path": "assets/sprites/ember/frame-12.webp",
+   "bytes": 47820
+  },
+  {
+   "path": "assets/sprites/ember/frame-13.webp",
+   "bytes": 46696
+  },
+  {
+   "path": "assets/sprites/ember/frame-14.webp",
+   "bytes": 47552
+  },
+  {
+   "path": "assets/sprites/ember/frame-15.webp",
+   "bytes": 47414
+  },
+  {
+   "path": "assets/sprites/ember/frame-16.webp",
+   "bytes": 47414
+  },
+  {
+   "path": "assets/sprites/ember/frame-17.webp",
+   "bytes": 47552
+  },
+  {
+   "path": "assets/sprites/ember/frame-18.webp",
+   "bytes": 49466
+  },
+  {
+   "path": "assets/sprites/ember/frame-19.webp",
+   "bytes": 49348
+  },
+  {
+   "path": "assets/sprites/ember/frame-20.webp",
+   "bytes": 49150
+  },
+  {
+   "path": "assets/sprites/ember/frame-21.webp",
+   "bytes": 53826
+  },
+  {
+   "path": "assets/sprites/ember/frame-22.webp",
+   "bytes": 54034
+  },
+  {
+   "path": "assets/sprites/ember/frame-23.webp",
+   "bytes": 54280
+  },
+  {
+   "path": "assets/sprites/ember/frame-24.webp",
+   "bytes": 53998
+  },
+  {
+   "path": "assets/sprites/ember/frame-25.webp",
+   "bytes": 48110
+  },
+  {
+   "path": "assets/sprites/ember/frame-26.webp",
+   "bytes": 47996
+  },
+  {
+   "path": "assets/sprites/ember/frame-27.webp",
+   "bytes": 47966
+  },
+  {
+   "path": "assets/sprites/ember/frame-28.webp",
+   "bytes": 47968
+  },
+  {
+   "path": "assets/sprites/ember/frame-29.webp",
+   "bytes": 47968
+  },
+  {
+   "path": "assets/sprites/ember/frame-30.webp",
+   "bytes": 44494
+  },
+  {
+   "path": "assets/sprites/ember/frame-31.webp",
+   "bytes": 47078
+  },
+  {
+   "path": "assets/sprites/ember/frame-32.webp",
+   "bytes": 50026
+  },
+  {
+   "path": "assets/sprites/ember/frame-33.webp",
+   "bytes": 52818
+  },
+  {
+   "path": "assets/sprites/ember/frame-34.webp",
+   "bytes": 55570
+  },
+  {
+   "path": "assets/sprites/ember/frame-35.webp",
+   "bytes": 53326
+  },
+  {
+   "path": "assets/sprites/ember/frame-36.webp",
+   "bytes": 31014
+  },
+  {
+   "path": "assets/sprites/ember/frame-37.webp",
+   "bytes": 29092
+  },
+  {
+   "path": "assets/sprites/ember/frame-38.webp",
+   "bytes": 27290
+  },
+  {
+   "path": "assets/sprites/ember/frame-39.webp",
+   "bytes": 24438
+  },
+  {
+   "path": "assets/sprites/ember/frame-40.webp",
+   "bytes": 22492
+  },
+  {
+   "path": "assets/sprites/ember/frame-41.webp",
+   "bytes": 18974
+  },
+  {
+   "path": "assets/sprites/ember/frame-42.webp",
+   "bytes": 17478
+  },
+  {
+   "path": "assets/sprites/ember/frame-43.webp",
+   "bytes": 16894
+  },
+  {
+   "path": "assets/sprites/ember/frame-44.webp",
+   "bytes": 41960
+  },
+  {
+   "path": "assets/sprites/ember/frame-45.webp",
+   "bytes": 44638
+  },
+  {
+   "path": "assets/sprites/ember/frame-46.webp",
+   "bytes": 45820
+  },
+  {
+   "path": "assets/sprites/ember/frame-47.webp",
+   "bytes": 46798
+  },
+  {
+   "path": "assets/sprites/ember/frame-48.webp",
+   "bytes": 47230
+  },
+  {
+   "path": "assets/sprites/ember/frame-49.webp",
+   "bytes": 47172
+  },
+  {
+   "path": "assets/sprites/ember/frame-50.webp",
+   "bytes": 46588
+  },
+  {
+   "path": "assets/sprites/ember/frame-51.webp",
+   "bytes": 45946
+  },
+  {
+   "path": "assets/sprites/ember/frame-52.webp",
+   "bytes": 44998
+  },
+  {
+   "path": "assets/sprites/ember/frame-53.webp",
+   "bytes": 42610
+  },
+  {
+   "path": "assets/sprites/hex/frame-00.webp",
+   "bytes": 22286
+  },
+  {
+   "path": "assets/sprites/hex/frame-01.webp",
+   "bytes": 23034
+  },
+  {
+   "path": "assets/sprites/hex/frame-02.webp",
+   "bytes": 23078
+  },
+  {
+   "path": "assets/sprites/hex/frame-03.webp",
+   "bytes": 23034
+  },
+  {
+   "path": "assets/sprites/hex/frame-04.webp",
+   "bytes": 22286
+  },
+  {
+   "path": "assets/sprites/hex/frame-05.webp",
+   "bytes": 22538
+  },
+  {
+   "path": "assets/sprites/hex/frame-06.webp",
+   "bytes": 22326
+  },
+  {
+   "path": "assets/sprites/hex/frame-07.webp",
+   "bytes": 22538
+  },
+  {
+   "path": "assets/sprites/hex/frame-08.webp",
+   "bytes": 23066
+  },
+  {
+   "path": "assets/sprites/hex/frame-09.webp",
+   "bytes": 22792
+  },
+  {
+   "path": "assets/sprites/hex/frame-10.webp",
+   "bytes": 22546
+  },
+  {
+   "path": "assets/sprites/hex/frame-11.webp",
+   "bytes": 22546
+  },
+  {
+   "path": "assets/sprites/hex/frame-12.webp",
+   "bytes": 22792
+  },
+  {
+   "path": "assets/sprites/hex/frame-13.webp",
+   "bytes": 23054
+  },
+  {
+   "path": "assets/sprites/hex/frame-14.webp",
+   "bytes": 22636
+  },
+  {
+   "path": "assets/sprites/hex/frame-15.webp",
+   "bytes": 22806
+  },
+  {
+   "path": "assets/sprites/hex/frame-16.webp",
+   "bytes": 22806
+  },
+  {
+   "path": "assets/sprites/hex/frame-17.webp",
+   "bytes": 22636
+  },
+  {
+   "path": "assets/sprites/hex/frame-18.webp",
+   "bytes": 23284
+  },
+  {
+   "path": "assets/sprites/hex/frame-19.webp",
+   "bytes": 23094
+  },
+  {
+   "path": "assets/sprites/hex/frame-20.webp",
+   "bytes": 22996
+  },
+  {
+   "path": "assets/sprites/hex/frame-21.webp",
+   "bytes": 24972
+  },
+  {
+   "path": "assets/sprites/hex/frame-22.webp",
+   "bytes": 27596
+  },
+  {
+   "path": "assets/sprites/hex/frame-23.webp",
+   "bytes": 26210
+  },
+  {
+   "path": "assets/sprites/hex/frame-24.webp",
+   "bytes": 24846
+  },
+  {
+   "path": "assets/sprites/hex/frame-25.webp",
+   "bytes": 23774
+  },
+  {
+   "path": "assets/sprites/hex/frame-26.webp",
+   "bytes": 23514
+  },
+  {
+   "path": "assets/sprites/hex/frame-27.webp",
+   "bytes": 23706
+  },
+  {
+   "path": "assets/sprites/hex/frame-28.webp",
+   "bytes": 23428
+  },
+  {
+   "path": "assets/sprites/hex/frame-29.webp",
+   "bytes": 23428
+  },
+  {
+   "path": "assets/sprites/hex/frame-30.webp",
+   "bytes": 23520
+  },
+  {
+   "path": "assets/sprites/hex/frame-31.webp",
+   "bytes": 25412
+  },
+  {
+   "path": "assets/sprites/hex/frame-32.webp",
+   "bytes": 26978
+  },
+  {
+   "path": "assets/sprites/hex/frame-33.webp",
+   "bytes": 29544
+  },
+  {
+   "path": "assets/sprites/hex/frame-34.webp",
+   "bytes": 31422
+  },
+  {
+   "path": "assets/sprites/hex/frame-35.webp",
+   "bytes": 29218
+  },
+  {
+   "path": "assets/sprites/hex/frame-36.webp",
+   "bytes": 28524
+  },
+  {
+   "path": "assets/sprites/hex/frame-37.webp",
+   "bytes": 26138
+  },
+  {
+   "path": "assets/sprites/hex/frame-38.webp",
+   "bytes": 23004
+  },
+  {
+   "path": "assets/sprites/hex/frame-39.webp",
+   "bytes": 18708
+  },
+  {
+   "path": "assets/sprites/hex/frame-40.webp",
+   "bytes": 15632
+  },
+  {
+   "path": "assets/sprites/hex/frame-41.webp",
+   "bytes": 11430
+  },
+  {
+   "path": "assets/sprites/hex/frame-42.webp",
+   "bytes": 9954
+  },
+  {
+   "path": "assets/sprites/hex/frame-43.webp",
+   "bytes": 8524
+  },
+  {
+   "path": "assets/sprites/hex/frame-44.webp",
+   "bytes": 32180
+  },
+  {
+   "path": "assets/sprites/hex/frame-45.webp",
+   "bytes": 32730
+  },
+  {
+   "path": "assets/sprites/hex/frame-46.webp",
+   "bytes": 33846
+  },
+  {
+   "path": "assets/sprites/hex/frame-47.webp",
+   "bytes": 34826
+  },
+  {
+   "path": "assets/sprites/hex/frame-48.webp",
+   "bytes": 35700
+  },
+  {
+   "path": "assets/sprites/hex/frame-49.webp",
+   "bytes": 35636
+  },
+  {
+   "path": "assets/sprites/hex/frame-50.webp",
+   "bytes": 36072
+  },
+  {
+   "path": "assets/sprites/hex/frame-51.webp",
+   "bytes": 35844
+  },
+  {
+   "path": "assets/sprites/hex/frame-52.webp",
+   "bytes": 35508
+  },
+  {
+   "path": "assets/sprites/hex/frame-53.webp",
+   "bytes": 33164
+  },
+  {
+   "path": "assets/sprites/mercy/frame-00.webp",
+   "bytes": 16328
+  },
+  {
+   "path": "assets/sprites/mercy/frame-01.webp",
+   "bytes": 16936
+  },
+  {
+   "path": "assets/sprites/mercy/frame-02.webp",
+   "bytes": 17082
+  },
+  {
+   "path": "assets/sprites/mercy/frame-03.webp",
+   "bytes": 16936
+  },
+  {
+   "path": "assets/sprites/mercy/frame-04.webp",
+   "bytes": 16328
+  },
+  {
+   "path": "assets/sprites/mercy/frame-05.webp",
+   "bytes": 16858
+  },
+  {
+   "path": "assets/sprites/mercy/frame-06.webp",
+   "bytes": 16896
+  },
+  {
+   "path": "assets/sprites/mercy/frame-07.webp",
+   "bytes": 16858
+  },
+  {
+   "path": "assets/sprites/mercy/frame-08.webp",
+   "bytes": 15186
+  },
+  {
+   "path": "assets/sprites/mercy/frame-09.webp",
+   "bytes": 15224
+  },
+  {
+   "path": "assets/sprites/mercy/frame-10.webp",
+   "bytes": 15290
+  },
+  {
+   "path": "assets/sprites/mercy/frame-11.webp",
+   "bytes": 15290
+  },
+  {
+   "path": "assets/sprites/mercy/frame-12.webp",
+   "bytes": 15224
+  },
+  {
+   "path": "assets/sprites/mercy/frame-13.webp",
+   "bytes": 15172
+  },
+  {
+   "path": "assets/sprites/mercy/frame-14.webp",
+   "bytes": 15100
+  },
+  {
+   "path": "assets/sprites/mercy/frame-15.webp",
+   "bytes": 15120
+  },
+  {
+   "path": "assets/sprites/mercy/frame-16.webp",
+   "bytes": 15120
+  },
+  {
+   "path": "assets/sprites/mercy/frame-17.webp",
+   "bytes": 15100
+  },
+  {
+   "path": "assets/sprites/mercy/frame-18.webp",
+   "bytes": 25664
+  },
+  {
+   "path": "assets/sprites/mercy/frame-19.webp",
+   "bytes": 25650
+  },
+  {
+   "path": "assets/sprites/mercy/frame-20.webp",
+   "bytes": 25664
+  },
+  {
+   "path": "assets/sprites/mercy/frame-21.webp",
+   "bytes": 28714
+  },
+  {
+   "path": "assets/sprites/mercy/frame-22.webp",
+   "bytes": 29816
+  },
+  {
+   "path": "assets/sprites/mercy/frame-23.webp",
+   "bytes": 29846
+  },
+  {
+   "path": "assets/sprites/mercy/frame-24.webp",
+   "bytes": 27376
+  },
+  {
+   "path": "assets/sprites/mercy/frame-25.webp",
+   "bytes": 25930
+  },
+  {
+   "path": "assets/sprites/mercy/frame-26.webp",
+   "bytes": 26024
+  },
+  {
+   "path": "assets/sprites/mercy/frame-27.webp",
+   "bytes": 25820
+  },
+  {
+   "path": "assets/sprites/mercy/frame-28.webp",
+   "bytes": 25902
+  },
+  {
+   "path": "assets/sprites/mercy/frame-29.webp",
+   "bytes": 25902
+  },
+  {
+   "path": "assets/sprites/mercy/frame-30.webp",
+   "bytes": 22100
+  },
+  {
+   "path": "assets/sprites/mercy/frame-31.webp",
+   "bytes": 23794
+  },
+  {
+   "path": "assets/sprites/mercy/frame-32.webp",
+   "bytes": 25202
+  },
+  {
+   "path": "assets/sprites/mercy/frame-33.webp",
+   "bytes": 26674
+  },
+  {
+   "path": "assets/sprites/mercy/frame-34.webp",
+   "bytes": 28052
+  },
+  {
+   "path": "assets/sprites/mercy/frame-35.webp",
+   "bytes": 25250
+  },
+  {
+   "path": "assets/sprites/mercy/frame-36.webp",
+   "bytes": 11212
+  },
+  {
+   "path": "assets/sprites/mercy/frame-37.webp",
+   "bytes": 10254
+  },
+  {
+   "path": "assets/sprites/mercy/frame-38.webp",
+   "bytes": 9424
+  },
+  {
+   "path": "assets/sprites/mercy/frame-39.webp",
+   "bytes": 8184
+  },
+  {
+   "path": "assets/sprites/mercy/frame-40.webp",
+   "bytes": 7236
+  },
+  {
+   "path": "assets/sprites/mercy/frame-41.webp",
+   "bytes": 6104
+  },
+  {
+   "path": "assets/sprites/mercy/frame-42.webp",
+   "bytes": 5650
+  },
+  {
+   "path": "assets/sprites/mercy/frame-43.webp",
+   "bytes": 5290
+  },
+  {
+   "path": "assets/sprites/mercy/frame-44.webp",
+   "bytes": 22612
+  },
+  {
+   "path": "assets/sprites/mercy/frame-45.webp",
+   "bytes": 24050
+  },
+  {
+   "path": "assets/sprites/mercy/frame-46.webp",
+   "bytes": 24606
+  },
+  {
+   "path": "assets/sprites/mercy/frame-47.webp",
+   "bytes": 24926
+  },
+  {
+   "path": "assets/sprites/mercy/frame-48.webp",
+   "bytes": 25084
+  },
+  {
+   "path": "assets/sprites/mercy/frame-49.webp",
+   "bytes": 25142
+  },
+  {
+   "path": "assets/sprites/mercy/frame-50.webp",
+   "bytes": 25174
+  },
+  {
+   "path": "assets/sprites/mercy/frame-51.webp",
+   "bytes": 25162
+  },
+  {
+   "path": "assets/sprites/mercy/frame-52.webp",
+   "bytes": 24852
+  },
+  {
+   "path": "assets/sprites/mercy/frame-53.webp",
+   "bytes": 23882
+  },
+  {
+   "path": "assets/sprites/rampart/frame-00.webp",
+   "bytes": 31884
+  },
+  {
+   "path": "assets/sprites/rampart/frame-01.webp",
+   "bytes": 32968
+  },
+  {
+   "path": "assets/sprites/rampart/frame-02.webp",
+   "bytes": 33338
+  },
+  {
+   "path": "assets/sprites/rampart/frame-03.webp",
+   "bytes": 32968
+  },
+  {
+   "path": "assets/sprites/rampart/frame-04.webp",
+   "bytes": 31884
+  },
+  {
+   "path": "assets/sprites/rampart/frame-05.webp",
+   "bytes": 32160
+  },
+  {
+   "path": "assets/sprites/rampart/frame-06.webp",
+   "bytes": 32082
+  },
+  {
+   "path": "assets/sprites/rampart/frame-07.webp",
+   "bytes": 32160
+  },
+  {
+   "path": "assets/sprites/rampart/frame-08.webp",
+   "bytes": 33726
+  },
+  {
+   "path": "assets/sprites/rampart/frame-09.webp",
+   "bytes": 33800
+  },
+  {
+   "path": "assets/sprites/rampart/frame-10.webp",
+   "bytes": 33946
+  },
+  {
+   "path": "assets/sprites/rampart/frame-11.webp",
+   "bytes": 33946
+  },
+  {
+   "path": "assets/sprites/rampart/frame-12.webp",
+   "bytes": 33800
+  },
+  {
+   "path": "assets/sprites/rampart/frame-13.webp",
+   "bytes": 33498
+  },
+  {
+   "path": "assets/sprites/rampart/frame-14.webp",
+   "bytes": 33918
+  },
+  {
+   "path": "assets/sprites/rampart/frame-15.webp",
+   "bytes": 34018
+  },
+  {
+   "path": "assets/sprites/rampart/frame-16.webp",
+   "bytes": 34018
+  },
+  {
+   "path": "assets/sprites/rampart/frame-17.webp",
+   "bytes": 33918
+  },
+  {
+   "path": "assets/sprites/rampart/frame-18.webp",
+   "bytes": 28282
+  },
+  {
+   "path": "assets/sprites/rampart/frame-19.webp",
+   "bytes": 28320
+  },
+  {
+   "path": "assets/sprites/rampart/frame-20.webp",
+   "bytes": 28322
+  },
+  {
+   "path": "assets/sprites/rampart/frame-21.webp",
+   "bytes": 31066
+  },
+  {
+   "path": "assets/sprites/rampart/frame-22.webp",
+   "bytes": 31230
+  },
+  {
+   "path": "assets/sprites/rampart/frame-23.webp",
+   "bytes": 31100
+  },
+  {
+   "path": "assets/sprites/rampart/frame-24.webp",
+   "bytes": 30576
+  },
+  {
+   "path": "assets/sprites/rampart/frame-25.webp",
+   "bytes": 28516
+  },
+  {
+   "path": "assets/sprites/rampart/frame-26.webp",
+   "bytes": 28586
+  },
+  {
+   "path": "assets/sprites/rampart/frame-27.webp",
+   "bytes": 28730
+  },
+  {
+   "path": "assets/sprites/rampart/frame-28.webp",
+   "bytes": 28742
+  },
+  {
+   "path": "assets/sprites/rampart/frame-29.webp",
+   "bytes": 28742
+  },
+  {
+   "path": "assets/sprites/rampart/frame-30.webp",
+   "bytes": 27376
+  },
+  {
+   "path": "assets/sprites/rampart/frame-31.webp",
+   "bytes": 29312
+  },
+  {
+   "path": "assets/sprites/rampart/frame-32.webp",
+   "bytes": 31240
+  },
+  {
+   "path": "assets/sprites/rampart/frame-33.webp",
+   "bytes": 33360
+  },
+  {
+   "path": "assets/sprites/rampart/frame-34.webp",
+   "bytes": 35212
+  },
+  {
+   "path": "assets/sprites/rampart/frame-35.webp",
+   "bytes": 35576
+  },
+  {
+   "path": "assets/sprites/rampart/frame-36.webp",
+   "bytes": 25908
+  },
+  {
+   "path": "assets/sprites/rampart/frame-37.webp",
+   "bytes": 24742
+  },
+  {
+   "path": "assets/sprites/rampart/frame-38.webp",
+   "bytes": 23232
+  },
+  {
+   "path": "assets/sprites/rampart/frame-39.webp",
+   "bytes": 20770
+  },
+  {
+   "path": "assets/sprites/rampart/frame-40.webp",
+   "bytes": 19212
+  },
+  {
+   "path": "assets/sprites/rampart/frame-41.webp",
+   "bytes": 17342
+  },
+  {
+   "path": "assets/sprites/rampart/frame-42.webp",
+   "bytes": 16294
+  },
+  {
+   "path": "assets/sprites/rampart/frame-43.webp",
+   "bytes": 15690
+  },
+  {
+   "path": "assets/sprites/rampart/frame-44.webp",
+   "bytes": 35234
+  },
+  {
+   "path": "assets/sprites/rampart/frame-45.webp",
+   "bytes": 35916
+  },
+  {
+   "path": "assets/sprites/rampart/frame-46.webp",
+   "bytes": 37158
+  },
+  {
+   "path": "assets/sprites/rampart/frame-47.webp",
+   "bytes": 37160
+  },
+  {
+   "path": "assets/sprites/rampart/frame-48.webp",
+   "bytes": 37456
+  },
+  {
+   "path": "assets/sprites/rampart/frame-49.webp",
+   "bytes": 38062
+  },
+  {
+   "path": "assets/sprites/rampart/frame-50.webp",
+   "bytes": 37216
+  },
+  {
+   "path": "assets/sprites/rampart/frame-51.webp",
+   "bytes": 36482
+  },
+  {
+   "path": "assets/sprites/rampart/frame-52.webp",
+   "bytes": 36382
+  },
+  {
+   "path": "assets/sprites/rampart/frame-53.webp",
+   "bytes": 35528
+  },
+  {
+   "path": "assets/sprites/rook/frame-00.webp",
+   "bytes": 20954
+  },
+  {
+   "path": "assets/sprites/rook/frame-01.webp",
+   "bytes": 21902
+  },
+  {
+   "path": "assets/sprites/rook/frame-02.webp",
+   "bytes": 22008
+  },
+  {
+   "path": "assets/sprites/rook/frame-03.webp",
+   "bytes": 21902
+  },
+  {
+   "path": "assets/sprites/rook/frame-04.webp",
+   "bytes": 20954
+  },
+  {
+   "path": "assets/sprites/rook/frame-05.webp",
+   "bytes": 21678
+  },
+  {
+   "path": "assets/sprites/rook/frame-06.webp",
+   "bytes": 21920
+  },
+  {
+   "path": "assets/sprites/rook/frame-07.webp",
+   "bytes": 21678
+  },
+  {
+   "path": "assets/sprites/rook/frame-08.webp",
+   "bytes": 20964
+  },
+  {
+   "path": "assets/sprites/rook/frame-09.webp",
+   "bytes": 21712
+  },
+  {
+   "path": "assets/sprites/rook/frame-10.webp",
+   "bytes": 21754
+  },
+  {
+   "path": "assets/sprites/rook/frame-11.webp",
+   "bytes": 21754
+  },
+  {
+   "path": "assets/sprites/rook/frame-12.webp",
+   "bytes": 21712
+  },
+  {
+   "path": "assets/sprites/rook/frame-13.webp",
+   "bytes": 20948
+  },
+  {
+   "path": "assets/sprites/rook/frame-14.webp",
+   "bytes": 21568
+  },
+  {
+   "path": "assets/sprites/rook/frame-15.webp",
+   "bytes": 21810
+  },
+  {
+   "path": "assets/sprites/rook/frame-16.webp",
+   "bytes": 21810
+  },
+  {
+   "path": "assets/sprites/rook/frame-17.webp",
+   "bytes": 21568
+  },
+  {
+   "path": "assets/sprites/rook/frame-18.webp",
+   "bytes": 23750
+  },
+  {
+   "path": "assets/sprites/rook/frame-19.webp",
+   "bytes": 23682
+  },
+  {
+   "path": "assets/sprites/rook/frame-20.webp",
+   "bytes": 23784
+  },
+  {
+   "path": "assets/sprites/rook/frame-21.webp",
+   "bytes": 26766
+  },
+  {
+   "path": "assets/sprites/rook/frame-22.webp",
+   "bytes": 28462
+  },
+  {
+   "path": "assets/sprites/rook/frame-23.webp",
+   "bytes": 30160
+  },
+  {
+   "path": "assets/sprites/rook/frame-24.webp",
+   "bytes": 25610
+  },
+  {
+   "path": "assets/sprites/rook/frame-25.webp",
+   "bytes": 23096
+  },
+  {
+   "path": "assets/sprites/rook/frame-26.webp",
+   "bytes": 23348
+  },
+  {
+   "path": "assets/sprites/rook/frame-27.webp",
+   "bytes": 23460
+  },
+  {
+   "path": "assets/sprites/rook/frame-28.webp",
+   "bytes": 23520
+  },
+  {
+   "path": "assets/sprites/rook/frame-29.webp",
+   "bytes": 23520
+  },
+  {
+   "path": "assets/sprites/rook/frame-30.webp",
+   "bytes": 17710
+  },
+  {
+   "path": "assets/sprites/rook/frame-31.webp",
+   "bytes": 18834
+  },
+  {
+   "path": "assets/sprites/rook/frame-32.webp",
+   "bytes": 19904
+  },
+  {
+   "path": "assets/sprites/rook/frame-33.webp",
+   "bytes": 21132
+  },
+  {
+   "path": "assets/sprites/rook/frame-34.webp",
+   "bytes": 22416
+  },
+  {
+   "path": "assets/sprites/rook/frame-35.webp",
+   "bytes": 21594
+  },
+  {
+   "path": "assets/sprites/rook/frame-36.webp",
+   "bytes": 18844
+  },
+  {
+   "path": "assets/sprites/rook/frame-37.webp",
+   "bytes": 18126
+  },
+  {
+   "path": "assets/sprites/rook/frame-38.webp",
+   "bytes": 17346
+  },
+  {
+   "path": "assets/sprites/rook/frame-39.webp",
+   "bytes": 15684
+  },
+  {
+   "path": "assets/sprites/rook/frame-40.webp",
+   "bytes": 14506
+  },
+  {
+   "path": "assets/sprites/rook/frame-41.webp",
+   "bytes": 12610
+  },
+  {
+   "path": "assets/sprites/rook/frame-42.webp",
+   "bytes": 11834
+  },
+  {
+   "path": "assets/sprites/rook/frame-43.webp",
+   "bytes": 11494
+  },
+  {
+   "path": "assets/sprites/rook/frame-44.webp",
+   "bytes": 43968
+  },
+  {
+   "path": "assets/sprites/rook/frame-45.webp",
+   "bytes": 47282
+  },
+  {
+   "path": "assets/sprites/rook/frame-46.webp",
+   "bytes": 48220
+  },
+  {
+   "path": "assets/sprites/rook/frame-47.webp",
+   "bytes": 49050
+  },
+  {
+   "path": "assets/sprites/rook/frame-48.webp",
+   "bytes": 49638
+  },
+  {
+   "path": "assets/sprites/rook/frame-49.webp",
+   "bytes": 50086
+  },
+  {
+   "path": "assets/sprites/rook/frame-50.webp",
+   "bytes": 49702
+  },
+  {
+   "path": "assets/sprites/rook/frame-51.webp",
+   "bytes": 49146
+  },
+  {
+   "path": "assets/sprites/rook/frame-52.webp",
+   "bytes": 48662
+  },
+  {
+   "path": "assets/sprites/rook/frame-53.webp",
+   "bytes": 45616
+  },
+  {
+   "path": "assets/sprites/sage/frame-00.webp",
+   "bytes": 22272
+  },
+  {
+   "path": "assets/sprites/sage/frame-01.webp",
+   "bytes": 22494
+  },
+  {
+   "path": "assets/sprites/sage/frame-02.webp",
+   "bytes": 22656
+  },
+  {
+   "path": "assets/sprites/sage/frame-03.webp",
+   "bytes": 22494
+  },
+  {
+   "path": "assets/sprites/sage/frame-04.webp",
+   "bytes": 22272
+  },
+  {
+   "path": "assets/sprites/sage/frame-05.webp",
+   "bytes": 22026
+  },
+  {
+   "path": "assets/sprites/sage/frame-06.webp",
+   "bytes": 22002
+  },
+  {
+   "path": "assets/sprites/sage/frame-07.webp",
+   "bytes": 22026
+  },
+  {
+   "path": "assets/sprites/sage/frame-08.webp",
+   "bytes": 25268
+  },
+  {
+   "path": "assets/sprites/sage/frame-09.webp",
+   "bytes": 25030
+  },
+  {
+   "path": "assets/sprites/sage/frame-10.webp",
+   "bytes": 24928
+  },
+  {
+   "path": "assets/sprites/sage/frame-11.webp",
+   "bytes": 24928
+  },
+  {
+   "path": "assets/sprites/sage/frame-12.webp",
+   "bytes": 25030
+  },
+  {
+   "path": "assets/sprites/sage/frame-13.webp",
+   "bytes": 25238
+  },
+  {
+   "path": "assets/sprites/sage/frame-14.webp",
+   "bytes": 25000
+  },
+  {
+   "path": "assets/sprites/sage/frame-15.webp",
+   "bytes": 24978
+  },
+  {
+   "path": "assets/sprites/sage/frame-16.webp",
+   "bytes": 24978
+  },
+  {
+   "path": "assets/sprites/sage/frame-17.webp",
+   "bytes": 25000
+  },
+  {
+   "path": "assets/sprites/sage/frame-18.webp",
+   "bytes": 22794
+  },
+  {
+   "path": "assets/sprites/sage/frame-19.webp",
+   "bytes": 22874
+  },
+  {
+   "path": "assets/sprites/sage/frame-20.webp",
+   "bytes": 22616
+  },
+  {
+   "path": "assets/sprites/sage/frame-21.webp",
+   "bytes": 25256
+  },
+  {
+   "path": "assets/sprites/sage/frame-22.webp",
+   "bytes": 27548
+  },
+  {
+   "path": "assets/sprites/sage/frame-23.webp",
+   "bytes": 28538
+  },
+  {
+   "path": "assets/sprites/sage/frame-24.webp",
+   "bytes": 24358
+  },
+  {
+   "path": "assets/sprites/sage/frame-25.webp",
+   "bytes": 22784
+  },
+  {
+   "path": "assets/sprites/sage/frame-26.webp",
+   "bytes": 22716
+  },
+  {
+   "path": "assets/sprites/sage/frame-27.webp",
+   "bytes": 22808
+  },
+  {
+   "path": "assets/sprites/sage/frame-28.webp",
+   "bytes": 22756
+  },
+  {
+   "path": "assets/sprites/sage/frame-29.webp",
+   "bytes": 22756
+  },
+  {
+   "path": "assets/sprites/sage/frame-30.webp",
+   "bytes": 17848
+  },
+  {
+   "path": "assets/sprites/sage/frame-31.webp",
+   "bytes": 19206
+  },
+  {
+   "path": "assets/sprites/sage/frame-32.webp",
+   "bytes": 20290
+  },
+  {
+   "path": "assets/sprites/sage/frame-33.webp",
+   "bytes": 21592
+  },
+  {
+   "path": "assets/sprites/sage/frame-34.webp",
+   "bytes": 22944
+  },
+  {
+   "path": "assets/sprites/sage/frame-35.webp",
+   "bytes": 23048
+  },
+  {
+   "path": "assets/sprites/sage/frame-36.webp",
+   "bytes": 18002
+  },
+  {
+   "path": "assets/sprites/sage/frame-37.webp",
+   "bytes": 17518
+  },
+  {
+   "path": "assets/sprites/sage/frame-38.webp",
+   "bytes": 16554
+  },
+  {
+   "path": "assets/sprites/sage/frame-39.webp",
+   "bytes": 15082
+  },
+  {
+   "path": "assets/sprites/sage/frame-40.webp",
+   "bytes": 13890
+  },
+  {
+   "path": "assets/sprites/sage/frame-41.webp",
+   "bytes": 12184
+  },
+  {
+   "path": "assets/sprites/sage/frame-42.webp",
+   "bytes": 11592
+  },
+  {
+   "path": "assets/sprites/sage/frame-43.webp",
+   "bytes": 11216
+  },
+  {
+   "path": "assets/sprites/sage/frame-44.webp",
+   "bytes": 23450
+  },
+  {
+   "path": "assets/sprites/sage/frame-45.webp",
+   "bytes": 24856
+  },
+  {
+   "path": "assets/sprites/sage/frame-46.webp",
+   "bytes": 25440
+  },
+  {
+   "path": "assets/sprites/sage/frame-47.webp",
+   "bytes": 26346
+  },
+  {
+   "path": "assets/sprites/sage/frame-48.webp",
+   "bytes": 26928
+  },
+  {
+   "path": "assets/sprites/sage/frame-49.webp",
+   "bytes": 27106
+  },
+  {
+   "path": "assets/sprites/sage/frame-50.webp",
+   "bytes": 26524
+  },
+  {
+   "path": "assets/sprites/sage/frame-51.webp",
+   "bytes": 26692
+  },
+  {
+   "path": "assets/sprites/sage/frame-52.webp",
+   "bytes": 26464
+  },
+  {
+   "path": "assets/sprites/sage/frame-53.webp",
+   "bytes": 26004
+  },
+  {
+   "path": "assets/sprites/shade/frame-00.webp",
+   "bytes": 27350
+  },
+  {
+   "path": "assets/sprites/shade/frame-01.webp",
+   "bytes": 28014
+  },
+  {
+   "path": "assets/sprites/shade/frame-02.webp",
+   "bytes": 28308
+  },
+  {
+   "path": "assets/sprites/shade/frame-03.webp",
+   "bytes": 28014
+  },
+  {
+   "path": "assets/sprites/shade/frame-04.webp",
+   "bytes": 27350
+  },
+  {
+   "path": "assets/sprites/shade/frame-05.webp",
+   "bytes": 27232
+  },
+  {
+   "path": "assets/sprites/shade/frame-06.webp",
+   "bytes": 27420
+  },
+  {
+   "path": "assets/sprites/shade/frame-07.webp",
+   "bytes": 27232
+  },
+  {
+   "path": "assets/sprites/shade/frame-08.webp",
+   "bytes": 26854
+  },
+  {
+   "path": "assets/sprites/shade/frame-09.webp",
+   "bytes": 26912
+  },
+  {
+   "path": "assets/sprites/shade/frame-10.webp",
+   "bytes": 27132
+  },
+  {
+   "path": "assets/sprites/shade/frame-11.webp",
+   "bytes": 27132
+  },
+  {
+   "path": "assets/sprites/shade/frame-12.webp",
+   "bytes": 26912
+  },
+  {
+   "path": "assets/sprites/shade/frame-13.webp",
+   "bytes": 26862
+  },
+  {
+   "path": "assets/sprites/shade/frame-14.webp",
+   "bytes": 26918
+  },
+  {
+   "path": "assets/sprites/shade/frame-15.webp",
+   "bytes": 26718
+  },
+  {
+   "path": "assets/sprites/shade/frame-16.webp",
+   "bytes": 26718
+  },
+  {
+   "path": "assets/sprites/shade/frame-17.webp",
+   "bytes": 26918
+  },
+  {
+   "path": "assets/sprites/shade/frame-18.webp",
+   "bytes": 31520
+  },
+  {
+   "path": "assets/sprites/shade/frame-19.webp",
+   "bytes": 31850
+  },
+  {
+   "path": "assets/sprites/shade/frame-20.webp",
+   "bytes": 31352
+  },
+  {
+   "path": "assets/sprites/shade/frame-21.webp",
+   "bytes": 35358
+  },
+  {
+   "path": "assets/sprites/shade/frame-22.webp",
+   "bytes": 34978
+  },
+  {
+   "path": "assets/sprites/shade/frame-23.webp",
+   "bytes": 36548
+  },
+  {
+   "path": "assets/sprites/shade/frame-24.webp",
+   "bytes": 33802
+  },
+  {
+   "path": "assets/sprites/shade/frame-25.webp",
+   "bytes": 32500
+  },
+  {
+   "path": "assets/sprites/shade/frame-26.webp",
+   "bytes": 32316
+  },
+  {
+   "path": "assets/sprites/shade/frame-27.webp",
+   "bytes": 32194
+  },
+  {
+   "path": "assets/sprites/shade/frame-28.webp",
+   "bytes": 32662
+  },
+  {
+   "path": "assets/sprites/shade/frame-29.webp",
+   "bytes": 32662
+  },
+  {
+   "path": "assets/sprites/shade/frame-30.webp",
+   "bytes": 22496
+  },
+  {
+   "path": "assets/sprites/shade/frame-31.webp",
+   "bytes": 24186
+  },
+  {
+   "path": "assets/sprites/shade/frame-32.webp",
+   "bytes": 25798
+  },
+  {
+   "path": "assets/sprites/shade/frame-33.webp",
+   "bytes": 27880
+  },
+  {
+   "path": "assets/sprites/shade/frame-34.webp",
+   "bytes": 29362
+  },
+  {
+   "path": "assets/sprites/shade/frame-35.webp",
+   "bytes": 26854
+  },
+  {
+   "path": "assets/sprites/shade/frame-36.webp",
+   "bytes": 20998
+  },
+  {
+   "path": "assets/sprites/shade/frame-37.webp",
+   "bytes": 19490
+  },
+  {
+   "path": "assets/sprites/shade/frame-38.webp",
+   "bytes": 17644
+  },
+  {
+   "path": "assets/sprites/shade/frame-39.webp",
+   "bytes": 14736
+  },
+  {
+   "path": "assets/sprites/shade/frame-40.webp",
+   "bytes": 12696
+  },
+  {
+   "path": "assets/sprites/shade/frame-41.webp",
+   "bytes": 10252
+  },
+  {
+   "path": "assets/sprites/shade/frame-42.webp",
+   "bytes": 9286
+  },
+  {
+   "path": "assets/sprites/shade/frame-43.webp",
+   "bytes": 8400
+  },
+  {
+   "path": "assets/sprites/shade/frame-44.webp",
+   "bytes": 29632
+  },
+  {
+   "path": "assets/sprites/shade/frame-45.webp",
+   "bytes": 30144
+  },
+  {
+   "path": "assets/sprites/shade/frame-46.webp",
+   "bytes": 30862
+  },
+  {
+   "path": "assets/sprites/shade/frame-47.webp",
+   "bytes": 30988
+  },
+  {
+   "path": "assets/sprites/shade/frame-48.webp",
+   "bytes": 30940
+  },
+  {
+   "path": "assets/sprites/shade/frame-49.webp",
+   "bytes": 30876
+  },
+  {
+   "path": "assets/sprites/shade/frame-50.webp",
+   "bytes": 31002
+  },
+  {
+   "path": "assets/sprites/shade/frame-51.webp",
+   "bytes": 30878
+  },
+  {
+   "path": "assets/sprites/shade/frame-52.webp",
+   "bytes": 30416
+  },
+  {
+   "path": "assets/sprites/shade/frame-53.webp",
+   "bytes": 30074
+  },
+  {
+   "path": "assets/sprites/specter/frame-00.webp",
+   "bytes": 16428
+  },
+  {
+   "path": "assets/sprites/specter/frame-01.webp",
+   "bytes": 17500
+  },
+  {
+   "path": "assets/sprites/specter/frame-02.webp",
+   "bytes": 17386
+  },
+  {
+   "path": "assets/sprites/specter/frame-03.webp",
+   "bytes": 17500
+  },
+  {
+   "path": "assets/sprites/specter/frame-04.webp",
+   "bytes": 16428
+  },
+  {
+   "path": "assets/sprites/specter/frame-05.webp",
+   "bytes": 16992
+  },
+  {
+   "path": "assets/sprites/specter/frame-06.webp",
+   "bytes": 17152
+  },
+  {
+   "path": "assets/sprites/specter/frame-07.webp",
+   "bytes": 16992
+  },
+  {
+   "path": "assets/sprites/specter/frame-08.webp",
+   "bytes": 19152
+  },
+  {
+   "path": "assets/sprites/specter/frame-09.webp",
+   "bytes": 19558
+  },
+  {
+   "path": "assets/sprites/specter/frame-10.webp",
+   "bytes": 19252
+  },
+  {
+   "path": "assets/sprites/specter/frame-11.webp",
+   "bytes": 19252
+  },
+  {
+   "path": "assets/sprites/specter/frame-12.webp",
+   "bytes": 19558
+  },
+  {
+   "path": "assets/sprites/specter/frame-13.webp",
+   "bytes": 19128
+  },
+  {
+   "path": "assets/sprites/specter/frame-14.webp",
+   "bytes": 19116
+  },
+  {
+   "path": "assets/sprites/specter/frame-15.webp",
+   "bytes": 19268
+  },
+  {
+   "path": "assets/sprites/specter/frame-16.webp",
+   "bytes": 19268
+  },
+  {
+   "path": "assets/sprites/specter/frame-17.webp",
+   "bytes": 19116
+  },
+  {
+   "path": "assets/sprites/specter/frame-18.webp",
+   "bytes": 21036
+  },
+  {
+   "path": "assets/sprites/specter/frame-19.webp",
+   "bytes": 20932
+  },
+  {
+   "path": "assets/sprites/specter/frame-20.webp",
+   "bytes": 21096
+  },
+  {
+   "path": "assets/sprites/specter/frame-21.webp",
+   "bytes": 22602
+  },
+  {
+   "path": "assets/sprites/specter/frame-22.webp",
+   "bytes": 22678
+  },
+  {
+   "path": "assets/sprites/specter/frame-23.webp",
+   "bytes": 22664
+  },
+  {
+   "path": "assets/sprites/specter/frame-24.webp",
+   "bytes": 22412
+  },
+  {
+   "path": "assets/sprites/specter/frame-25.webp",
+   "bytes": 20740
+  },
+  {
+   "path": "assets/sprites/specter/frame-26.webp",
+   "bytes": 20584
+  },
+  {
+   "path": "assets/sprites/specter/frame-27.webp",
+   "bytes": 20554
+  },
+  {
+   "path": "assets/sprites/specter/frame-28.webp",
+   "bytes": 20550
+  },
+  {
+   "path": "assets/sprites/specter/frame-29.webp",
+   "bytes": 20550
+  },
+  {
+   "path": "assets/sprites/specter/frame-30.webp",
+   "bytes": 16986
+  },
+  {
+   "path": "assets/sprites/specter/frame-31.webp",
+   "bytes": 19936
+  },
+  {
+   "path": "assets/sprites/specter/frame-32.webp",
+   "bytes": 21900
+  },
+  {
+   "path": "assets/sprites/specter/frame-33.webp",
+   "bytes": 23958
+  },
+  {
+   "path": "assets/sprites/specter/frame-34.webp",
+   "bytes": 26484
+  },
+  {
+   "path": "assets/sprites/specter/frame-35.webp",
+   "bytes": 26696
+  },
+  {
+   "path": "assets/sprites/specter/frame-36.webp",
+   "bytes": 24350
+  },
+  {
+   "path": "assets/sprites/specter/frame-37.webp",
+   "bytes": 23716
+  },
+  {
+   "path": "assets/sprites/specter/frame-38.webp",
+   "bytes": 22492
+  },
+  {
+   "path": "assets/sprites/specter/frame-39.webp",
+   "bytes": 19976
+  },
+  {
+   "path": "assets/sprites/specter/frame-40.webp",
+   "bytes": 18628
+  },
+  {
+   "path": "assets/sprites/specter/frame-41.webp",
+   "bytes": 17084
+  },
+  {
+   "path": "assets/sprites/specter/frame-42.webp",
+   "bytes": 16120
+  },
+  {
+   "path": "assets/sprites/specter/frame-43.webp",
+   "bytes": 15506
+  },
+  {
+   "path": "assets/sprites/specter/frame-44.webp",
+   "bytes": 26086
+  },
+  {
+   "path": "assets/sprites/specter/frame-45.webp",
+   "bytes": 27972
+  },
+  {
+   "path": "assets/sprites/specter/frame-46.webp",
+   "bytes": 28464
+  },
+  {
+   "path": "assets/sprites/specter/frame-47.webp",
+   "bytes": 29044
+  },
+  {
+   "path": "assets/sprites/specter/frame-48.webp",
+   "bytes": 29286
+  },
+  {
+   "path": "assets/sprites/specter/frame-49.webp",
+   "bytes": 29288
+  },
+  {
+   "path": "assets/sprites/specter/frame-50.webp",
+   "bytes": 29130
+  },
+  {
+   "path": "assets/sprites/specter/frame-51.webp",
+   "bytes": 28502
+  },
+  {
+   "path": "assets/sprites/specter/frame-52.webp",
+   "bytes": 28270
+  },
+  {
+   "path": "assets/sprites/specter/frame-53.webp",
+   "bytes": 26834
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-00.webp",
+   "bytes": 30986
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-01.webp",
+   "bytes": 31660
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-02.webp",
+   "bytes": 31990
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-03.webp",
+   "bytes": 31660
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-04.webp",
+   "bytes": 30986
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-05.webp",
+   "bytes": 31598
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-06.webp",
+   "bytes": 31382
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-07.webp",
+   "bytes": 31598
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-08.webp",
+   "bytes": 23334
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-09.webp",
+   "bytes": 23174
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-10.webp",
+   "bytes": 23270
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-11.webp",
+   "bytes": 23270
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-12.webp",
+   "bytes": 23174
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-13.webp",
+   "bytes": 23334
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-14.webp",
+   "bytes": 23534
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-15.webp",
+   "bytes": 23800
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-16.webp",
+   "bytes": 23800
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-17.webp",
+   "bytes": 23534
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-18.webp",
+   "bytes": 49150
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-19.webp",
+   "bytes": 49362
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-20.webp",
+   "bytes": 50796
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-21.webp",
+   "bytes": 50698
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-22.webp",
+   "bytes": 50356
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-23.webp",
+   "bytes": 49770
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-24.webp",
+   "bytes": 49612
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-25.webp",
+   "bytes": 47226
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-26.webp",
+   "bytes": 30986
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-27.webp",
+   "bytes": 31144
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-28.webp",
+   "bytes": 31144
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-29.webp",
+   "bytes": 31144
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-30.webp",
+   "bytes": 18450
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-31.webp",
+   "bytes": 17644
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-32.webp",
+   "bytes": 17806
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-33.webp",
+   "bytes": 18172
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-34.webp",
+   "bytes": 17546
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-35.webp",
+   "bytes": 17380
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-36.webp",
+   "bytes": 21108
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-37.webp",
+   "bytes": 19086
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-38.webp",
+   "bytes": 17910
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-39.webp",
+   "bytes": 15574
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-40.webp",
+   "bytes": 16118
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-41.webp",
+   "bytes": 13466
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-42.webp",
+   "bytes": 11194
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-43.webp",
+   "bytes": 12154
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-44.webp",
+   "bytes": 33240
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-45.webp",
+   "bytes": 35156
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-46.webp",
+   "bytes": 36590
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-47.webp",
+   "bytes": 37200
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-48.webp",
+   "bytes": 34206
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-49.webp",
+   "bytes": 32928
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-50.webp",
+   "bytes": 30986
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-51.webp",
+   "bytes": 31144
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-52.webp",
+   "bytes": 31144
+  },
+  {
+   "path": "assets/sprites/sentinel/frame-53.webp",
+   "bytes": 31144
+  },
+  {
+   "path": "assets/sprites/hymn/frame-00.webp",
+   "bytes": 27596
+  },
+  {
+   "path": "assets/sprites/hymn/frame-01.webp",
+   "bytes": 29158
+  },
+  {
+   "path": "assets/sprites/hymn/frame-02.webp",
+   "bytes": 29058
+  },
+  {
+   "path": "assets/sprites/hymn/frame-03.webp",
+   "bytes": 29158
+  },
+  {
+   "path": "assets/sprites/hymn/frame-04.webp",
+   "bytes": 27596
+  },
+  {
+   "path": "assets/sprites/hymn/frame-05.webp",
+   "bytes": 28866
+  },
+  {
+   "path": "assets/sprites/hymn/frame-06.webp",
+   "bytes": 28974
+  },
+  {
+   "path": "assets/sprites/hymn/frame-07.webp",
+   "bytes": 28866
+  },
+  {
+   "path": "assets/sprites/hymn/frame-08.webp",
+   "bytes": 33576
+  },
+  {
+   "path": "assets/sprites/hymn/frame-09.webp",
+   "bytes": 33272
+  },
+  {
+   "path": "assets/sprites/hymn/frame-10.webp",
+   "bytes": 33328
+  },
+  {
+   "path": "assets/sprites/hymn/frame-11.webp",
+   "bytes": 33328
+  },
+  {
+   "path": "assets/sprites/hymn/frame-12.webp",
+   "bytes": 33272
+  },
+  {
+   "path": "assets/sprites/hymn/frame-13.webp",
+   "bytes": 33576
+  },
+  {
+   "path": "assets/sprites/hymn/frame-14.webp",
+   "bytes": 33328
+  },
+  {
+   "path": "assets/sprites/hymn/frame-15.webp",
+   "bytes": 32982
+  },
+  {
+   "path": "assets/sprites/hymn/frame-16.webp",
+   "bytes": 32982
+  },
+  {
+   "path": "assets/sprites/hymn/frame-17.webp",
+   "bytes": 33328
+  },
+  {
+   "path": "assets/sprites/hymn/frame-18.webp",
+   "bytes": 44730
+  },
+  {
+   "path": "assets/sprites/hymn/frame-19.webp",
+   "bytes": 45048
+  },
+  {
+   "path": "assets/sprites/hymn/frame-20.webp",
+   "bytes": 46968
+  },
+  {
+   "path": "assets/sprites/hymn/frame-21.webp",
+   "bytes": 46848
+  },
+  {
+   "path": "assets/sprites/hymn/frame-22.webp",
+   "bytes": 46810
+  },
+  {
+   "path": "assets/sprites/hymn/frame-23.webp",
+   "bytes": 46394
+  },
+  {
+   "path": "assets/sprites/hymn/frame-24.webp",
+   "bytes": 45836
+  },
+  {
+   "path": "assets/sprites/hymn/frame-25.webp",
+   "bytes": 41720
+  },
+  {
+   "path": "assets/sprites/hymn/frame-26.webp",
+   "bytes": 27596
+  },
+  {
+   "path": "assets/sprites/hymn/frame-27.webp",
+   "bytes": 28020
+  },
+  {
+   "path": "assets/sprites/hymn/frame-28.webp",
+   "bytes": 28020
+  },
+  {
+   "path": "assets/sprites/hymn/frame-29.webp",
+   "bytes": 28020
+  },
+  {
+   "path": "assets/sprites/hymn/frame-30.webp",
+   "bytes": 32424
+  },
+  {
+   "path": "assets/sprites/hymn/frame-31.webp",
+   "bytes": 32160
+  },
+  {
+   "path": "assets/sprites/hymn/frame-32.webp",
+   "bytes": 31090
+  },
+  {
+   "path": "assets/sprites/hymn/frame-33.webp",
+   "bytes": 31622
+  },
+  {
+   "path": "assets/sprites/hymn/frame-34.webp",
+   "bytes": 29790
+  },
+  {
+   "path": "assets/sprites/hymn/frame-35.webp",
+   "bytes": 29862
+  },
+  {
+   "path": "assets/sprites/hymn/frame-36.webp",
+   "bytes": 19200
+  },
+  {
+   "path": "assets/sprites/hymn/frame-37.webp",
+   "bytes": 16908
+  },
+  {
+   "path": "assets/sprites/hymn/frame-38.webp",
+   "bytes": 15906
+  },
+  {
+   "path": "assets/sprites/hymn/frame-39.webp",
+   "bytes": 14420
+  },
+  {
+   "path": "assets/sprites/hymn/frame-40.webp",
+   "bytes": 13874
+  },
+  {
+   "path": "assets/sprites/hymn/frame-41.webp",
+   "bytes": 12194
+  },
+  {
+   "path": "assets/sprites/hymn/frame-42.webp",
+   "bytes": 9730
+  },
+  {
+   "path": "assets/sprites/hymn/frame-43.webp",
+   "bytes": 9874
+  },
+  {
+   "path": "assets/sprites/hymn/frame-44.webp",
+   "bytes": 50396
+  },
+  {
+   "path": "assets/sprites/hymn/frame-45.webp",
+   "bytes": 53182
+  },
+  {
+   "path": "assets/sprites/hymn/frame-46.webp",
+   "bytes": 54110
+  },
+  {
+   "path": "assets/sprites/hymn/frame-47.webp",
+   "bytes": 54942
+  },
+  {
+   "path": "assets/sprites/hymn/frame-48.webp",
+   "bytes": 51384
+  },
+  {
+   "path": "assets/sprites/hymn/frame-49.webp",
+   "bytes": 50572
+  },
+  {
+   "path": "assets/sprites/hymn/frame-50.webp",
+   "bytes": 27596
+  },
+  {
+   "path": "assets/sprites/hymn/frame-51.webp",
+   "bytes": 28020
+  },
+  {
+   "path": "assets/sprites/hymn/frame-52.webp",
+   "bytes": 28020
+  },
+  {
+   "path": "assets/sprites/hymn/frame-53.webp",
+   "bytes": 28020
+  },
+  {
+   "path": "assets/sprites/vigil/frame-00.webp",
+   "bytes": 18476
+  },
+  {
+   "path": "assets/sprites/vigil/frame-01.webp",
+   "bytes": 18792
+  },
+  {
+   "path": "assets/sprites/vigil/frame-02.webp",
+   "bytes": 18972
+  },
+  {
+   "path": "assets/sprites/vigil/frame-03.webp",
+   "bytes": 18792
+  },
+  {
+   "path": "assets/sprites/vigil/frame-04.webp",
+   "bytes": 18476
+  },
+  {
+   "path": "assets/sprites/vigil/frame-05.webp",
+   "bytes": 18594
+  },
+  {
+   "path": "assets/sprites/vigil/frame-06.webp",
+   "bytes": 18724
+  },
+  {
+   "path": "assets/sprites/vigil/frame-07.webp",
+   "bytes": 18594
+  },
+  {
+   "path": "assets/sprites/vigil/frame-08.webp",
+   "bytes": 21712
+  },
+  {
+   "path": "assets/sprites/vigil/frame-09.webp",
+   "bytes": 21956
+  },
+  {
+   "path": "assets/sprites/vigil/frame-10.webp",
+   "bytes": 22010
+  },
+  {
+   "path": "assets/sprites/vigil/frame-11.webp",
+   "bytes": 22010
+  },
+  {
+   "path": "assets/sprites/vigil/frame-12.webp",
+   "bytes": 21956
+  },
+  {
+   "path": "assets/sprites/vigil/frame-13.webp",
+   "bytes": 21724
+  },
+  {
+   "path": "assets/sprites/vigil/frame-14.webp",
+   "bytes": 21928
+  },
+  {
+   "path": "assets/sprites/vigil/frame-15.webp",
+   "bytes": 21886
+  },
+  {
+   "path": "assets/sprites/vigil/frame-16.webp",
+   "bytes": 21886
+  },
+  {
+   "path": "assets/sprites/vigil/frame-17.webp",
+   "bytes": 21928
+  },
+  {
+   "path": "assets/sprites/vigil/frame-18.webp",
+   "bytes": 21332
+  },
+  {
+   "path": "assets/sprites/vigil/frame-19.webp",
+   "bytes": 21298
+  },
+  {
+   "path": "assets/sprites/vigil/frame-20.webp",
+   "bytes": 21150
+  },
+  {
+   "path": "assets/sprites/vigil/frame-21.webp",
+   "bytes": 22798
+  },
+  {
+   "path": "assets/sprites/vigil/frame-22.webp",
+   "bytes": 23038
+  },
+  {
+   "path": "assets/sprites/vigil/frame-23.webp",
+   "bytes": 23082
+  },
+  {
+   "path": "assets/sprites/vigil/frame-24.webp",
+   "bytes": 22592
+  },
+  {
+   "path": "assets/sprites/vigil/frame-25.webp",
+   "bytes": 21166
+  },
+  {
+   "path": "assets/sprites/vigil/frame-26.webp",
+   "bytes": 21286
+  },
+  {
+   "path": "assets/sprites/vigil/frame-27.webp",
+   "bytes": 21308
+  },
+  {
+   "path": "assets/sprites/vigil/frame-28.webp",
+   "bytes": 21214
+  },
+  {
+   "path": "assets/sprites/vigil/frame-29.webp",
+   "bytes": 21214
+  },
+  {
+   "path": "assets/sprites/vigil/frame-30.webp",
+   "bytes": 17650
+  },
+  {
+   "path": "assets/sprites/vigil/frame-31.webp",
+   "bytes": 18902
+  },
+  {
+   "path": "assets/sprites/vigil/frame-32.webp",
+   "bytes": 20006
+  },
+  {
+   "path": "assets/sprites/vigil/frame-33.webp",
+   "bytes": 21314
+  },
+  {
+   "path": "assets/sprites/vigil/frame-34.webp",
+   "bytes": 22632
+  },
+  {
+   "path": "assets/sprites/vigil/frame-35.webp",
+   "bytes": 22358
+  },
+  {
+   "path": "assets/sprites/vigil/frame-36.webp",
+   "bytes": 25188
+  },
+  {
+   "path": "assets/sprites/vigil/frame-37.webp",
+   "bytes": 23768
+  },
+  {
+   "path": "assets/sprites/vigil/frame-38.webp",
+   "bytes": 22614
+  },
+  {
+   "path": "assets/sprites/vigil/frame-39.webp",
+   "bytes": 20012
+  },
+  {
+   "path": "assets/sprites/vigil/frame-40.webp",
+   "bytes": 18692
+  },
+  {
+   "path": "assets/sprites/vigil/frame-41.webp",
+   "bytes": 17128
+  },
+  {
+   "path": "assets/sprites/vigil/frame-42.webp",
+   "bytes": 15930
+  },
+  {
+   "path": "assets/sprites/vigil/frame-43.webp",
+   "bytes": 15096
+  },
+  {
+   "path": "assets/sprites/vigil/frame-44.webp",
+   "bytes": 31458
+  },
+  {
+   "path": "assets/sprites/vigil/frame-45.webp",
+   "bytes": 32782
+  },
+  {
+   "path": "assets/sprites/vigil/frame-46.webp",
+   "bytes": 33538
+  },
+  {
+   "path": "assets/sprites/vigil/frame-47.webp",
+   "bytes": 34540
+  },
+  {
+   "path": "assets/sprites/vigil/frame-48.webp",
+   "bytes": 35162
+  },
+  {
+   "path": "assets/sprites/vigil/frame-49.webp",
+   "bytes": 35388
+  },
+  {
+   "path": "assets/sprites/vigil/frame-50.webp",
+   "bytes": 35344
+  },
+  {
+   "path": "assets/sprites/vigil/frame-51.webp",
+   "bytes": 35574
+  },
+  {
+   "path": "assets/sprites/vigil/frame-52.webp",
+   "bytes": 34846
+  },
+  {
+   "path": "assets/sprites/vigil/frame-53.webp",
+   "bytes": 34460
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-00.webp",
+   "bytes": 482
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-01.webp",
+   "bytes": 2182
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-02.webp",
+   "bytes": 3420
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-03.webp",
+   "bytes": 2178
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-04.webp",
+   "bytes": 3256
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-05.webp",
+   "bytes": 1820
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-06.webp",
+   "bytes": 2906
+  },
+  {
+   "path": "assets/sprites/vfx-bastion/frame-07.webp",
+   "bytes": 296
+  },
+  {
+   "path": "assets/sprites/proj-bastion/frame-00.webp",
+   "bytes": 972
+  },
+  {
+   "path": "assets/sprites/proj-bastion/frame-01.webp",
+   "bytes": 1192
+  },
+  {
+   "path": "assets/sprites/proj-bastion/frame-02.webp",
+   "bytes": 1154
+  },
+  {
+   "path": "assets/sprites/proj-bastion/frame-03.webp",
+   "bytes": 1154
+  },
+  {
+   "path": "assets/sprites/proj-bastion/frame-04.webp",
+   "bytes": 1180
+  },
+  {
+   "path": "assets/sprites/proj-bastion/frame-05.webp",
+   "bytes": 1150
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-00.webp",
+   "bytes": 5350
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-01.webp",
+   "bytes": 5780
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-02.webp",
+   "bytes": 6902
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-03.webp",
+   "bytes": 5508
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-04.webp",
+   "bytes": 6520
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-05.webp",
+   "bytes": 5266
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-06.webp",
+   "bytes": 6092
+  },
+  {
+   "path": "assets/sprites/vfx-rampart/frame-07.webp",
+   "bytes": 5668
+  },
+  {
+   "path": "assets/sprites/proj-rampart/frame-00.webp",
+   "bytes": 2114
+  },
+  {
+   "path": "assets/sprites/proj-rampart/frame-01.webp",
+   "bytes": 2558
+  },
+  {
+   "path": "assets/sprites/proj-rampart/frame-02.webp",
+   "bytes": 2484
+  },
+  {
+   "path": "assets/sprites/proj-rampart/frame-03.webp",
+   "bytes": 2546
+  },
+  {
+   "path": "assets/sprites/proj-rampart/frame-04.webp",
+   "bytes": 2584
+  },
+  {
+   "path": "assets/sprites/proj-rampart/frame-05.webp",
+   "bytes": 2560
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-00.webp",
+   "bytes": 2398
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-01.webp",
+   "bytes": 2296
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-02.webp",
+   "bytes": 2844
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-03.webp",
+   "bytes": 3352
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-04.webp",
+   "bytes": 3956
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-05.webp",
+   "bytes": 4412
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-06.webp",
+   "bytes": 4762
+  },
+  {
+   "path": "assets/sprites/vfx-deadeye/frame-07.webp",
+   "bytes": 5004
+  },
+  {
+   "path": "assets/sprites/proj-deadeye/frame-00.webp",
+   "bytes": 838
+  },
+  {
+   "path": "assets/sprites/proj-deadeye/frame-01.webp",
+   "bytes": 824
+  },
+  {
+   "path": "assets/sprites/proj-deadeye/frame-02.webp",
+   "bytes": 838
+  },
+  {
+   "path": "assets/sprites/proj-deadeye/frame-03.webp",
+   "bytes": 824
+  },
+  {
+   "path": "assets/sprites/proj-deadeye/frame-04.webp",
+   "bytes": 838
+  },
+  {
+   "path": "assets/sprites/proj-deadeye/frame-05.webp",
+   "bytes": 824
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-00.webp",
+   "bytes": 1150
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-01.webp",
+   "bytes": 1738
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-02.webp",
+   "bytes": 2462
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-03.webp",
+   "bytes": 3074
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-04.webp",
+   "bytes": 3658
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-05.webp",
+   "bytes": 3968
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-06.webp",
+   "bytes": 4166
+  },
+  {
+   "path": "assets/sprites/vfx-vigil/frame-07.webp",
+   "bytes": 4590
+  },
+  {
+   "path": "assets/sprites/proj-vigil/frame-00.webp",
+   "bytes": 928
+  },
+  {
+   "path": "assets/sprites/proj-vigil/frame-01.webp",
+   "bytes": 1012
+  },
+  {
+   "path": "assets/sprites/proj-vigil/frame-02.webp",
+   "bytes": 952
+  },
+  {
+   "path": "assets/sprites/proj-vigil/frame-03.webp",
+   "bytes": 1014
+  },
+  {
+   "path": "assets/sprites/proj-vigil/frame-04.webp",
+   "bytes": 960
+  },
+  {
+   "path": "assets/sprites/proj-vigil/frame-05.webp",
+   "bytes": 990
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-00.webp",
+   "bytes": 738
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-01.webp",
+   "bytes": 1444
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-02.webp",
+   "bytes": 2592
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-03.webp",
+   "bytes": 3656
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-04.webp",
+   "bytes": 4172
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-05.webp",
+   "bytes": 4620
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-06.webp",
+   "bytes": 5024
+  },
+  {
+   "path": "assets/sprites/vfx-hex/frame-07.webp",
+   "bytes": 2038
+  },
+  {
+   "path": "assets/sprites/proj-hex/frame-00.webp",
+   "bytes": 928
+  },
+  {
+   "path": "assets/sprites/proj-hex/frame-01.webp",
+   "bytes": 1140
+  },
+  {
+   "path": "assets/sprites/proj-hex/frame-02.webp",
+   "bytes": 1112
+  },
+  {
+   "path": "assets/sprites/proj-hex/frame-03.webp",
+   "bytes": 1112
+  },
+  {
+   "path": "assets/sprites/proj-hex/frame-04.webp",
+   "bytes": 1128
+  },
+  {
+   "path": "assets/sprites/proj-hex/frame-05.webp",
+   "bytes": 1112
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-00.webp",
+   "bytes": 1784
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-01.webp",
+   "bytes": 2644
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-02.webp",
+   "bytes": 3874
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-03.webp",
+   "bytes": 4686
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-04.webp",
+   "bytes": 5882
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-05.webp",
+   "bytes": 6314
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-06.webp",
+   "bytes": 6636
+  },
+  {
+   "path": "assets/sprites/vfx-ember/frame-07.webp",
+   "bytes": 6858
+  },
+  {
+   "path": "assets/sprites/proj-ember/frame-00.webp",
+   "bytes": 1280
+  },
+  {
+   "path": "assets/sprites/proj-ember/frame-01.webp",
+   "bytes": 1548
+  },
+  {
+   "path": "assets/sprites/proj-ember/frame-02.webp",
+   "bytes": 1536
+  },
+  {
+   "path": "assets/sprites/proj-ember/frame-03.webp",
+   "bytes": 1534
+  },
+  {
+   "path": "assets/sprites/proj-ember/frame-04.webp",
+   "bytes": 1558
+  },
+  {
+   "path": "assets/sprites/proj-ember/frame-05.webp",
+   "bytes": 1558
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-00.webp",
+   "bytes": 1552
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-01.webp",
+   "bytes": 1830
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-02.webp",
+   "bytes": 1796
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-03.webp",
+   "bytes": 2260
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-04.webp",
+   "bytes": 2474
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-05.webp",
+   "bytes": 2456
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-06.webp",
+   "bytes": 2592
+  },
+  {
+   "path": "assets/sprites/vfx-mercy/frame-07.webp",
+   "bytes": 2598
+  },
+  {
+   "path": "assets/sprites/proj-mercy/frame-00.webp",
+   "bytes": 910
+  },
+  {
+   "path": "assets/sprites/proj-mercy/frame-01.webp",
+   "bytes": 1094
+  },
+  {
+   "path": "assets/sprites/proj-mercy/frame-02.webp",
+   "bytes": 1076
+  },
+  {
+   "path": "assets/sprites/proj-mercy/frame-03.webp",
+   "bytes": 1076
+  },
+  {
+   "path": "assets/sprites/proj-mercy/frame-04.webp",
+   "bytes": 1092
+  },
+  {
+   "path": "assets/sprites/proj-mercy/frame-05.webp",
+   "bytes": 1062
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-00.webp",
+   "bytes": 1780
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-01.webp",
+   "bytes": 2926
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-02.webp",
+   "bytes": 4318
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-03.webp",
+   "bytes": 5436
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-04.webp",
+   "bytes": 6340
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-05.webp",
+   "bytes": 6962
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-06.webp",
+   "bytes": 7966
+  },
+  {
+   "path": "assets/sprites/vfx-sage/frame-07.webp",
+   "bytes": 8052
+  },
+  {
+   "path": "assets/sprites/proj-sage/frame-00.webp",
+   "bytes": 868
+  },
+  {
+   "path": "assets/sprites/proj-sage/frame-01.webp",
+   "bytes": 1002
+  },
+  {
+   "path": "assets/sprites/proj-sage/frame-02.webp",
+   "bytes": 1052
+  },
+  {
+   "path": "assets/sprites/proj-sage/frame-03.webp",
+   "bytes": 1068
+  },
+  {
+   "path": "assets/sprites/proj-sage/frame-04.webp",
+   "bytes": 1038
+  },
+  {
+   "path": "assets/sprites/proj-sage/frame-05.webp",
+   "bytes": 1012
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-00.webp",
+   "bytes": 1948
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-01.webp",
+   "bytes": 3008
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-02.webp",
+   "bytes": 4000
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-03.webp",
+   "bytes": 4838
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-04.webp",
+   "bytes": 5586
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-05.webp",
+   "bytes": 5906
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-06.webp",
+   "bytes": 4888
+  },
+  {
+   "path": "assets/sprites/vfx-rook/frame-07.webp",
+   "bytes": 4756
+  },
+  {
+   "path": "assets/sprites/proj-rook/frame-00.webp",
+   "bytes": 1116
+  },
+  {
+   "path": "assets/sprites/proj-rook/frame-01.webp",
+   "bytes": 1306
+  },
+  {
+   "path": "assets/sprites/proj-rook/frame-02.webp",
+   "bytes": 1334
+  },
+  {
+   "path": "assets/sprites/proj-rook/frame-03.webp",
+   "bytes": 1418
+  },
+  {
+   "path": "assets/sprites/proj-rook/frame-04.webp",
+   "bytes": 1350
+  },
+  {
+   "path": "assets/sprites/proj-rook/frame-05.webp",
+   "bytes": 1376
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-00.webp",
+   "bytes": 1930
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-01.webp",
+   "bytes": 2096
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-02.webp",
+   "bytes": 2562
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-03.webp",
+   "bytes": 3020
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-04.webp",
+   "bytes": 3366
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-05.webp",
+   "bytes": 3576
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-06.webp",
+   "bytes": 4002
+  },
+  {
+   "path": "assets/sprites/vfx-dusk/frame-07.webp",
+   "bytes": 4424
+  },
+  {
+   "path": "assets/sprites/proj-dusk/frame-00.webp",
+   "bytes": 950
+  },
+  {
+   "path": "assets/sprites/proj-dusk/frame-01.webp",
+   "bytes": 1192
+  },
+  {
+   "path": "assets/sprites/proj-dusk/frame-02.webp",
+   "bytes": 1236
+  },
+  {
+   "path": "assets/sprites/proj-dusk/frame-03.webp",
+   "bytes": 1200
+  },
+  {
+   "path": "assets/sprites/proj-dusk/frame-04.webp",
+   "bytes": 1244
+  },
+  {
+   "path": "assets/sprites/proj-dusk/frame-05.webp",
+   "bytes": 1228
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-00.webp",
+   "bytes": 1880
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-01.webp",
+   "bytes": 2114
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-02.webp",
+   "bytes": 2142
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-03.webp",
+   "bytes": 2060
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-04.webp",
+   "bytes": 2004
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-05.webp",
+   "bytes": 1890
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-06.webp",
+   "bytes": 1912
+  },
+  {
+   "path": "assets/sprites/vfx-shade/frame-07.webp",
+   "bytes": 2042
+  },
+  {
+   "path": "assets/sprites/proj-shade/frame-00.webp",
+   "bytes": 966
+  },
+  {
+   "path": "assets/sprites/proj-shade/frame-01.webp",
+   "bytes": 1140
+  },
+  {
+   "path": "assets/sprites/proj-shade/frame-02.webp",
+   "bytes": 1144
+  },
+  {
+   "path": "assets/sprites/proj-shade/frame-03.webp",
+   "bytes": 1144
+  },
+  {
+   "path": "assets/sprites/proj-shade/frame-04.webp",
+   "bytes": 1128
+  },
+  {
+   "path": "assets/sprites/proj-shade/frame-05.webp",
+   "bytes": 1120
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-00.webp",
+   "bytes": 1646
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-01.webp",
+   "bytes": 2216
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-02.webp",
+   "bytes": 2654
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-03.webp",
+   "bytes": 3004
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-04.webp",
+   "bytes": 3598
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-05.webp",
+   "bytes": 3810
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-06.webp",
+   "bytes": 3854
+  },
+  {
+   "path": "assets/sprites/vfx-specter/frame-07.webp",
+   "bytes": 3704
+  },
+  {
+   "path": "assets/sprites/proj-specter/frame-00.webp",
+   "bytes": 734
+  },
+  {
+   "path": "assets/sprites/proj-specter/frame-01.webp",
+   "bytes": 774
+  },
+  {
+   "path": "assets/sprites/proj-specter/frame-02.webp",
+   "bytes": 774
+  },
+  {
+   "path": "assets/sprites/proj-specter/frame-03.webp",
+   "bytes": 774
+  },
+  {
+   "path": "assets/sprites/proj-specter/frame-04.webp",
+   "bytes": 774
+  },
+  {
+   "path": "assets/sprites/proj-specter/frame-05.webp",
+   "bytes": 774
+  },
+  {
+   "path": "assets/sprites/arena_hit_spark/frame-00.webp",
+   "bytes": 43562
+  },
+  {
+   "path": "assets/sprites/arena_plasma_blast/frame-00.webp",
+   "bytes": 14578
+  },
+  {
+   "path": "assets/sprites/arena_arcane_burst/frame-00.webp",
+   "bytes": 37800
+  },
+  {
+   "path": "assets/sprites/arena_slime/frame-00.webp",
+   "bytes": 22768
+  },
+  {
+   "path": "assets/sprites/arena_skeleton/frame-00.webp",
+   "bytes": 33220
+  },
+  {
+   "path": "assets/sprites/arena_dread_warden/frame-00.webp",
+   "bytes": 65624
+  },
+  {
    "path": "assets/sprites/arena_potion/frame-00.webp",
-   "bytes": 8040
+   "bytes": 19786
   },
   {
    "path": "assets/sprites/arena_energy_bolt/frame-00.webp",
-   "bytes": 9520
+   "bytes": 25144
   },
   {
    "path": "assets/sprites/arena_gold_coin/frame-00.webp",
-   "bytes": 15616
+   "bytes": 32830
   },
   {
    "path": "assets/sprites/arena_gem/frame-00.webp",
-   "bytes": 10986
+   "bytes": 32540
   },
   {
    "path": "assets/sprites/arena_ticket/frame-00.webp",
-   "bytes": 14776
+   "bytes": 37380
   },
   {
    "path": "assets/sprites/arena_sword/frame-00.webp",
-   "bytes": 7006
+   "bytes": 20572
   },
   {
    "path": "assets/sprites/arena_staff/frame-00.webp",
-   "bytes": 7734
+   "bytes": 21042
   },
   {
    "path": "assets/sprites/arena_dagger/frame-00.webp",
-   "bytes": 13198
+   "bytes": 42166
   },
   {
    "path": "assets/sprites/arena_hammer/frame-00.webp",
-   "bytes": 16420
+   "bytes": 48954
   },
   {
    "path": "assets/sprites/arena_crown/frame-00.webp",
-   "bytes": 15926
+   "bytes": 40202
   },
   {
    "path": "assets/sprites/arena_armor/frame-00.webp",
-   "bytes": 12374
+   "bytes": 32448
   },
   {
    "path": "assets/sprites/arena_shield/frame-00.webp",
-   "bytes": 11546
+   "bytes": 29912
   },
   {
    "path": "assets/sprites/arena_forge_backdrop/frame-00.jpg",
@@ -7281,47 +7281,47 @@
   },
   {
    "path": "assets/sprites/fx_impact_flash/frame-00.webp",
-   "bytes": 6276
+   "bytes": 19760
   },
   {
    "path": "assets/sprites/fx_impact_spark/frame-00.webp",
-   "bytes": 14804
+   "bytes": 38984
   },
   {
    "path": "assets/sprites/fx_spark_shower/frame-00.webp",
-   "bytes": 16910
+   "bytes": 43824
   },
   {
    "path": "assets/sprites/fx_plasma_eruption/frame-00.webp",
-   "bytes": 17556
+   "bytes": 53486
   },
   {
    "path": "assets/sprites/fx_plasma_explosion/frame-00.webp",
-   "bytes": 22470
+   "bytes": 68266
   },
   {
    "path": "assets/sprites/fx_plasma_fireball/frame-00.webp",
-   "bytes": 13618
+   "bytes": 41974
   },
   {
    "path": "assets/sprites/fx_plasma_shockwave/frame-00.webp",
-   "bytes": 22496
+   "bytes": 65196
   },
   {
    "path": "assets/sprites/fx_arcane_explosion/frame-00.webp",
-   "bytes": 19198
+   "bytes": 57168
   },
   {
    "path": "assets/sprites/fx_arcane_implosion/frame-00.webp",
-   "bytes": 19960
+   "bytes": 61362
   },
   {
    "path": "assets/sprites/fx_arcane_nova/frame-00.webp",
-   "bytes": 24834
+   "bytes": 65708
   },
   {
    "path": "assets/sprites/fx_arcane_pillar/frame-00.webp",
-   "bytes": 15252
+   "bytes": 50328
   },
   {
    "path": "assets/env/blue/floor-3.webp",

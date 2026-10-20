@@ -1765,7 +1765,7 @@ let player = null, allies = [];
 
 // ---------- camera ----------
 const cam = { x: 0, y: 0 };
-const CAM_Z = 0.85; // zoomed out a bit; player stays dead-center
+const CAM_Z = 1.15; // graphics scale-up (2026-10-20, Adrian: "scaling the graphics up"): was 0.85 (zoomed out, hero ~71 CSS px on a phone) — 1.15 renders the world ~1.35x bigger; player stays dead-center
 function updateCamera() {
   const tx = player.x - (W / CAM_Z) / 2, ty = player.y - (H / CAM_Z) / 2;
   cam.x += (tx - cam.x) * 0.15; cam.y += (ty - cam.y) * 0.15;

@@ -3,7 +3,7 @@
   html,body { width:100%; height:100%; overflow:hidden; background:#050508; touch-action:none;
     font-family:'Segoe UI',system-ui,sans-serif; color:#e8e8f0; user-select:none; -webkit-user-select:none; }
   #game-container { position:fixed; inset:0; overflow:hidden; }
-  #game-canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  #game-canvas { position:absolute; inset:0; width:100%; height:100%; display:block; image-rendering:pixelated; /* graphics scale-up 2026-10-20: compositor upscale of the DPR-capped canvas stays nearest-neighbour crisp, not bilinear-soft */ }
 
   /* ---------- START SCREEN ---------- */
   #start-screen { position:absolute; inset:0; z-index:50; display:flex; flex-direction:column;
